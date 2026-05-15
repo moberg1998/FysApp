@@ -1,7 +1,3 @@
-import { init } from "@instantdb/react-native";
-import schema from "../instant.schema";
-
-export const db = init({
-  appId: process.env.EXPO_PUBLIC_INSTANT_APP_ID!,
-  schema,
-});
+// InstantDB removed — FysApp is offline-first with no cloud backend.
+// All state is stored in AsyncStorage via store/progressStore.ts
+export {};
