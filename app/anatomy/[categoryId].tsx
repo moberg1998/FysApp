@@ -33,7 +33,7 @@ export default function AnatomySession() {
   const questions = ALL_QUESTIONS[categoryId ?? ''] ?? [];
 
   useEffect(() => {
-    if (questions.length > 0 && !session) {
+    if (questions.length > 0 && (!session || session.categoryId !== categoryId)) {
       startSession(categoryId ?? '', questions);
     }
   }, [categoryId]);
@@ -103,7 +103,7 @@ export default function AnatomySession() {
                 color={isCorrect ? Colors.correct : Colors.incorrect}
               />
               <Text style={[styles.feedbackLabel, { color: isCorrect ? Colors.correct : Colors.incorrect }]}>
-                {isCorrect ? 'Correct' : 'Incorrect'}
+                {isCorrect ? 'Korrekt' : 'Forkert'}
               </Text>
             </View>
             <Text style={styles.explanation}>{question.explanation}</Text>

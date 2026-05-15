@@ -44,12 +44,10 @@ export default function QuizSession() {
   const { session, toggleOption, submitAnswer, nextQuestion } = useQuizSession();
 
   useEffect(() => {
-    if (!session) {
-      router.replace('/quiz/index');
-    } else if (session.isComplete) {
+    if (session?.isComplete) {
       router.replace('/quiz/results');
     }
-  }, [session, router]);
+  }, [session?.isComplete]);
 
   if (!session) return null;
 

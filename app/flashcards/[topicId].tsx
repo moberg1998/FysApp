@@ -20,9 +20,10 @@ export default function FlashcardSession() {
   const router = useRouter();
   const { session, startSession, flip, rate } = useFlashcardSession();
 
+  const cards = ALL_FLASHCARDS[topicId ?? ''] ?? [];
+
   useEffect(() => {
-    const cards = ALL_FLASHCARDS[topicId ?? ''] ?? [];
-    if (cards.length > 0 && !session) {
+    if (cards.length > 0 && (!session || session.topicId !== topicId)) {
       startSession(topicId ?? '', cards);
     }
   }, [topicId]);
@@ -44,7 +45,7 @@ export default function FlashcardSession() {
     rate(status);
   };
 
-  if (!session || session.cards.length === 0) {
+  if (cards.length === 0) {
     return (
       <View style={styles.screen}>
         <ScreenHeader title="Flashkort" onBack={() => router.replace('/flashcards/index')} />
@@ -54,6 +55,8 @@ export default function FlashcardSession() {
       </View>
     );
   }
+
+  if (!session) return null;
 
   const card = session.cards[session.currentIndex];
 
