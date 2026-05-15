@@ -1,64 +1,232 @@
-import { db } from "@/lib/db";
-import { AppSchema } from "@/instant.schema";
-import { InstaQLEntity } from "@instantdb/react-native";
-import { View, Text, Button } from "react-native";
+import React from 'react';
+import {
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+  StyleSheet,
+  StatusBar,
+  Platform,
+} from 'react-native';
+import { useRouter } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
+import { ModeCard } from '@/components/ui/ModeCard';
+import { Colors } from '@/constants/Colors';
+import { Layout } from '@/constants/Layout';
+import { useProgress } from '@/hooks/useProgress';
 
-type Color = InstaQLEntity<AppSchema, "colors">;
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 44 : (StatusBar.currentHeight ?? 24);
 
-const selectId = "4d39508b-9ee2-48a3-b70d-8192d9c5a059";
+const MODES = [
+  {
+    id: 'quiz',
+    title: 'Quiz Mode',
+    description: 'Interactive questions with immediate clinical feedback',
+    icon: 'help-circle' as const,
+    accentColor: Colors.modeQuiz,
+    route: '/quiz',
+  },
+  {
+    id: 'exam',
+    title: 'Clinical Case / Exam',
+    description: '6-step patient cases with structured clinical reasoning',
+    icon: 'clipboard' as const,
+    accentColor: Colors.modeExam,
+    route: '/exam',
+  },
+  {
+    id: 'anatomy',
+    title: 'Anatomy Mode',
+    description: 'Structure → function → clinical relevance',
+    icon: 'body' as const,
+    accentColor: Colors.modeAnatomy,
+    route: '/anatomy',
+  },
+  {
+    id: 'flashcards',
+    title: 'Flashcards',
+    description: 'Fast repetition of clinical facts and key concepts',
+    icon: 'albums' as const,
+    accentColor: Colors.modeFlashcard,
+    route: '/flashcards',
+  },
+];
 
-function App() {
-  const { isLoading, error, data } = db.useQuery({
-    colors: {
-      $: { where: { id: selectId } },
-    },
-  });
-  if (isLoading) {
-    return (
-      <View>
-        <Text>Loading...</Text>
-      </View>
-    );
-  }
-  if (error) {
-    return (
-      <View>
-        <Text>Error: {error.message}</Text>
-      </View>
-    );
-  }
+export default function HomeScreen() {
+  const router = useRouter();
+  const { progress } = useProgress();
 
-  return <Main color={data.colors[0]} />;
-}
-
-function Main(props: { color?: Color }) {
-  const { value } = props.color || { value: "lightgray" };
+  const totalQuizzes = progress?.quizResults.length ?? 0;
+  const totalExams = progress?.examResults.length ?? 0;
 
   return (
-    <View
-      className="flex flex-1 items-center justify-center"
-      style={[{ backgroundColor: value }]}
-    >
-      <View className="bg-white opacity-80 p-3 rounded-lg">
-        <Text className="text-[24px] font-bold mb-4">
-          Hi! pick your favorite color
-        </Text>
-        <View className="my-4">
-          {["green", "blue", "purple"].map((c) => {
-            return (
-              <Button
-                title={c}
-                onPress={() => {
-                  db.transact(db.tx.colors[selectId].update({ value: c }));
-                }}
-                key={c}
-              />
-            );
-          })}
+    <View style={styles.screen}>
+      <StatusBar barStyle="light-content" backgroundColor={Colors.background} />
+      <ScrollView
+        style={styles.scroll}
+        contentContainerStyle={styles.scrollContent}
+        showsVerticalScrollIndicator={false}
+      >
+        {/* Header */}
+        <View style={styles.header}>
+          <View>
+            <Text style={styles.appName}>FysApp</Text>
+            <Text style={styles.tagline}>Clinical Physiotherapy Learning</Text>
+          </View>
+          <TouchableOpacity
+            onPress={() => router.push('/progress')}
+            style={styles.progressButton}
+            activeOpacity={0.75}
+          >
+            <Ionicons name="stats-chart" size={20} color={Colors.primary} />
+          </TouchableOpacity>
         </View>
-      </View>
+
+        {/* Summary strip */}
+        {(totalQuizzes > 0 || totalExams > 0) && (
+          <TouchableOpacity
+            onPress={() => router.push('/progress')}
+            activeOpacity={0.8}
+            style={styles.summaryStrip}
+          >
+            <Ionicons name="checkmark-circle" size={16} color={Colors.correct} />
+            <Text style={styles.summaryText}>
+              {totalQuizzes} quiz session{totalQuizzes !== 1 ? 's' : ''} · {totalExams} exam{totalExams !== 1 ? 's' : ''} completed
+            </Text>
+            <Ionicons name="chevron-forward" size={14} color={Colors.textMuted} style={{ marginLeft: 'auto' }} />
+          </TouchableOpacity>
+        )}
+
+        {/* Section label */}
+        <Text style={styles.sectionLabel}>Learning Modes</Text>
+
+        {/* Mode cards */}
+        <View style={styles.modeList}>
+          {MODES.map((mode) => (
+            <ModeCard
+              key={mode.id}
+              title={mode.title}
+              description={mode.description}
+              icon={mode.icon}
+              accentColor={mode.accentColor}
+              onPress={() => router.push(mode.route as '/quiz')}
+            />
+          ))}
+        </View>
+
+        {/* Topic coverage */}
+        <View style={styles.topicBanner}>
+          <Ionicons name="library-outline" size={18} color={Colors.textMuted} />
+          <View style={styles.topicBannerText}>
+            <Text style={styles.topicBannerTitle}>20 Clinical Topics</Text>
+            <Text style={styles.topicBannerSub}>Parkinson's fully available · 19 topics coming soon</Text>
+          </View>
+        </View>
+
+        {/* Footer */}
+        <Text style={styles.footer}>Offline · No login required · All content bundled</Text>
+      </ScrollView>
     </View>
   );
 }
 
-export default App;
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: Colors.background,
+  },
+  scroll: {
+    flex: 1,
+  },
+  scrollContent: {
+    paddingTop: STATUSBAR_HEIGHT + Layout.spacing.md,
+    paddingHorizontal: Layout.spacing.md,
+    paddingBottom: Layout.spacing.xxl,
+    gap: Layout.spacing.md,
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    paddingBottom: Layout.spacing.sm,
+  },
+  appName: {
+    fontSize: 28,
+    fontWeight: '800',
+    color: Colors.textPrimary,
+    letterSpacing: -0.5,
+  },
+  tagline: {
+    fontSize: 13,
+    color: Colors.textSecondary,
+    marginTop: 2,
+  },
+  progressButton: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: Colors.surface,
+    borderWidth: 1,
+    borderColor: Colors.border,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 4,
+  },
+  summaryStrip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+    backgroundColor: Colors.correctSubtle,
+    borderRadius: Layout.radius.md,
+    paddingHorizontal: Layout.spacing.md,
+    paddingVertical: 10,
+    borderWidth: 1,
+    borderColor: Colors.correct + '30',
+  },
+  summaryText: {
+    fontSize: 13,
+    color: Colors.correct,
+    fontWeight: '500',
+  },
+  sectionLabel: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: Colors.textMuted,
+    textTransform: 'uppercase',
+    letterSpacing: 1,
+    marginTop: Layout.spacing.sm,
+  },
+  modeList: {
+    gap: Layout.spacing.sm,
+  },
+  topicBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Layout.spacing.md,
+    backgroundColor: Colors.surface,
+    borderRadius: Layout.radius.md,
+    padding: Layout.spacing.md,
+    borderWidth: 1,
+    borderColor: Colors.border,
+    marginTop: Layout.spacing.sm,
+  },
+  topicBannerText: {
+    flex: 1,
+  },
+  topicBannerTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: Colors.textSecondary,
+  },
+  topicBannerSub: {
+    fontSize: 12,
+    color: Colors.textMuted,
+    marginTop: 2,
+  },
+  footer: {
+    fontSize: 11,
+    color: Colors.textMuted,
+    textAlign: 'center',
+    marginTop: Layout.spacing.md,
+  },
+});
