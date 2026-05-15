@@ -20,8 +20,12 @@ export default function FlashcardsTopicSelect() {
 
   const handlePress = (topicId: string) => {
     const cards = ALL_FLASHCARDS[topicId] ?? [];
+    console.log('[DEBUG flashcards/index] topicId:', topicId, '| cards.length:', cards.length, '| ALL_FLASHCARDS keys:', Object.keys(ALL_FLASHCARDS));
     if (cards.length > 0) {
+      console.log('[DEBUG flashcards/index] calling startSession with', cards.length, 'cards');
       startSession(topicId, cards);
+    } else {
+      console.log('[DEBUG flashcards/index] NO cards found — startSession NOT called');
     }
     router.push({ pathname: '/flashcards/[topicId]', params: { topicId } });
   };

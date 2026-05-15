@@ -54,8 +54,12 @@ export default function AnatomyCategorySelect() {
 
   const handlePress = (categoryId: string) => {
     const questions = ALL_QUESTIONS[categoryId] ?? [];
+    console.log('[DEBUG anatomy/index] categoryId:', categoryId, '| questions.length:', questions.length, '| ALL_QUESTIONS keys:', Object.keys(ALL_QUESTIONS));
     if (questions.length > 0) {
+      console.log('[DEBUG anatomy/index] calling startSession with', questions.length, 'questions');
       startSession(categoryId, questions);
+    } else {
+      console.log('[DEBUG anatomy/index] NO questions found — startSession NOT called');
     }
     router.push({ pathname: '/anatomy/[categoryId]', params: { categoryId } });
   };
