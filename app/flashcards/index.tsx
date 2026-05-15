@@ -20,7 +20,7 @@ export default function FlashcardsTopicSelect() {
         renderItem={({ item }) => (
           <TopicCard
             topic={item}
-            onPress={() => router.push(`/flashcards/${item.id}`)}
+            onPress={() => router.push({ pathname: '/flashcards/[topicId]', params: { topicId: item.id } })}
           />
         )}
         showsVerticalScrollIndicator={false}

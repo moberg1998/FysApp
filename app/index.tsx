@@ -24,7 +24,7 @@ const MODES = [
     description: 'Interactive questions with immediate clinical feedback',
     icon: 'help-circle' as const,
     accentColor: Colors.modeQuiz,
-    route: '/quiz',
+    route: '/quiz/index' as const,
   },
   {
     id: 'exam',
@@ -32,7 +32,7 @@ const MODES = [
     description: '6-step patient cases with structured clinical reasoning',
     icon: 'clipboard' as const,
     accentColor: Colors.modeExam,
-    route: '/exam',
+    route: '/exam/index' as const,
   },
   {
     id: 'anatomy',
@@ -40,7 +40,7 @@ const MODES = [
     description: 'Structure → function → clinical relevance',
     icon: 'body' as const,
     accentColor: Colors.modeAnatomy,
-    route: '/anatomy',
+    route: '/anatomy/index' as const,
   },
   {
     id: 'flashcards',
@@ -48,7 +48,7 @@ const MODES = [
     description: 'Fast repetition of clinical facts and key concepts',
     icon: 'albums' as const,
     accentColor: Colors.modeFlashcard,
-    route: '/flashcards',
+    route: '/flashcards/index' as const,
   },
 ];
 
@@ -74,7 +74,7 @@ export default function HomeScreen() {
             <Text style={styles.tagline}>Clinical Physiotherapy Learning</Text>
           </View>
           <TouchableOpacity
-            onPress={() => router.push('/progress')}
+            onPress={() => router.push('/progress/index')}
             style={styles.progressButton}
             activeOpacity={0.75}
           >
@@ -85,7 +85,7 @@ export default function HomeScreen() {
         {/* Summary strip */}
         {(totalQuizzes > 0 || totalExams > 0) && (
           <TouchableOpacity
-            onPress={() => router.push('/progress')}
+            onPress={() => router.push('/progress/index')}
             activeOpacity={0.8}
             style={styles.summaryStrip}
           >
@@ -109,7 +109,7 @@ export default function HomeScreen() {
               description={mode.description}
               icon={mode.icon}
               accentColor={mode.accentColor}
-              onPress={() => router.push(mode.route as '/quiz')}
+              onPress={() => router.push(mode.route)}
             />
           ))}
         </View>

@@ -47,14 +47,14 @@ export default function AnatomySession() {
   const handleBack = () => {
     Alert.alert('Exit Session', 'Your progress will be lost.', [
       { text: 'Cancel', style: 'cancel' },
-      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/anatomy') },
+      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/anatomy/index') },
     ]);
   };
 
   if (!session || questions.length === 0) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Anatomy" onBack={() => router.replace('/anatomy')} />
+        <ScreenHeader title="Anatomy" onBack={() => router.replace('/anatomy/index')} />
         <View style={styles.center}>
           <Text style={styles.emptyText}>No questions available for this category yet.</Text>
         </View>

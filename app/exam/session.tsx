@@ -24,9 +24,9 @@ function ExamOptionButton({
   isSubmitted: boolean;
   onPress: () => void;
 }) {
-  let bgColor = Colors.surface;
-  let borderColor = Colors.border;
-  let textColor = Colors.textSecondary;
+  let bgColor: string = Colors.surface;
+  let borderColor: string = Colors.border;
+  let textColor: string = Colors.textSecondary;
 
   if (isSubmitted) {
     if (isCorrect && isSelected) { bgColor = Colors.correctSubtle; borderColor = Colors.correct; textColor = Colors.correct; }
@@ -54,7 +54,7 @@ export default function ExamSession() {
 
   useEffect(() => {
     if (!session) {
-      router.replace('/exam');
+      router.replace('/exam/index');
     } else if (session.isComplete) {
       router.replace('/exam/results');
     }
@@ -72,7 +72,7 @@ export default function ExamSession() {
   const handleBack = () => {
     Alert.alert('Exit Case', 'Your progress will be lost. Are you sure?', [
       { text: 'Cancel', style: 'cancel' },
-      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/exam') },
+      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/exam/index') },
     ]);
   };
 

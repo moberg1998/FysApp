@@ -52,7 +52,7 @@ export default function AnatomyCategorySelect() {
         renderItem={({ item }) => (
           <CategoryCard
             category={item}
-            onPress={() => router.push(`/anatomy/${item.id}`)}
+            onPress={() => router.push({ pathname: '/anatomy/[categoryId]', params: { categoryId: item.id } })}
             bestScore={getBestScore(item.id)}
           />
         )}

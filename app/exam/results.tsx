@@ -66,10 +66,10 @@ export default function ExamResults() {
   if (!session) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Results" onBack={() => router.replace('/exam')} />
+        <ScreenHeader title="Results" onBack={() => router.replace('/exam/index')} />
         <View style={styles.empty}>
           <Text style={styles.emptyText}>No session data.</Text>
-          <Button title="Back to Cases" onPress={() => { resetSession(); router.replace('/exam'); }} />
+          <Button title="Back to Cases" onPress={() => { resetSession(); router.replace('/exam/index'); }} />
         </View>
       </View>
     );
@@ -81,7 +81,7 @@ export default function ExamResults() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Case Results" onBack={() => { resetSession(); router.replace('/exam'); }} showBack />
+      <ScreenHeader title="Case Results" onBack={() => { resetSession(); router.replace('/exam/index'); }} showBack />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         {/* Score section */}
         <View style={styles.scoreRow}>
@@ -146,7 +146,7 @@ export default function ExamResults() {
               const examCase = session.examCase;
               const topicId = session.topicId;
               resetSession();
-              router.replace(`/exam/${topicId}`);
+              router.replace({ pathname: '/exam/[topicId]', params: { topicId } });
             }}
             variant="secondary"
             size="lg"
@@ -154,7 +154,7 @@ export default function ExamResults() {
           />
           <Button
             title="Back to Cases"
-            onPress={() => { resetSession(); router.replace('/exam'); }}
+            onPress={() => { resetSession(); router.replace('/exam/index'); }}
             variant="ghost"
             size="lg"
             fullWidth

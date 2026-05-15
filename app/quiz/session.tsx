@@ -45,7 +45,7 @@ export default function QuizSession() {
 
   useEffect(() => {
     if (!session) {
-      router.replace('/quiz');
+      router.replace('/quiz/index');
     } else if (session.isComplete) {
       router.replace('/quiz/results');
     }
@@ -68,7 +68,7 @@ export default function QuizSession() {
   const handleBack = () => {
     Alert.alert('Exit Quiz', 'Your progress will be lost. Are you sure?', [
       { text: 'Cancel', style: 'cancel' },
-      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/quiz') },
+      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/quiz/index') },
     ]);
   };
 

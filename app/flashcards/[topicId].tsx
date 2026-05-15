@@ -36,7 +36,7 @@ export default function FlashcardSession() {
   const handleBack = () => {
     Alert.alert('Exit Flashcards', 'Your session progress will be lost.', [
       { text: 'Cancel', style: 'cancel' },
-      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/flashcards') },
+      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/flashcards/index') },
     ]);
   };
 
@@ -47,7 +47,7 @@ export default function FlashcardSession() {
   if (!session || session.cards.length === 0) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Flashcards" onBack={() => router.replace('/flashcards')} />
+        <ScreenHeader title="Flashcards" onBack={() => router.replace('/flashcards/index')} />
         <View style={styles.center}>
           <Text style={styles.emptyText}>No flashcards available for this topic yet.</Text>
         </View>

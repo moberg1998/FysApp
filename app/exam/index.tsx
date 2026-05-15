@@ -22,7 +22,7 @@ export default function ExamTopicSelect() {
         renderItem={({ item }) => (
           <TopicCard
             topic={item}
-            onPress={() => router.push(`/exam/${item.id}`)}
+            onPress={() => router.push({ pathname: '/exam/[topicId]', params: { topicId: item.id } })}
           />
         )}
         showsVerticalScrollIndicator={false}

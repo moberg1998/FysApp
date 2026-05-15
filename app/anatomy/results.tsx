@@ -18,10 +18,10 @@ export default function AnatomyResults() {
   if (!session) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Results" onBack={() => router.replace('/anatomy')} />
+        <ScreenHeader title="Results" onBack={() => router.replace('/anatomy/index')} />
         <View style={styles.empty}>
           <Text style={styles.emptyText}>No session data.</Text>
-          <Button title="Back to Anatomy" onPress={() => { resetSession(); router.replace('/anatomy'); }} />
+          <Button title="Back to Anatomy" onPress={() => { resetSession(); router.replace('/anatomy/index'); }} />
         </View>
       </View>
     );
@@ -39,7 +39,7 @@ export default function AnatomyResults() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Session Complete" onBack={() => { resetSession(); router.replace('/anatomy'); }} showBack />
+      <ScreenHeader title="Session Complete" onBack={() => { resetSession(); router.replace('/anatomy/index'); }} showBack />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.scoreRow}>
           <ScoreCircle score={score} size={110} label={scoreLabel} />
@@ -79,14 +79,14 @@ export default function AnatomyResults() {
         <View style={styles.actions}>
           <Button
             title="Study Again"
-            onPress={() => { resetSession(); router.replace(`/anatomy/${session.categoryId}`); }}
+            onPress={() => { resetSession(); router.replace({ pathname: '/anatomy/[categoryId]', params: { categoryId: session.categoryId } }); }}
             variant="secondary"
             size="lg"
             fullWidth
           />
           <Button
             title="Back to Categories"
-            onPress={() => { resetSession(); router.replace('/anatomy'); }}
+            onPress={() => { resetSession(); router.replace('/anatomy/index'); }}
             variant="ghost"
             size="lg"
             fullWidth

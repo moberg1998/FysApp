@@ -94,10 +94,10 @@ export default function QuizResults() {
   if (!session || !results) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Results" onBack={() => router.replace('/quiz')} />
+        <ScreenHeader title="Results" onBack={() => router.replace('/quiz/index')} />
         <View style={styles.empty}>
           <Text style={styles.emptyText}>No session data. Return to quiz.</Text>
-          <Button title="Go to Quiz" onPress={() => { resetSession(); router.replace('/quiz'); }} />
+          <Button title="Go to Quiz" onPress={() => { resetSession(); router.replace('/quiz/index'); }} />
         </View>
       </View>
     );
@@ -107,7 +107,7 @@ export default function QuizResults() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Results" onBack={() => { resetSession(); router.replace('/quiz'); }} showBack />
+      <ScreenHeader title="Results" onBack={() => { resetSession(); router.replace('/quiz/index'); }} showBack />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         {/* Score */}
         <View style={styles.scoreRow}>
@@ -183,7 +183,7 @@ export default function QuizResults() {
         })}
 
         <View style={styles.actions}>
-          <Button title="New Session" onPress={() => { resetSession(); router.replace('/quiz'); }} variant="secondary" size="lg" fullWidth />
+          <Button title="New Session" onPress={() => { resetSession(); router.replace('/quiz/index'); }} variant="secondary" size="lg" fullWidth />
         </View>
       </ScrollView>
     </View>

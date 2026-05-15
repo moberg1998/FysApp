@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, ViewStyle, StyleSheet } from 'react-native';
+import { View, ViewStyle, StyleProp, StyleSheet } from 'react-native';
 import { Colors } from '@/constants/Colors';
 import { Layout } from '@/constants/Layout';
 
 interface CardProps {
   children: React.ReactNode;
-  style?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
   elevated?: boolean;
   noPadding?: boolean;
 }

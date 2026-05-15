@@ -23,7 +23,7 @@ export default function QuizTopicSelect() {
           <TopicCard
             topic={item}
             bestScore={getBestScore(item.id)}
-            onPress={() => router.push(`/quiz/${item.id}`)}
+            onPress={() => router.push({ pathname: '/quiz/[topicId]', params: { topicId: item.id } })}
           />
         )}
         showsVerticalScrollIndicator={false}

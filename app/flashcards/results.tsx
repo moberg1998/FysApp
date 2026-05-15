@@ -40,10 +40,10 @@ export default function FlashcardResults() {
   if (!session) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Results" onBack={() => router.replace('/flashcards')} />
+        <ScreenHeader title="Results" onBack={() => router.replace('/flashcards/index')} />
         <View style={styles.empty}>
           <Text style={styles.emptyText}>No session data.</Text>
-          <Button title="Back to Flashcards" onPress={() => { resetSession(); router.replace('/flashcards'); }} />
+          <Button title="Back to Flashcards" onPress={() => { resetSession(); router.replace('/flashcards/index'); }} />
         </View>
       </View>
     );
@@ -60,7 +60,7 @@ export default function FlashcardResults() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Session Complete" onBack={() => { resetSession(); router.replace('/flashcards'); }} showBack />
+      <ScreenHeader title="Session Complete" onBack={() => { resetSession(); router.replace('/flashcards/index'); }} showBack />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.scoreRow}>
           <ScoreCircle score={score} size={110} label={scoreLabel} />
@@ -113,14 +113,14 @@ export default function FlashcardResults() {
         <View style={styles.actions}>
           <Button
             title="Study Again"
-            onPress={() => { resetSession(); router.replace(`/flashcards/${session.topicId}`); }}
+            onPress={() => { resetSession(); router.replace({ pathname: '/flashcards/[topicId]', params: { topicId: session.topicId } }); }}
             variant="secondary"
             size="lg"
             fullWidth
           />
           <Button
             title="Back to Topics"
-            onPress={() => { resetSession(); router.replace('/flashcards'); }}
+            onPress={() => { resetSession(); router.replace('/flashcards/index'); }}
             variant="ghost"
             size="lg"
             fullWidth
