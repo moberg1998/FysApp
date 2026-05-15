@@ -1,0 +1,170 @@
+import { AnatomyCategory } from '@/types';
+
+export const ANATOMY_CATEGORIES: AnatomyCategory[] = [
+  // ─── Lower Extremity ──────────────────────────────────────────────────────
+  {
+    id: 'hip-pelvis',
+    title: 'Hip & Pelvis',
+    description: 'Bony landmarks, muscles, ligaments, and clinical relevance',
+    questionCount: 8,
+    isAvailable: true,
+    group: 'lower-extremity',
+  },
+  {
+    id: 'knee',
+    title: 'Knee',
+    description: 'Joint structure, ligaments, menisci, and common injuries',
+    questionCount: 8,
+    isAvailable: true,
+    group: 'lower-extremity',
+  },
+  {
+    id: 'ankle-foot',
+    title: 'Ankle & Foot',
+    description: 'Mortise joint, arches, tendons, and clinical relevance',
+    questionCount: 8,
+    isAvailable: true,
+    group: 'lower-extremity',
+  },
+  {
+    id: 'gait-cycle',
+    title: 'Gait Cycle',
+    description: 'Phases, muscle activity, and pathological deviations',
+    questionCount: 8,
+    isAvailable: true,
+    group: 'lower-extremity',
+  },
+  {
+    id: 'balance-postural',
+    title: 'Balance & Postural Strategies',
+    description: 'Ankle, hip, and stepping strategies; sensory systems',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'lower-extremity',
+  },
+  {
+    id: 'myotomes-lower',
+    title: 'Myotomes & Dermatomes (Lower)',
+    description: 'L2–S2 myotomes, dermatomes, and reflexes',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'lower-extremity',
+  },
+
+  // ─── Upper Extremity ──────────────────────────────────────────────────────
+  {
+    id: 'shoulder-complex',
+    title: 'Shoulder Complex',
+    description: 'GH, AC, SC joints; rotator cuff; scapular control',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'upper-extremity',
+  },
+  {
+    id: 'scapula-control',
+    title: 'Scapula & Scapular Control',
+    description: 'Serratus anterior, trapezius, scapular dyskinesis',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'upper-extremity',
+  },
+  {
+    id: 'elbow-forearm',
+    title: 'Elbow & Forearm',
+    description: 'Joint structure, pronation/supination, common pathology',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'upper-extremity',
+  },
+  {
+    id: 'wrist-hand',
+    title: 'Wrist & Hand',
+    description: 'Carpal bones, intrinsic muscles, grip function',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'upper-extremity',
+  },
+  {
+    id: 'myotomes-upper',
+    title: 'Myotomes & Dermatomes (Upper)',
+    description: 'C5–T1 myotomes, dermatomes, and reflexes',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'upper-extremity',
+  },
+
+  // ─── Spine & Trunk ────────────────────────────────────────────────────────
+  {
+    id: 'cervical-spine',
+    title: 'Cervical Spine',
+    description: 'Vertebral anatomy, joints of Luschka, cervicogenic headache',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'spine-trunk',
+  },
+  {
+    id: 'thoracic-spine',
+    title: 'Thoracic Spine & Trunk',
+    description: 'Rib cage, facets, thoracic mobility in function',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'spine-trunk',
+  },
+  {
+    id: 'lumbar-spine',
+    title: 'Lumbar Spine & Pelvis',
+    description: 'Disc anatomy, sacroiliac joint, lumbar stability',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'spine-trunk',
+  },
+  {
+    id: 'core-musculature',
+    title: 'Core Musculature in Function',
+    description: 'Local and global stabilisers, intra-abdominal pressure',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'spine-trunk',
+  },
+
+  // ─── Neurofunctional Anatomy ──────────────────────────────────────────────
+  {
+    id: 'basal-ganglia-parkinson',
+    title: 'Basal Ganglia & Parkinson\'s',
+    description: 'Motor loop, dopamine pathways, clinical relevance',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'neurofunctional',
+  },
+  {
+    id: 'corticospinal-stroke',
+    title: 'Corticospinal Pathways & Stroke',
+    description: 'Motor control pathways, UMN signs, recovery',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'neurofunctional',
+  },
+  {
+    id: 'cerebellar-function',
+    title: 'Cerebellar Function & Ataxia',
+    description: 'Cerebellar anatomy, coordination, clinical signs',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'neurofunctional',
+  },
+  {
+    id: 'central-peripheral',
+    title: 'Central vs Peripheral Neurology',
+    description: 'UMN vs LMN signs, key differentiators',
+    questionCount: 0,
+    isAvailable: false,
+    group: 'neurofunctional',
+  },
+];
+
+export const ANATOMY_GROUPS = [
+  { key: 'lower-extremity', label: 'Lower Extremity' },
+  { key: 'upper-extremity', label: 'Upper Extremity' },
+  { key: 'spine-trunk', label: 'Spine & Trunk' },
+  { key: 'neurofunctional', label: 'Neurofunctional Anatomy' },
+] as const;
