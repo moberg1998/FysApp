@@ -18,19 +18,19 @@ const feedbackConfig: Record<FeedbackType, { color: string; bg: string; icon: st
     color: Colors.correct,
     bg: Colors.correctSubtle,
     icon: 'checkmark-circle',
-    label: 'Correct',
+    label: 'Korrekt',
   },
   partial: {
     color: Colors.warning,
     bg: Colors.warningSubtle,
     icon: 'alert-circle',
-    label: 'Partially Correct',
+    label: 'Delvist korrekt',
   },
   incorrect: {
     color: Colors.incorrect,
     bg: Colors.incorrectSubtle,
     icon: 'close-circle',
-    label: 'Incorrect',
+    label: 'Forkert',
   },
 };
 
@@ -46,13 +46,13 @@ export function FeedbackPanel({ type, explanation, takeaway, partialInfo }: Feed
       </View>
 
       <View style={styles.body}>
-        <Text style={styles.explanationLabel}>Explanation</Text>
+        <Text style={styles.explanationLabel}>Forklaring</Text>
         <Text style={styles.explanation}>{explanation}</Text>
 
         <View style={styles.takeawayBox}>
           <View style={styles.takeawayHeader}>
             <Ionicons name="bookmark" size={14} color={Colors.primary} />
-            <Text style={styles.takeawayLabel}>Most important takeaway</Text>
+            <Text style={styles.takeawayLabel}>Vigtigste læringspointe</Text>
           </View>
           <Text style={styles.takeaway}>{takeaway}</Text>
         </View>

@@ -14,7 +14,7 @@ export default function ExamTopicSelect() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Clinical Cases" subtitle="Choose a topic" />
+      <ScreenHeader title="Kliniske cases" subtitle="Vælg et emne" />
       <FlatList
         data={EXAM_TOPICS}
         keyExtractor={(t) => t.id}

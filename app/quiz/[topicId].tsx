@@ -16,7 +16,7 @@ const ALL_QUESTIONS: Record<string, QuizQuestion[]> = {
 };
 
 const LENGTHS = [5, 10, 20, 0] as const;
-const LENGTH_LABELS: Record<number, string> = { 5: '5 Questions', 10: '10 Questions', 20: '20 Questions', 0: 'All Questions' };
+const LENGTH_LABELS: Record<number, string> = { 5: '5 spørgsmål', 10: '10 spørgsmål', 20: '20 spørgsmål', 0: 'Alle spørgsmål' };
 
 export default function QuizConfig() {
   const { topicId } = useLocalSearchParams<{ topicId: string }>();
@@ -41,14 +41,14 @@ export default function QuizConfig() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title={topic.title} subtitle="Configure your session" />
+      <ScreenHeader title={topic.title} subtitle="Konfigurer din session" />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <Card style={styles.infoCard}>
-          <Text style={styles.infoLabel}>Available questions</Text>
+          <Text style={styles.infoLabel}>Tilgængelige spørgsmål</Text>
           <Text style={styles.infoValue}>{questions.length}</Text>
         </Card>
 
-        <Text style={styles.sectionLabel}>Session Length</Text>
+        <Text style={styles.sectionLabel}>Sessionslængde</Text>
         <View style={styles.lengthGrid}>
           {LENGTHS.map((len) => {
             const isAvailable = len === 0 || len <= questions.length;
@@ -68,7 +68,7 @@ export default function QuizConfig() {
                   {len === 0 ? `All ${questions.length}` : len}
                 </Text>
                 <Text style={[styles.lengthSubtext, isSelected && styles.lengthSubtextSelected]}>
-                  {len === 0 ? 'questions' : 'q\'s'}
+                  {len === 0 ? 'spørgsmål' : 'sp.'}
                 </Text>
               </TouchableOpacity>
             );
@@ -76,7 +76,7 @@ export default function QuizConfig() {
         </View>
 
         <Button
-          title="Start Quiz"
+          title="Start quiz"
           onPress={handleStart}
           disabled={questions.length === 0}
           size="lg"
@@ -85,7 +85,7 @@ export default function QuizConfig() {
         />
 
         {questions.length === 0 && (
-          <Text style={styles.emptyNote}>No questions available for this topic yet.</Text>
+          <Text style={styles.emptyNote}>Ingen spørgsmål tilgængeligt for dette emne endnu.</Text>
         )}
       </ScrollView>
     </View>

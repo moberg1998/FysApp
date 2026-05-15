@@ -70,9 +70,9 @@ export default function ExamSession() {
   const isLast = session.currentStep >= 5;
 
   const handleBack = () => {
-    Alert.alert('Exit Case', 'Your progress will be lost. Are you sure?', [
-      { text: 'Cancel', style: 'cancel' },
-      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/exam/index') },
+    Alert.alert('Afslut case', 'Din fremgang slettes. Er du sikker?', [
+      { text: 'Annuller', style: 'cancel' },
+      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/exam/index') },
     ]);
   };
 
@@ -80,7 +80,7 @@ export default function ExamSession() {
     <View style={styles.screen}>
       <ScreenHeader
         title={session.examCase.title}
-        subtitle={`Step ${session.currentStep + 1} of 6`}
+        subtitle={`Trin ${session.currentStep + 1} af 6`}
         onBack={handleBack}
       />
       <StepIndicator currentStep={session.currentStep} submittedSteps={session.stepSubmitted} />
@@ -95,7 +95,7 @@ export default function ExamSession() {
           <Card style={styles.profileCard}>
             <Text style={styles.profileLabel}>PATIENT</Text>
             <Text style={styles.profileText}>{session.examCase.patientProfile}</Text>
-            <Text style={styles.complaintLabel}>Chief Complaint</Text>
+            <Text style={styles.complaintLabel}>Hovedklage</Text>
             <Text style={styles.complaintText}>{session.examCase.chiefComplaint}</Text>
           </Card>
         )}
@@ -156,7 +156,7 @@ export default function ExamSession() {
       <View style={styles.footer}>
         {!isSubmitted ? (
           <Button
-            title="Submit Step"
+            title="Bekræft trin"
             onPress={submitStep}
             disabled={selectedIds.length === 0}
             size="lg"
@@ -164,7 +164,7 @@ export default function ExamSession() {
           />
         ) : (
           <Button
-            title={isLast ? 'See Results' : 'Next Step'}
+            title={isLast ? 'Se resultater' : 'Næste trin'}
             onPress={nextStep}
             size="lg"
             fullWidth

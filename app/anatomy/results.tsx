@@ -18,10 +18,10 @@ export default function AnatomyResults() {
   if (!session) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Results" onBack={() => router.replace('/anatomy/index')} />
+        <ScreenHeader title="Resultater" onBack={() => router.replace('/anatomy/index')} />
         <View style={styles.empty}>
-          <Text style={styles.emptyText}>No session data.</Text>
-          <Button title="Back to Anatomy" onPress={() => { resetSession(); router.replace('/anatomy/index'); }} />
+          <Text style={styles.emptyText}>Ingen sessionsdata.</Text>
+          <Button title="Tilbage til anatomi" onPress={() => { resetSession(); router.replace('/anatomy/index'); }} />
         </View>
       </View>
     );
@@ -35,24 +35,24 @@ export default function AnatomyResults() {
   const total = session.questions.length;
   const score = total > 0 ? Math.round((correct / total) * 100) : 0;
   const category = ANATOMY_CATEGORIES.find((c) => c.id === session.categoryId);
-  const scoreLabel = score >= 75 ? 'Well done' : score >= 50 ? 'Good effort' : 'Keep practising';
+  const scoreLabel = score >= 75 ? 'Godt klaret' : score >= 50 ? 'God indsats' : 'Bliv ved med at øve';
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Session Complete" onBack={() => { resetSession(); router.replace('/anatomy/index'); }} showBack />
+      <ScreenHeader title="Session afsluttet" onBack={() => { resetSession(); router.replace('/anatomy/index'); }} showBack />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.scoreRow}>
           <ScoreCircle score={score} size={110} label={scoreLabel} />
           <View style={styles.statsColumn}>
-            <StatRow icon="checkmark-circle" color={Colors.correct} label="Correct" value={`${correct}`} />
-            <StatRow icon="close-circle" color={Colors.incorrect} label="Incorrect" value={`${total - correct}`} />
-            <StatRow icon="layers" color={Colors.textSecondary} label="Total" value={`${total}`} />
+            <StatRow icon="checkmark-circle" color={Colors.correct} label="Korrekt" value={`${correct}`} />
+            <StatRow icon="close-circle" color={Colors.incorrect} label="Forkert" value={`${total - correct}`} />
+            <StatRow icon="layers" color={Colors.textSecondary} label="I alt" value={`${total}`} />
           </View>
         </View>
 
         {/* Question review */}
         <Card>
-          <Text style={styles.reviewTitle}>Question Review</Text>
+          <Text style={styles.reviewTitle}>Spørgsmålsgennemgang</Text>
           {session.questions.map((q, i) => {
             const selected = session.answers[q.id];
             const isCorrect = selected != null && q.options.find((o) => o.id === selected)?.isCorrect;
@@ -69,7 +69,7 @@ export default function AnatomyResults() {
                   <Text style={styles.reviewQuestion} numberOfLines={2}>{q.question}</Text>
                 </View>
                 {!isCorrect && correctOption && (
-                  <Text style={styles.reviewAnswer}>Correct: {correctOption.text}</Text>
+                  <Text style={styles.reviewAnswer}>Korrekt: {correctOption.text}</Text>
                 )}
               </View>
             );
@@ -78,14 +78,14 @@ export default function AnatomyResults() {
 
         <View style={styles.actions}>
           <Button
-            title="Study Again"
+            title="Studér igen"
             onPress={() => { resetSession(); router.replace({ pathname: '/anatomy/[categoryId]', params: { categoryId: session.categoryId } }); }}
             variant="secondary"
             size="lg"
             fullWidth
           />
           <Button
-            title="Back to Categories"
+            title="Tilbage til kategorier"
             onPress={() => { resetSession(); router.replace('/anatomy/index'); }}
             variant="ghost"
             size="lg"

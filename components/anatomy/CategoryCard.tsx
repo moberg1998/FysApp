@@ -37,7 +37,7 @@ export function CategoryCard({ category, onPress, bestScore }: CategoryCardProps
           <Text style={[styles.title, !isAvailable && styles.titleDisabled]}>{category.title}</Text>
           {!isAvailable && (
             <View style={styles.comingSoon}>
-              <Text style={styles.comingSoonText}>Soon</Text>
+              <Text style={styles.comingSoonText}>Snart</Text>
             </View>
           )}
           {bestScore != null && (
@@ -48,7 +48,7 @@ export function CategoryCard({ category, onPress, bestScore }: CategoryCardProps
         </View>
         <Text style={styles.description} numberOfLines={1}>{category.description}</Text>
         {isAvailable && (
-          <Text style={styles.count}>{category.questionCount} questions</Text>
+          <Text style={styles.count}>{category.questionCount} spørgsmål</Text>
         )}
       </View>
 

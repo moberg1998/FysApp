@@ -6,12 +6,12 @@ import { Layout } from '@/constants/Layout';
 import { ExamStepType } from '@/types';
 
 const STEP_TYPE_META: Record<ExamStepType, { label: string; icon: string; color: string }> = {
-  anamnesis: { label: 'Anamnesis', icon: 'chatbubble-ellipses', color: Colors.info },
-  'red-flags': { label: 'Red Flags', icon: 'warning', color: Colors.incorrect },
-  examination: { label: 'Examination', icon: 'body', color: Colors.modeAnatomy },
-  hypothesis: { label: 'Clinical Reasoning', icon: 'bulb', color: Colors.warning },
-  treatment: { label: 'Treatment Plan', icon: 'fitness', color: Colors.primary },
-  documentation: { label: 'Documentation', icon: 'document-text', color: Colors.textSecondary },
+  anamnesis: { label: 'Anamnese', icon: 'chatbubble-ellipses', color: Colors.info },
+  'red-flags': { label: 'Røde flag', icon: 'warning', color: Colors.incorrect },
+  examination: { label: 'Undersøgelse', icon: 'body', color: Colors.modeAnatomy },
+  hypothesis: { label: 'Klinisk ræsonnering', icon: 'bulb', color: Colors.warning },
+  treatment: { label: 'Behandlingsplan', icon: 'fitness', color: Colors.primary },
+  documentation: { label: 'Dokumentation', icon: 'document-text', color: Colors.textSecondary },
 };
 
 interface StepCardProps {
@@ -28,11 +28,11 @@ export function StepCard({ type, stepNumber, prompt }: StepCardProps) {
       <View style={styles.header}>
         <View style={[styles.typeTag, { backgroundColor: meta.color + '20' }]}>
           <Ionicons name={meta.icon as 'body'} size={13} color={meta.color} />
-          <Text style={[styles.typeLabel, { color: meta.color }]}>Step {stepNumber} — {meta.label}</Text>
+          <Text style={[styles.typeLabel, { color: meta.color }]}>Trin {stepNumber} — {meta.label}</Text>
         </View>
       </View>
       <Text style={styles.prompt}>{prompt}</Text>
-      <Text style={styles.hint}>Select all that apply</Text>
+      <Text style={styles.hint}>Vælg alle der passer</Text>
     </View>
   );
 }

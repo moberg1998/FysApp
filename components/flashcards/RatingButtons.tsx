@@ -11,9 +11,9 @@ interface RatingButtonsProps {
 }
 
 const ratings: { status: FlashcardStatus; label: string; icon: string; color: string; bg: string }[] = [
-  { status: 'repeat', label: 'Again', icon: 'refresh', color: Colors.incorrect, bg: Colors.incorrectSubtle },
-  { status: 'unsure', label: 'Unsure', icon: 'help-circle', color: Colors.warning, bg: Colors.warningSubtle },
-  { status: 'knew', label: 'Knew it', icon: 'checkmark-circle', color: Colors.correct, bg: Colors.correctSubtle },
+  { status: 'repeat', label: 'Igen', icon: 'refresh', color: Colors.incorrect, bg: Colors.incorrectSubtle },
+  { status: 'unsure', label: 'Usikker', icon: 'help-circle', color: Colors.warning, bg: Colors.warningSubtle },
+  { status: 'knew', label: 'Vidste det', icon: 'checkmark-circle', color: Colors.correct, bg: Colors.correctSubtle },
 ];
 
 export function RatingButtons({ onRate, disabled }: RatingButtonsProps) {

@@ -53,9 +53,9 @@ export default function ProgressScreen() {
   if (isLoading) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Progress" onBack={() => router.back()} />
+        <ScreenHeader title="Fremgang" onBack={() => router.back()} />
         <View style={styles.center}>
-          <Text style={styles.loadingText}>Loading...</Text>
+          <Text style={styles.loadingText}>Indlæser...</Text>
         </View>
       </View>
     );
@@ -65,14 +65,14 @@ export default function ProgressScreen() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Progress" subtitle="Your learning overview" onBack={() => router.back()} />
+      <ScreenHeader title="Fremgang" subtitle="Din læringsoversigt" onBack={() => router.back()} />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
 
         {!hasAnyData && (
           <View style={styles.emptyBanner}>
             <Ionicons name="stats-chart" size={32} color={Colors.textMuted} />
-            <Text style={styles.emptyTitle}>No activity yet</Text>
-            <Text style={styles.emptyText}>Complete a quiz, flashcard session, or exam to see your progress here.</Text>
+            <Text style={styles.emptyTitle}>Ingen aktivitet endnu</Text>
+            <Text style={styles.emptyText}>Gennemfør en quiz, flashkort-session eller eksamen for at se din fremgang her.</Text>
           </View>
         )}
 
@@ -81,9 +81,9 @@ export default function ProgressScreen() {
           <Card>
             <SectionHeader icon="help-circle" color={Colors.modeQuiz} title="Quiz" />
             <View style={styles.statsGrid}>
-              <StatBox label="Sessions" value={`${quizStats.total}`} color={Colors.textPrimary} />
-              <StatBox label="Best Score" value={`${quizStats.best}%`} color={Colors.correct} />
-              <StatBox label="Latest" value={`${quizStats.latest}%`} color={Colors.primary} />
+              <StatBox label="Sessioner" value={`${quizStats.total}`} color={Colors.textPrimary} />
+              <StatBox label="Bedste score" value={`${quizStats.best}%`} color={Colors.correct} />
+              <StatBox label="Seneste" value={`${quizStats.latest}%`} color={Colors.primary} />
             </View>
           </Card>
         )}
@@ -91,11 +91,11 @@ export default function ProgressScreen() {
         {/* Flashcard stats */}
         {flashcardStats && (
           <Card>
-            <SectionHeader icon="layers" color={Colors.modeFlashcard} title="Flashcards" />
+            <SectionHeader icon="layers" color={Colors.modeFlashcard} title="Flashkort" />
             <View style={styles.statsGrid}>
-              <StatBox label="Sessions" value={`${flashcardStats.sessions}`} color={Colors.textPrimary} />
-              <StatBox label="Knew It" value={`${flashcardStats.totalKnew}`} color={Colors.correct} />
-              <StatBox label="Total Rated" value={`${flashcardStats.totalCards}`} color={Colors.textSecondary} />
+              <StatBox label="Sessioner" value={`${flashcardStats.sessions}`} color={Colors.textPrimary} />
+              <StatBox label="Vidste det" value={`${flashcardStats.totalKnew}`} color={Colors.correct} />
+              <StatBox label="Samlet bedømt" value={`${flashcardStats.totalCards}`} color={Colors.textSecondary} />
             </View>
             {flashcardStats.totalCards > 0 && (
               <View style={styles.knewBar}>
@@ -111,11 +111,11 @@ export default function ProgressScreen() {
         {/* Exam stats */}
         {examStats && (
           <Card>
-            <SectionHeader icon="document" color={Colors.modeExam} title="Clinical Cases" />
+            <SectionHeader icon="document" color={Colors.modeExam} title="Kliniske cases" />
             <View style={styles.statsGrid}>
-              <StatBox label="Attempts" value={`${examStats.total}`} color={Colors.textPrimary} />
-              <StatBox label="Passed" value={`${examStats.passed}`} color={Colors.correct} />
-              <StatBox label="Best Score" value={`${examStats.best}%`} color={Colors.primary} />
+              <StatBox label="Forsøg" value={`${examStats.total}`} color={Colors.textPrimary} />
+              <StatBox label="Bestået" value={`${examStats.passed}`} color={Colors.correct} />
+              <StatBox label="Bedste score" value={`${examStats.best}%`} color={Colors.primary} />
             </View>
           </Card>
         )}
@@ -123,7 +123,7 @@ export default function ProgressScreen() {
         {/* Weak areas */}
         {weakAreas.length > 0 && (
           <Card>
-            <SectionHeader icon="trending-down" color={Colors.warning} title="Areas to Focus On" />
+            <SectionHeader icon="trending-down" color={Colors.warning} title="Fokusområder" />
             {weakAreas.map((area) => {
               const errorRate = Math.round((area.incorrectCount / area.totalAttempts) * 100);
               return (
@@ -132,8 +132,8 @@ export default function ProgressScreen() {
                     <Text style={styles.weakTagText}>{area.tag.replace(/-/g, ' ')}</Text>
                   </View>
                   <View style={styles.weakRight}>
-                    <Text style={styles.weakRate}>{errorRate}% errors</Text>
-                    <Text style={styles.weakAttempts}>{area.totalAttempts} attempts</Text>
+                    <Text style={styles.weakRate}>{errorRate}% fejl</Text>
+                    <Text style={styles.weakAttempts}>{area.totalAttempts} forsøg</Text>
                   </View>
                 </View>
               );
@@ -143,7 +143,7 @@ export default function ProgressScreen() {
 
         {/* Topic progress */}
         <Card>
-          <SectionHeader icon="grid" color={Colors.primary} title="Topics" />
+          <SectionHeader icon="grid" color={Colors.primary} title="Emner" />
           {availableTopics.map((topic) => {
             const quizBest = progress?.quizResults
               .filter((r) => r.topicId === topic.id)

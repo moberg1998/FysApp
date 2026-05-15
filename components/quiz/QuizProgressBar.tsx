@@ -16,7 +16,7 @@ export function QuizProgressBar({ current, total }: QuizProgressBarProps) {
     <View style={styles.container}>
       <ProgressBar progress={progress} height={4} />
       <Text style={styles.label}>
-        {current} <Text style={styles.of}>of</Text> {total}
+        {current} <Text style={styles.of}>af</Text> {total}
       </Text>
     </View>
   );

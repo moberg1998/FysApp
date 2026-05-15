@@ -20,10 +20,12 @@ export default function ExamCaseList() {
   const { topicId } = useLocalSearchParams<{ topicId: string }>();
   const router = useRouter();
   const { progress } = useProgress();
-
-  const topic = getTopicById(topicId ?? '');
-  const cases = ALL_EXAM_CASES[topicId ?? ''] ?? [];
   const { startSession } = useExamSession();
+
+  if (!topicId) return null;
+
+  const topic = getTopicById(topicId);
+  const cases = ALL_EXAM_CASES[topicId] ?? [];
 
   const handleSelectCase = (examCase: ExamCase) => {
     startSession(topicId ?? '', examCase);
@@ -40,11 +42,11 @@ export default function ExamCaseList() {
   if (!topic?.isAvailable || cases.length === 0) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Clinical Cases" onBack={() => router.back()} />
+        <ScreenHeader title="Kliniske cases" onBack={() => router.back()} />
         <EmptyState
           icon="construct"
-          title="Coming Soon"
-          message="Clinical cases for this topic are being prepared. Check back soon."
+          title="Kommer snart"
+          message="Kliniske cases til dette emne er under udarbejdelse. Kom tilbage snart."
         />
       </View>
     );
@@ -52,14 +54,14 @@ export default function ExamCaseList() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title={topic.title} subtitle="Select a case" onBack={() => router.back()} />
+      <ScreenHeader title={topic.title} subtitle="Vælg en case" onBack={() => router.back()} />
       <FlatList
         data={cases}
         keyExtractor={(c) => c.id}
         contentContainerStyle={styles.list}
         ListHeaderComponent={
           <Text style={styles.intro}>
-            Work through each case step by step. Select all appropriate actions for each clinical stage.
+            Arbejd dig gennem hvert trin. Vælg alle passende handlinger for hvert klinisk trin.
           </Text>
         }
         renderItem={({ item }) => (

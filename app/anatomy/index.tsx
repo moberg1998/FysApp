@@ -10,10 +10,10 @@ import { useProgress } from '@/hooks/useProgress';
 import { AnatomyCategory } from '@/types';
 
 const GROUP_LABELS: Record<AnatomyCategory['group'], string> = {
-  'lower-extremity': 'Lower Extremity',
-  'upper-extremity': 'Upper Extremity',
-  'spine-trunk': 'Spine & Trunk',
-  'neurofunctional': 'Neurological & Functional',
+  'lower-extremity': 'Underekstremitet',
+  'upper-extremity': 'Overekstremitet',
+  'spine-trunk': 'Rygsøjle og krop',
+  'neurofunctional': 'Neurologisk og funktionelt',
 };
 
 const GROUP_ORDER: AnatomyCategory['group'][] = [
@@ -41,7 +41,7 @@ export default function AnatomyCategorySelect() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Anatomy" subtitle="Choose a category" />
+      <ScreenHeader title="Anatomi" subtitle="Vælg en kategori" />
       <SectionList
         sections={sections}
         keyExtractor={(item) => item.id}

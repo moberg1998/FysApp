@@ -12,7 +12,7 @@ export default function FlashcardsTopicSelect() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Flashcards" subtitle="Choose a topic" />
+      <ScreenHeader title="Flashkort" subtitle="Vælg et emne" />
       <FlatList
         data={TOPICS}
         keyExtractor={(t) => t.id}

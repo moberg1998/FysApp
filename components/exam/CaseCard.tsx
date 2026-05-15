@@ -38,7 +38,7 @@ export function CaseCard({ examCase, onPress, isCompleted, score }: CaseCardProp
       <View style={styles.footer}>
         <View style={styles.stepBadge}>
           <Ionicons name="list" size={12} color={Colors.textMuted} />
-          <Text style={styles.stepText}>6 clinical steps</Text>
+          <Text style={styles.stepText}>6 kliniske trin</Text>
         </View>
         <Ionicons name="chevron-forward" size={16} color={Colors.textMuted} />
       </View>

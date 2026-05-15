@@ -14,7 +14,7 @@ export default function QuizTopicSelect() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Quiz Mode" subtitle="Choose a topic to practice" />
+      <ScreenHeader title="Quiz" subtitle="Vælg et emne at øve" />
       <FlatList
         data={TOPICS}
         keyExtractor={(t) => t.id}

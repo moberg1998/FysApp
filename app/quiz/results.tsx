@@ -94,29 +94,29 @@ export default function QuizResults() {
   if (!session || !results) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Results" onBack={() => router.replace('/quiz/index')} />
+        <ScreenHeader title="Resultater" onBack={() => router.replace('/quiz/index')} />
         <View style={styles.empty}>
-          <Text style={styles.emptyText}>No session data. Return to quiz.</Text>
-          <Button title="Go to Quiz" onPress={() => { resetSession(); router.replace('/quiz/index'); }} />
+          <Text style={styles.emptyText}>Ingen sessionsdata. Gå tilbage til quiz.</Text>
+          <Button title="Gå til quiz" onPress={() => { resetSession(); router.replace('/quiz/index'); }} />
         </View>
       </View>
     );
   }
 
-  const scoreLabel = results.score >= 75 ? 'Excellent' : results.score >= 50 ? 'Good effort' : 'Keep practising';
+  const scoreLabel = results.score >= 75 ? 'Fremragende' : results.score >= 50 ? 'God indsats' : 'Bliv ved med at øve';
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Results" onBack={() => { resetSession(); router.replace('/quiz/index'); }} showBack />
+      <ScreenHeader title="Resultater" onBack={() => { resetSession(); router.replace('/quiz/index'); }} showBack />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         {/* Score */}
         <View style={styles.scoreRow}>
           <ScoreCircle score={results.score} size={110} label={scoreLabel} />
           <View style={styles.statsColumn}>
-            <StatRow icon="checkmark-circle" color={Colors.correct} label="Correct" value={`${results.correct}`} />
-            <StatRow icon="alert-circle" color={Colors.warning} label="Partial" value={`${results.partial}`} />
-            <StatRow icon="close-circle" color={Colors.incorrect} label="Incorrect" value={`${results.incorrect}`} />
-            <StatRow icon="layers" color={Colors.textSecondary} label="Total" value={`${session.questions.length}`} />
+            <StatRow icon="checkmark-circle" color={Colors.correct} label="Korrekt" value={`${results.correct}`} />
+            <StatRow icon="alert-circle" color={Colors.warning} label="Delvist" value={`${results.partial}`} />
+            <StatRow icon="close-circle" color={Colors.incorrect} label="Forkert" value={`${results.incorrect}`} />
+            <StatRow icon="layers" color={Colors.textSecondary} label="I alt" value={`${session.questions.length}`} />
           </View>
         </View>
 
@@ -125,7 +125,7 @@ export default function QuizResults() {
           <Card>
             <View style={styles.weakHeader}>
               <Ionicons name="trending-down" size={16} color={Colors.warning} />
-              <Text style={styles.weakTitle}>Areas to review</Text>
+              <Text style={styles.weakTitle}>Områder at gennemgå</Text>
             </View>
             <View style={styles.tagRow}>
               {results.weakTags.map((tag) => (
@@ -142,7 +142,7 @@ export default function QuizResults() {
           activeOpacity={0.75}
         >
           <Text style={styles.reviewToggleText}>
-            {showReview ? 'Hide Question Review' : 'Review All Questions'}
+            {showReview ? 'Skjul spørgsmålsgennemgang' : 'Gennemgå alle spørgsmål'}
           </Text>
           <Ionicons name={showReview ? 'chevron-up' : 'chevron-down'} size={18} color={Colors.primary} />
         </TouchableOpacity>
@@ -183,7 +183,7 @@ export default function QuizResults() {
         })}
 
         <View style={styles.actions}>
-          <Button title="New Session" onPress={() => { resetSession(); router.replace('/quiz/index'); }} variant="secondary" size="lg" fullWidth />
+          <Button title="Ny session" onPress={() => { resetSession(); router.replace('/quiz/index'); }} variant="secondary" size="lg" fullWidth />
         </View>
       </ScrollView>
     </View>

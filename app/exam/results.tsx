@@ -13,7 +13,7 @@ import { useProgress } from '@/hooks/useProgress';
 import { generateId } from '@/store/progressStore';
 import { ExamResult, ExamStepScore } from '@/types';
 
-const STEP_LABELS = ['Anamnesis', 'Red Flags', 'Examination', 'Reasoning', 'Treatment', 'Documentation'];
+const STEP_LABELS = ['Anamnese', 'Røde flag', 'Undersøgelse', 'Ræsonnering', 'Behandling', 'Dokumentation'];
 
 export default function ExamResults() {
   const router = useRouter();
@@ -66,22 +66,22 @@ export default function ExamResults() {
   if (!session) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Results" onBack={() => router.replace('/exam/index')} />
+        <ScreenHeader title="Resultater" onBack={() => router.replace('/exam/index')} />
         <View style={styles.empty}>
-          <Text style={styles.emptyText}>No session data.</Text>
-          <Button title="Back to Cases" onPress={() => { resetSession(); router.replace('/exam/index'); }} />
+          <Text style={styles.emptyText}>Ingen sessionsdata.</Text>
+          <Button title="Tilbage til cases" onPress={() => { resetSession(); router.replace('/exam/index'); }} />
         </View>
       </View>
     );
   }
 
   const scoreLabel = passed
-    ? percentage >= 80 ? 'Excellent clinical reasoning' : 'Case completed'
-    : 'Review needed';
+    ? percentage >= 80 ? 'Fremragende klinisk ræsonnering' : 'Case gennemført'
+    : 'Gennemgang nødvendig';
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Case Results" onBack={() => { resetSession(); router.replace('/exam/index'); }} showBack />
+      <ScreenHeader title="Caseresultater" onBack={() => { resetSession(); router.replace('/exam/index'); }} showBack />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         {/* Score section */}
         <View style={styles.scoreRow}>
@@ -94,15 +94,15 @@ export default function ExamResults() {
                 color={passed ? Colors.correct : Colors.incorrect}
               />
               <Text style={[styles.passText, { color: passed ? Colors.correct : Colors.incorrect }]}>
-                {passed ? 'Pass' : 'Did not pass'}
+                {passed ? 'Bestået' : 'Ikke bestået'}
               </Text>
             </View>
             <View style={styles.statRow}>
-              <Text style={styles.statLabel}>Correct selections</Text>
+              <Text style={styles.statLabel}>Korrekte valg</Text>
               <Text style={[styles.statValue, { color: Colors.textPrimary }]}>{totalCorrect} / {totalPossible}</Text>
             </View>
             <View style={styles.statRow}>
-              <Text style={styles.statLabel}>Pass threshold</Text>
+              <Text style={styles.statLabel}>Beståelsesgrænse</Text>
               <Text style={styles.statValue}>60%</Text>
             </View>
           </View>
@@ -110,7 +110,7 @@ export default function ExamResults() {
 
         {/* Step breakdown */}
         <Card>
-          <Text style={styles.breakdownTitle}>Step Breakdown</Text>
+          <Text style={styles.breakdownTitle}>Trinsfordeling</Text>
           {stepScores.map((s, i) => {
             const pct = s.totalCorrect > 0 ? Math.round((s.correctCount / s.totalCorrect) * 100) : 0;
             const color = pct >= 70 ? Colors.correct : pct >= 40 ? Colors.warning : Colors.incorrect;
@@ -141,7 +141,7 @@ export default function ExamResults() {
 
         <View style={styles.actions}>
           <Button
-            title="Try Again"
+            title="Prøv igen"
             onPress={() => {
               const examCase = session.examCase;
               const topicId = session.topicId;
@@ -153,7 +153,7 @@ export default function ExamResults() {
             fullWidth
           />
           <Button
-            title="Back to Cases"
+            title="Tilbage til cases"
             onPress={() => { resetSession(); router.replace('/exam/index'); }}
             variant="ghost"
             size="lg"

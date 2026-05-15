@@ -34,9 +34,9 @@ export default function FlashcardSession() {
   }, [session?.isComplete]);
 
   const handleBack = () => {
-    Alert.alert('Exit Flashcards', 'Your session progress will be lost.', [
-      { text: 'Cancel', style: 'cancel' },
-      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/flashcards/index') },
+    Alert.alert('Afslut flashkort', 'Din sessionsfremdrift slettes.', [
+      { text: 'Annuller', style: 'cancel' },
+      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/flashcards/index') },
     ]);
   };
 
@@ -47,9 +47,9 @@ export default function FlashcardSession() {
   if (!session || session.cards.length === 0) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Flashcards" onBack={() => router.replace('/flashcards/index')} />
+        <ScreenHeader title="Flashkort" onBack={() => router.replace('/flashcards/index')} />
         <View style={styles.center}>
-          <Text style={styles.emptyText}>No flashcards available for this topic yet.</Text>
+          <Text style={styles.emptyText}>Ingen flashkort tilgængeligt for dette emne endnu.</Text>
         </View>
       </View>
     );
@@ -59,7 +59,7 @@ export default function FlashcardSession() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Flashcards" subtitle={card.category} onBack={handleBack} />
+      <ScreenHeader title="Flashkort" subtitle={card.category} onBack={handleBack} />
       <QuizProgressBar current={session.currentIndex + 1} total={session.cards.length} />
 
       <View style={styles.cardArea}>
@@ -73,11 +73,11 @@ export default function FlashcardSession() {
       <View style={styles.footer}>
         {session.isFlipped ? (
           <>
-            <Text style={styles.ratingHint}>How well did you know this?</Text>
+            <Text style={styles.ratingHint}>Hvor godt kendte du dette?</Text>
             <RatingButtons onRate={handleRate} />
           </>
         ) : (
-          <Text style={styles.flipHint}>Tap the card to reveal the answer</Text>
+          <Text style={styles.flipHint}>Tryk på kortet for at se svaret</Text>
         )}
       </View>
     </View>

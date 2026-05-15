@@ -62,20 +62,20 @@ export default function QuizSession() {
   const correctCount = question.options.filter((o) => o.isCorrect).length;
   const selectedCorrect = selectedIds.filter((id) => question.options.find((o) => o.id === id)?.isCorrect).length;
   const partialInfo = isMultiple && isSubmitted
-    ? `${selectedCorrect} of ${correctCount} correct answers`
+    ? `${selectedCorrect} af ${correctCount} korrekte svar`
     : undefined;
 
   const handleBack = () => {
-    Alert.alert('Exit Quiz', 'Your progress will be lost. Are you sure?', [
-      { text: 'Cancel', style: 'cancel' },
-      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/quiz/index') },
+    Alert.alert('Afslut quiz', 'Din fremgang slettes. Er du sikker?', [
+      { text: 'Annuller', style: 'cancel' },
+      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/quiz/index') },
     ]);
   };
 
   return (
     <View style={styles.screen}>
       <ScreenHeader
-        title={isMultiple ? 'Select all that apply' : 'Select one answer'}
+        title={isMultiple ? 'Vælg alle der passer' : 'Vælg ét svar'}
         onBack={handleBack}
       />
       <QuizProgressBar current={session.currentIndex + 1} total={session.questions.length} />
@@ -90,7 +90,7 @@ export default function QuizSession() {
           <Card style={styles.contextCard}>
             <View style={styles.contextHeader}>
               <Ionicons name="person" size={14} color={Colors.info} />
-              <Text style={styles.contextLabel}>Clinical Scenario</Text>
+              <Text style={styles.contextLabel}>Klinisk scenarie</Text>
             </View>
             <Text style={styles.contextText}>{question.context}</Text>
           </Card>
@@ -128,7 +128,7 @@ export default function QuizSession() {
       <View style={styles.footer}>
         {!isSubmitted ? (
           <Button
-            title="Check Answer"
+            title="Tjek svar"
             onPress={submitAnswer}
             disabled={selectedIds.length === 0}
             size="lg"
@@ -136,7 +136,7 @@ export default function QuizSession() {
           />
         ) : (
           <Button
-            title={session.currentIndex >= session.questions.length - 1 ? 'See Results' : 'Next Question'}
+            title={session.currentIndex >= session.questions.length - 1 ? 'Se resultater' : 'Næste spørgsmål'}
             onPress={nextQuestion}
             size="lg"
             fullWidth

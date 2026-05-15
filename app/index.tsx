@@ -20,32 +20,32 @@ const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 44 : (StatusBar.currentHeight ?
 const MODES = [
   {
     id: 'quiz',
-    title: 'Quiz Mode',
-    description: 'Interactive questions with immediate clinical feedback',
+    title: 'Quiz',
+    description: 'Interaktive spørgsmål med øjeblikkelig klinisk feedback',
     icon: 'help-circle' as const,
     accentColor: Colors.modeQuiz,
     route: '/quiz/index' as const,
   },
   {
     id: 'exam',
-    title: 'Clinical Case / Exam',
-    description: '6-step patient cases with structured clinical reasoning',
+    title: 'Klinisk case / eksamen',
+    description: '6-trins patientcases med struktureret klinisk ræsonnering',
     icon: 'clipboard' as const,
     accentColor: Colors.modeExam,
     route: '/exam/index' as const,
   },
   {
     id: 'anatomy',
-    title: 'Anatomy Mode',
-    description: 'Structure → function → clinical relevance',
+    title: 'Anatomi',
+    description: 'Struktur → funktion → klinisk relevans',
     icon: 'body' as const,
     accentColor: Colors.modeAnatomy,
     route: '/anatomy/index' as const,
   },
   {
     id: 'flashcards',
-    title: 'Flashcards',
-    description: 'Fast repetition of clinical facts and key concepts',
+    title: 'Flashkort',
+    description: 'Hurtig repetition af kliniske fakta og nøglebegreber',
     icon: 'albums' as const,
     accentColor: Colors.modeFlashcard,
     route: '/flashcards/index' as const,
@@ -71,7 +71,7 @@ export default function HomeScreen() {
         <View style={styles.header}>
           <View>
             <Text style={styles.appName}>FysApp</Text>
-            <Text style={styles.tagline}>Clinical Physiotherapy Learning</Text>
+            <Text style={styles.tagline}>Klinisk fysioterapiundervisning</Text>
           </View>
           <TouchableOpacity
             onPress={() => router.push('/progress/index')}
@@ -91,14 +91,14 @@ export default function HomeScreen() {
           >
             <Ionicons name="checkmark-circle" size={16} color={Colors.correct} />
             <Text style={styles.summaryText}>
-              {totalQuizzes} quiz session{totalQuizzes !== 1 ? 's' : ''} · {totalExams} exam{totalExams !== 1 ? 's' : ''} completed
+              {totalQuizzes} quiz-session{totalQuizzes !== 1 ? 'er' : ''} · {totalExams} case{totalExams !== 1 ? 's' : ''} gennemført
             </Text>
             <Ionicons name="chevron-forward" size={14} color={Colors.textMuted} style={{ marginLeft: 'auto' }} />
           </TouchableOpacity>
         )}
 
         {/* Section label */}
-        <Text style={styles.sectionLabel}>Learning Modes</Text>
+        <Text style={styles.sectionLabel}>Læringstilstande</Text>
 
         {/* Mode cards */}
         <View style={styles.modeList}>
@@ -118,13 +118,13 @@ export default function HomeScreen() {
         <View style={styles.topicBanner}>
           <Ionicons name="library-outline" size={18} color={Colors.textMuted} />
           <View style={styles.topicBannerText}>
-            <Text style={styles.topicBannerTitle}>20 Clinical Topics</Text>
-            <Text style={styles.topicBannerSub}>Parkinson's fully available · 19 topics coming soon</Text>
+            <Text style={styles.topicBannerTitle}>20 kliniske emner</Text>
+            <Text style={styles.topicBannerSub}>Parkinson tilgængeligt · 19 emner kommer snart</Text>
           </View>
         </View>
 
         {/* Footer */}
-        <Text style={styles.footer}>Offline · No login required · All content bundled</Text>
+        <Text style={styles.footer}>Offline · Intet login krævet · Alt indhold er inkluderet</Text>
       </ScrollView>
     </View>
   );

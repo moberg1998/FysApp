@@ -37,13 +37,13 @@ export function TopicCard({ topic, bestScore, onPress }: TopicCardProps) {
           {!isDisabled && (
             <View style={styles.stats}>
               {topic.quizCount > 0 && (
-                <Text style={styles.statText}>{topic.quizCount} questions</Text>
+                <Text style={styles.statText}>{topic.quizCount} spørgsmål</Text>
               )}
               {topic.flashcardCount > 0 && (
-                <Text style={styles.statText}>{topic.flashcardCount} cards</Text>
+                <Text style={styles.statText}>{topic.flashcardCount} kort</Text>
               )}
               {bestScore !== null && bestScore !== undefined && (
-                <Text style={[styles.statText, styles.score]}>Best: {bestScore}%</Text>
+                <Text style={[styles.statText, styles.score]}>Bedste: {bestScore}%</Text>
               )}
             </View>
           )}

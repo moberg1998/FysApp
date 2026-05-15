@@ -40,10 +40,10 @@ export default function FlashcardResults() {
   if (!session) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Results" onBack={() => router.replace('/flashcards/index')} />
+        <ScreenHeader title="Resultater" onBack={() => router.replace('/flashcards/index')} />
         <View style={styles.empty}>
-          <Text style={styles.emptyText}>No session data.</Text>
-          <Button title="Back to Flashcards" onPress={() => { resetSession(); router.replace('/flashcards/index'); }} />
+          <Text style={styles.emptyText}>Ingen sessionsdata.</Text>
+          <Button title="Tilbage til flashkort" onPress={() => { resetSession(); router.replace('/flashcards/index'); }} />
         </View>
       </View>
     );
@@ -56,19 +56,19 @@ export default function FlashcardResults() {
   const total = session.cards.length;
   const score = total > 0 ? Math.round((knew / total) * 100) : 0;
 
-  const scoreLabel = score >= 75 ? 'Great recall' : score >= 50 ? 'Keep going' : 'More practice needed';
+  const scoreLabel = score >= 75 ? 'Fremragende genkaldelse' : score >= 50 ? 'Fortsæt' : 'Mere øvelse nødvendigt';
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Session Complete" onBack={() => { resetSession(); router.replace('/flashcards/index'); }} showBack />
+      <ScreenHeader title="Session afsluttet" onBack={() => { resetSession(); router.replace('/flashcards/index'); }} showBack />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.scoreRow}>
           <ScoreCircle score={score} size={110} label={scoreLabel} />
           <View style={styles.statsColumn}>
-            <StatRow icon="checkmark-circle" color={Colors.correct} label="Knew it" value={`${knew}`} />
-            <StatRow icon="help-circle" color={Colors.warning} label="Unsure" value={`${unsure}`} />
-            <StatRow icon="refresh-circle" color={Colors.incorrect} label="Repeat" value={`${repeat}`} />
-            <StatRow icon="layers" color={Colors.textSecondary} label="Total" value={`${total}`} />
+            <StatRow icon="checkmark-circle" color={Colors.correct} label="Vidste det" value={`${knew}`} />
+            <StatRow icon="help-circle" color={Colors.warning} label="Usikker" value={`${unsure}`} />
+            <StatRow icon="refresh-circle" color={Colors.incorrect} label="Gentag" value={`${repeat}`} />
+            <StatRow icon="layers" color={Colors.textSecondary} label="I alt" value={`${total}`} />
           </View>
         </View>
 
@@ -76,7 +76,7 @@ export default function FlashcardResults() {
           <Card>
             <View style={styles.repeatHeader}>
               <Ionicons name="refresh" size={16} color={Colors.incorrect} />
-              <Text style={styles.repeatTitle}>Cards to review again</Text>
+              <Text style={styles.repeatTitle}>Kort til gennemgang igen</Text>
             </View>
             <View style={styles.repeatList}>
               {session.cards
@@ -95,7 +95,7 @@ export default function FlashcardResults() {
           <Card>
             <View style={styles.repeatHeader}>
               <Ionicons name="alert-circle" size={16} color={Colors.warning} />
-              <Text style={styles.repeatTitle}>Cards to revisit</Text>
+              <Text style={styles.repeatTitle}>Kort at vende tilbage til</Text>
             </View>
             <View style={styles.repeatList}>
               {session.cards
@@ -112,14 +112,14 @@ export default function FlashcardResults() {
 
         <View style={styles.actions}>
           <Button
-            title="Study Again"
+            title="Studér igen"
             onPress={() => { resetSession(); router.replace({ pathname: '/flashcards/[topicId]', params: { topicId: session.topicId } }); }}
             variant="secondary"
             size="lg"
             fullWidth
           />
           <Button
-            title="Back to Topics"
+            title="Tilbage til emner"
             onPress={() => { resetSession(); router.replace('/flashcards/index'); }}
             variant="ghost"
             size="lg"

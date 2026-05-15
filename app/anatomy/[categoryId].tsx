@@ -45,22 +45,24 @@ export default function AnatomySession() {
   }, [session?.isComplete]);
 
   const handleBack = () => {
-    Alert.alert('Exit Session', 'Your progress will be lost.', [
-      { text: 'Cancel', style: 'cancel' },
-      { text: 'Exit', style: 'destructive', onPress: () => router.replace('/anatomy/index') },
+    Alert.alert('Afslut session', 'Din fremgang slettes.', [
+      { text: 'Annuller', style: 'cancel' },
+      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/anatomy/index') },
     ]);
   };
 
-  if (!session || questions.length === 0) {
+  if (questions.length === 0) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Anatomy" onBack={() => router.replace('/anatomy/index')} />
+        <ScreenHeader title="Anatomi" onBack={() => router.replace('/anatomy/index')} />
         <View style={styles.center}>
-          <Text style={styles.emptyText}>No questions available for this category yet.</Text>
+          <Text style={styles.emptyText}>Ingen spørgsmål tilgængeligt for denne kategori endnu.</Text>
         </View>
       </View>
     );
   }
+
+  if (!session) return null;
 
   const question = session.questions[session.currentIndex];
   const selectedId = session.answers[question.id] ?? null;
@@ -106,7 +108,7 @@ export default function AnatomySession() {
             </View>
             <Text style={styles.explanation}>{question.explanation}</Text>
             <View style={styles.clinicalRelevance}>
-              <Text style={styles.clinicalLabel}>Clinical relevance</Text>
+              <Text style={styles.clinicalLabel}>Klinisk relevans</Text>
               <Text style={styles.clinicalText}>{question.clinicalRelevance}</Text>
             </View>
           </Card>
@@ -116,7 +118,7 @@ export default function AnatomySession() {
       <View style={styles.footer}>
         {!isSubmitted ? (
           <Button
-            title="Check Answer"
+            title="Tjek svar"
             onPress={submitAnswer}
             disabled={selectedId === null}
             size="lg"
@@ -124,7 +126,7 @@ export default function AnatomySession() {
           />
         ) : (
           <Button
-            title={session.currentIndex >= session.questions.length - 1 ? 'See Results' : 'Next Question'}
+            title={session.currentIndex >= session.questions.length - 1 ? 'Se resultater' : 'Næste spørgsmål'}
             onPress={nextQuestion}
             size="lg"
             fullWidth

@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@/constants/Colors';
 import { Layout } from '@/constants/Layout';
 
-const STEP_LABELS = ['Anamnesis', 'Red Flags', 'Examination', 'Hypothesis', 'Treatment', 'Documentation'];
+const STEP_LABELS = ['Anamnese', 'Røde flag', 'Undersøgelse', 'Hypotese', 'Behandling', 'Dokumentation'];
 
 interface StepIndicatorProps {
   currentStep: number; // 0-5

@@ -19,7 +19,7 @@ export function ExamFeedback({ correctCount, totalCorrect, explanation, clinical
   const bgColor = allCorrect ? Colors.correctSubtle : partial ? Colors.warningSubtle : Colors.incorrectSubtle;
   const icon = allCorrect ? 'checkmark-circle' : partial ? 'alert-circle' : 'close-circle';
   const iconColor = allCorrect ? Colors.correct : partial ? Colors.warning : Colors.incorrect;
-  const label = allCorrect ? 'All correct' : partial ? `${correctCount} of ${totalCorrect} correct` : 'Incomplete';
+  const label = allCorrect ? 'Alle korrekte' : partial ? `${correctCount} af ${totalCorrect} korrekte` : 'Ufuldstændig';
 
   return (
     <View style={styles.container}>
@@ -29,14 +29,14 @@ export function ExamFeedback({ correctCount, totalCorrect, explanation, clinical
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.sectionLabel}>Explanation</Text>
+        <Text style={styles.sectionLabel}>Forklaring</Text>
         <Text style={styles.sectionText}>{explanation}</Text>
       </View>
 
       <View style={styles.clinicalNote}>
         <View style={styles.noteHeader}>
           <Ionicons name="document-text" size={14} color={Colors.info} />
-          <Text style={styles.noteLabel}>Clinical Note</Text>
+          <Text style={styles.noteLabel}>Klinisk note</Text>
         </View>
         <Text style={styles.noteText}>{clinicalNote}</Text>
       </View>

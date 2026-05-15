@@ -57,9 +57,9 @@ export function FlipCard({ card, isFlipped, onFlip }: FlipCardProps) {
           { transform: [{ rotateY: frontRotate }], opacity: frontOpacity },
         ]}
       >
-        <Text style={styles.side}>Question</Text>
+        <Text style={styles.side}>Spørgsmål</Text>
         <Text style={styles.frontText}>{card.front}</Text>
-        <Text style={styles.hint}>Tap to reveal answer</Text>
+        <Text style={styles.hint}>Tryk for at se svar</Text>
       </Animated.View>
 
       <Animated.View
@@ -69,11 +69,11 @@ export function FlipCard({ card, isFlipped, onFlip }: FlipCardProps) {
           { transform: [{ rotateY: backRotate }], opacity: backOpacity },
         ]}
       >
-        <Text style={[styles.side, { color: Colors.correct }]}>Answer</Text>
+        <Text style={[styles.side, { color: Colors.correct }]}>Svar</Text>
         <Text style={styles.backText}>{card.back}</Text>
         {card.clinicalPoint ? (
           <View style={styles.clinicalPointBox}>
-            <Text style={styles.clinicalPointLabel}>Clinical Point</Text>
+            <Text style={styles.clinicalPointLabel}>Klinisk pointe</Text>
             <Text style={styles.clinicalPoint}>{card.clinicalPoint}</Text>
           </View>
         ) : null}
