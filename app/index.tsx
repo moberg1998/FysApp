@@ -53,6 +53,7 @@ const MODES = [
 ];
 
 export default function HomeScreen() {
+  console.log('APP LOADED v2');
   const router = useRouter();
   const { progress } = useProgress();
 

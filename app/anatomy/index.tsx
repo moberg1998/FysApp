@@ -77,7 +77,10 @@ export default function AnatomyCategorySelect() {
         renderItem={({ item }) => (
           <CategoryCard
             category={item}
-            onPress={() => handlePress(item.id)}
+            onPress={() => {
+              console.log('ANATOMY TAP:', item.id);
+              handlePress(item.id);
+            }}
             bestScore={getBestScore(item.id)}
           />
         )}
