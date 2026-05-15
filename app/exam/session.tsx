@@ -53,12 +53,10 @@ export default function ExamSession() {
   const { session, toggleOption, submitStep, nextStep } = useExamSession();
 
   useEffect(() => {
-    if (!session) {
-      router.replace('/exam/index');
-    } else if (session.isComplete) {
+    if (session?.isComplete) {
       router.replace('/exam/results');
     }
-  }, [session]);
+  }, [session?.isComplete]);
 
   if (!session) return null;
 
@@ -72,7 +70,7 @@ export default function ExamSession() {
   const handleBack = () => {
     Alert.alert('Afslut case', 'Din fremgang slettes. Er du sikker?', [
       { text: 'Annuller', style: 'cancel' },
-      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/exam/index') },
+      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/exam') },
     ]);
   };
 

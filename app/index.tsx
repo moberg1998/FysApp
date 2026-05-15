@@ -24,7 +24,7 @@ const MODES = [
     description: 'Interaktive spørgsmål med øjeblikkelig klinisk feedback',
     icon: 'help-circle' as const,
     accentColor: Colors.modeQuiz,
-    route: '/quiz/index' as const,
+    route: '/quiz' as const,
   },
   {
     id: 'exam',
@@ -32,7 +32,7 @@ const MODES = [
     description: '6-trins patientcases med struktureret klinisk ræsonnering',
     icon: 'clipboard' as const,
     accentColor: Colors.modeExam,
-    route: '/exam/index' as const,
+    route: '/exam' as const,
   },
   {
     id: 'anatomy',
@@ -40,7 +40,7 @@ const MODES = [
     description: 'Struktur → funktion → klinisk relevans',
     icon: 'body' as const,
     accentColor: Colors.modeAnatomy,
-    route: '/anatomy/index' as const,
+    route: '/anatomy' as const,
   },
   {
     id: 'flashcards',
@@ -48,7 +48,7 @@ const MODES = [
     description: 'Hurtig repetition af kliniske fakta og nøglebegreber',
     icon: 'albums' as const,
     accentColor: Colors.modeFlashcard,
-    route: '/flashcards/index' as const,
+    route: '/flashcards' as const,
   },
 ];
 

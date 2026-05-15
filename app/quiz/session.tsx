@@ -66,7 +66,7 @@ export default function QuizSession() {
   const handleBack = () => {
     Alert.alert('Afslut quiz', 'Din fremgang slettes. Er du sikker?', [
       { text: 'Annuller', style: 'cancel' },
-      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/quiz/index') },
+      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/quiz') },
     ]);
   };
 

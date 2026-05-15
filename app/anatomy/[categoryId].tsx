@@ -47,14 +47,14 @@ export default function AnatomySession() {
   const handleBack = () => {
     Alert.alert('Afslut session', 'Din fremgang slettes.', [
       { text: 'Annuller', style: 'cancel' },
-      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/anatomy/index') },
+      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/anatomy') },
     ]);
   };
 
   if (questions.length === 0) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Anatomi" onBack={() => router.replace('/anatomy/index')} />
+        <ScreenHeader title="Anatomi" onBack={() => router.replace('/anatomy')} />
         <View style={styles.center}>
           <Text style={styles.emptyText}>Ingen spørgsmål tilgængeligt for denne kategori endnu.</Text>
         </View>

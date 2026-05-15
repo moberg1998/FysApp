@@ -66,10 +66,10 @@ export default function ExamResults() {
   if (!session) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Resultater" onBack={() => router.replace('/exam/index')} />
+        <ScreenHeader title="Resultater" onBack={() => router.replace('/exam')} />
         <View style={styles.empty}>
           <Text style={styles.emptyText}>Ingen sessionsdata.</Text>
-          <Button title="Tilbage til cases" onPress={() => { resetSession(); router.replace('/exam/index'); }} />
+          <Button title="Tilbage til cases" onPress={() => { resetSession(); router.replace('/exam'); }} />
         </View>
       </View>
     );
@@ -81,7 +81,7 @@ export default function ExamResults() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Caseresultater" onBack={() => { resetSession(); router.replace('/exam/index'); }} showBack />
+      <ScreenHeader title="Caseresultater" onBack={() => { resetSession(); router.replace('/exam'); }} showBack />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         {/* Score section */}
         <View style={styles.scoreRow}>
@@ -154,7 +154,7 @@ export default function ExamResults() {
           />
           <Button
             title="Tilbage til cases"
-            onPress={() => { resetSession(); router.replace('/exam/index'); }}
+            onPress={() => { resetSession(); router.replace('/exam'); }}
             variant="ghost"
             size="lg"
             fullWidth

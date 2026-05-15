@@ -40,10 +40,10 @@ export default function FlashcardResults() {
   if (!session) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Resultater" onBack={() => router.replace('/flashcards/index')} />
+        <ScreenHeader title="Resultater" onBack={() => router.replace('/flashcards')} />
         <View style={styles.empty}>
           <Text style={styles.emptyText}>Ingen sessionsdata.</Text>
-          <Button title="Tilbage til flashkort" onPress={() => { resetSession(); router.replace('/flashcards/index'); }} />
+          <Button title="Tilbage til flashkort" onPress={() => { resetSession(); router.replace('/flashcards'); }} />
         </View>
       </View>
     );
@@ -60,7 +60,7 @@ export default function FlashcardResults() {
 
   return (
     <View style={styles.screen}>
-      <ScreenHeader title="Session afsluttet" onBack={() => { resetSession(); router.replace('/flashcards/index'); }} showBack />
+      <ScreenHeader title="Session afsluttet" onBack={() => { resetSession(); router.replace('/flashcards'); }} showBack />
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.scoreRow}>
           <ScoreCircle score={score} size={110} label={scoreLabel} />
@@ -120,7 +120,7 @@ export default function FlashcardResults() {
           />
           <Button
             title="Tilbage til emner"
-            onPress={() => { resetSession(); router.replace('/flashcards/index'); }}
+            onPress={() => { resetSession(); router.replace('/flashcards'); }}
             variant="ghost"
             size="lg"
             fullWidth

@@ -36,6 +36,7 @@ const GROUP_ORDER: AnatomyCategory['group'][] = [
 ];
 
 export default function AnatomyCategorySelect() {
+  console.log('ANATOMY INDEX FUNCTION ENTERED');
   const router = useRouter();
   const { progress } = useProgress();
   const { startSession } = useAnatomySession();
@@ -44,6 +45,8 @@ export default function AnatomyCategorySelect() {
     title: GROUP_LABELS[group],
     data: ANATOMY_CATEGORIES.filter((c) => c.group === group),
   })).filter((s) => s.data.length > 0);
+
+  console.log('[DEBUG anatomy/index] RENDER sections:', sections.length, sections.map(s => s.title + ':' + s.data.length));
 
   const getBestScore = (categoryId: string): number | null => {
     if (!progress) return null;
@@ -74,16 +77,19 @@ export default function AnatomyCategorySelect() {
         renderSectionHeader={({ section }) => (
           <Text style={styles.sectionHeader}>{section.title}</Text>
         )}
-        renderItem={({ item }) => (
-          <CategoryCard
-            category={item}
-            onPress={() => {
-              console.log('ANATOMY TAP:', item.id);
-              handlePress(item.id);
-            }}
-            bestScore={getBestScore(item.id)}
-          />
-        )}
+        renderItem={({ item }) => {
+          console.log('[DEBUG anatomy/index] RENDER ITEM:', item.id, 'available:', item.isAvailable);
+          return (
+            <CategoryCard
+              category={item}
+              onPress={() => {
+                console.log('ANATOMY TAP:', item.id);
+                handlePress(item.id);
+              }}
+              bestScore={getBestScore(item.id)}
+            />
+          );
+        }}
         ItemSeparatorComponent={() => <View style={styles.separator} />}
         showsVerticalScrollIndicator={false}
       />

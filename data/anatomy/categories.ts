@@ -4,7 +4,7 @@ export const ANATOMY_CATEGORIES: AnatomyCategory[] = [
   // ─── Lower Extremity ──────────────────────────────────────────────────────
   {
     id: 'hip-pelvis',
-    title: 'Hip & Pelvis',
+    title: 'Hofte & Bækken',
     description: 'Bony landmarks, muscles, ligaments, and clinical relevance',
     questionCount: 8,
     isAvailable: true,
@@ -12,7 +12,7 @@ export const ANATOMY_CATEGORIES: AnatomyCategory[] = [
   },
   {
     id: 'knee',
-    title: 'Knee',
+    title: 'Knæ',
     description: 'Joint structure, ligaments, menisci, and common injuries',
     questionCount: 8,
     isAvailable: true,
@@ -20,7 +20,7 @@ export const ANATOMY_CATEGORIES: AnatomyCategory[] = [
   },
   {
     id: 'ankle-foot',
-    title: 'Ankle & Foot',
+    title: 'Ankel & Fod',
     description: 'Mortise joint, arches, tendons, and clinical relevance',
     questionCount: 8,
     isAvailable: true,
@@ -28,7 +28,7 @@ export const ANATOMY_CATEGORIES: AnatomyCategory[] = [
   },
   {
     id: 'gait-cycle',
-    title: 'Gait Cycle',
+    title: 'Gangcyklus',
     description: 'Phases, muscle activity, and pathological deviations',
     questionCount: 8,
     isAvailable: true,

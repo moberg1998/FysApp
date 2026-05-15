@@ -37,7 +37,7 @@ export default function FlashcardSession() {
   const handleBack = () => {
     Alert.alert('Afslut flashkort', 'Din sessionsfremdrift slettes.', [
       { text: 'Annuller', style: 'cancel' },
-      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/flashcards/index') },
+      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/flashcards') },
     ]);
   };
 
@@ -48,7 +48,7 @@ export default function FlashcardSession() {
   if (cards.length === 0) {
     return (
       <View style={styles.screen}>
-        <ScreenHeader title="Flashkort" onBack={() => router.replace('/flashcards/index')} />
+        <ScreenHeader title="Flashkort" onBack={() => router.replace('/flashcards')} />
         <View style={styles.center}>
           <Text style={styles.emptyText}>Ingen flashkort tilgængeligt for dette emne endnu.</Text>
         </View>
