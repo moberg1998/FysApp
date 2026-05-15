@@ -6,8 +6,20 @@ import { CategoryCard } from '@/components/anatomy/CategoryCard';
 import { Colors } from '@/constants/Colors';
 import { Layout } from '@/constants/Layout';
 import { ANATOMY_CATEGORIES } from '@/data/anatomy/categories';
+import { hipPelvisQuestions } from '@/data/anatomy/hipPelvis';
+import { kneeQuestions } from '@/data/anatomy/knee';
+import { ankleFootQuestions } from '@/data/anatomy/ankleFoot';
+import { gaitCycleQuestions } from '@/data/anatomy/gaitCycle';
 import { useProgress } from '@/hooks/useProgress';
-import { AnatomyCategory } from '@/types';
+import { useAnatomySession } from '@/context/AnatomySessionContext';
+import { AnatomyCategory, AnatomyQuestion } from '@/types';
+
+const ALL_QUESTIONS: Record<string, AnatomyQuestion[]> = {
+  'hip-pelvis': hipPelvisQuestions,
+  'knee': kneeQuestions,
+  'ankle-foot': ankleFootQuestions,
+  'gait-cycle': gaitCycleQuestions,
+};
 
 const GROUP_LABELS: Record<AnatomyCategory['group'], string> = {
   'lower-extremity': 'Underekstremitet',
@@ -26,6 +38,7 @@ const GROUP_ORDER: AnatomyCategory['group'][] = [
 export default function AnatomyCategorySelect() {
   const router = useRouter();
   const { progress } = useProgress();
+  const { startSession } = useAnatomySession();
 
   const sections = GROUP_ORDER.map((group) => ({
     title: GROUP_LABELS[group],
@@ -37,6 +50,14 @@ export default function AnatomyCategorySelect() {
     const results = progress.quizResults.filter((r) => r.topicId === `anatomy-${categoryId}`);
     if (results.length === 0) return null;
     return Math.max(...results.map((r) => r.score));
+  };
+
+  const handlePress = (categoryId: string) => {
+    const questions = ALL_QUESTIONS[categoryId] ?? [];
+    if (questions.length > 0) {
+      startSession(categoryId, questions);
+    }
+    router.push({ pathname: '/anatomy/[categoryId]', params: { categoryId } });
   };
 
   return (
@@ -52,7 +73,7 @@ export default function AnatomyCategorySelect() {
         renderItem={({ item }) => (
           <CategoryCard
             category={item}
-            onPress={() => router.push({ pathname: '/anatomy/[categoryId]', params: { categoryId: item.id } })}
+            onPress={() => handlePress(item.id)}
             bestScore={getBestScore(item.id)}
           />
         )}
