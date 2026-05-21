@@ -45,6 +45,7 @@ export default function RootLayout() {
                   <Stack.Screen name="exam" />
                   <Stack.Screen name="anatomy" />
                   <Stack.Screen name="flashcards" />
+                  <Stack.Screen name="guide" />
                   <Stack.Screen name="progress/index" />
                   <Stack.Screen name="+not-found" />
                 </Stack>

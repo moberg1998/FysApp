@@ -10,9 +10,10 @@ interface TopicCardProps {
   topic: Topic;
   bestScore?: number | null;
   onPress: () => void;
+  examMode?: boolean;
 }
 
-export function TopicCard({ topic, bestScore, onPress }: TopicCardProps) {
+export function TopicCard({ topic, bestScore, onPress, examMode }: TopicCardProps) {
   const isDisabled = !topic.isAvailable;
 
   return (
@@ -36,11 +37,19 @@ export function TopicCard({ topic, bestScore, onPress }: TopicCardProps) {
           <Text style={styles.subtitle}>{topic.subtitle}</Text>
           {!isDisabled && (
             <View style={styles.stats}>
-              {topic.quizCount > 0 && (
-                <Text style={styles.statText}>{topic.quizCount} spørgsmål</Text>
-              )}
-              {topic.flashcardCount > 0 && (
-                <Text style={styles.statText}>{topic.flashcardCount} kort</Text>
+              {examMode ? (
+                topic.examCaseCount > 0 && (
+                  <Text style={styles.statText}>{topic.examCaseCount} {topic.examCaseCount === 1 ? 'case' : 'cases'}</Text>
+                )
+              ) : (
+                <>
+                  {topic.quizCount > 0 && (
+                    <Text style={styles.statText}>{topic.quizCount} spørgsmål</Text>
+                  )}
+                  {topic.flashcardCount > 0 && (
+                    <Text style={styles.statText}>{topic.flashcardCount} kort</Text>
+                  )}
+                </>
               )}
               {bestScore !== null && bestScore !== undefined && (
                 <Text style={[styles.statText, styles.score]}>Bedste: {bestScore}%</Text>
@@ -49,7 +58,7 @@ export function TopicCard({ topic, bestScore, onPress }: TopicCardProps) {
           )}
         </View>
         {isDisabled && (
-          <Badge label="Coming Soon" variant="coming-soon" />
+          <Badge label="Kommer snart" variant="coming-soon" />
         )}
       </View>
     </TouchableOpacity>

@@ -1,11 +1,11 @@
 import { AnatomyCategory } from '@/types';
 
 export const ANATOMY_CATEGORIES: AnatomyCategory[] = [
-  // ─── Lower Extremity ──────────────────────────────────────────────────────
+  // ─── Underekstremitet ─────────────────────────────────────────────────────
   {
     id: 'hip-pelvis',
     title: 'Hofte & Bækken',
-    description: 'Bony landmarks, muscles, ligaments, and clinical relevance',
+    description: 'Knoglestrukturer, muskler, ligamenter og klinisk relevans',
     questionCount: 8,
     isAvailable: true,
     group: 'lower-extremity',
@@ -13,7 +13,7 @@ export const ANATOMY_CATEGORIES: AnatomyCategory[] = [
   {
     id: 'knee',
     title: 'Knæ',
-    description: 'Joint structure, ligaments, menisci, and common injuries',
+    description: 'Ledstruktur, ligamenter, menisker og hyppige skader',
     questionCount: 8,
     isAvailable: true,
     group: 'lower-extremity',
@@ -21,7 +21,7 @@ export const ANATOMY_CATEGORIES: AnatomyCategory[] = [
   {
     id: 'ankle-foot',
     title: 'Ankel & Fod',
-    description: 'Mortise joint, arches, tendons, and clinical relevance',
+    description: 'Mortiseled, hvælvinger, sener og klinisk relevans',
     questionCount: 8,
     isAvailable: true,
     group: 'lower-extremity',
@@ -29,133 +29,133 @@ export const ANATOMY_CATEGORIES: AnatomyCategory[] = [
   {
     id: 'gait-cycle',
     title: 'Gangcyklus',
-    description: 'Phases, muscle activity, and pathological deviations',
+    description: 'Faser, muskelaktivitet og patologiske afvigelser',
     questionCount: 8,
     isAvailable: true,
     group: 'lower-extremity',
   },
   {
     id: 'balance-postural',
-    title: 'Balance & Postural Strategies',
-    description: 'Ankle, hip, and stepping strategies; sensory systems',
+    title: 'Balance & posturale strategier',
+    description: 'Ankel-, hofte- og skridtstrategier; sensoriske systemer',
     questionCount: 0,
     isAvailable: false,
     group: 'lower-extremity',
   },
   {
     id: 'myotomes-lower',
-    title: 'Myotomes & Dermatomes (Lower)',
-    description: 'L2–S2 myotomes, dermatomes, and reflexes',
+    title: 'Myotomer & dermatomer (underekstremitet)',
+    description: 'L2–S2 myotomer, dermatomer og reflekser',
     questionCount: 0,
     isAvailable: false,
     group: 'lower-extremity',
   },
 
-  // ─── Upper Extremity ──────────────────────────────────────────────────────
+  // ─── Overekstremitet ──────────────────────────────────────────────────────
   {
     id: 'shoulder-complex',
-    title: 'Shoulder Complex',
-    description: 'GH, AC, SC joints; rotator cuff; scapular control',
+    title: 'Skulderkomplementet',
+    description: 'GH-, AC-, SC-led; rotatorcuff; skapulær kontrol',
     questionCount: 0,
     isAvailable: false,
     group: 'upper-extremity',
   },
   {
     id: 'scapula-control',
-    title: 'Scapula & Scapular Control',
-    description: 'Serratus anterior, trapezius, scapular dyskinesis',
+    title: 'Skapula & skapulær kontrol',
+    description: 'Serratus anterior, trapezius, skapulær dyskinesi',
     questionCount: 0,
     isAvailable: false,
     group: 'upper-extremity',
   },
   {
     id: 'elbow-forearm',
-    title: 'Elbow & Forearm',
-    description: 'Joint structure, pronation/supination, common pathology',
+    title: 'Albue & underarm',
+    description: 'Ledstruktur, pronation/supination, hyppig patologi',
     questionCount: 0,
     isAvailable: false,
     group: 'upper-extremity',
   },
   {
     id: 'wrist-hand',
-    title: 'Wrist & Hand',
-    description: 'Carpal bones, intrinsic muscles, grip function',
+    title: 'Håndled & hånd',
+    description: 'Karpalknogler, intrinsiske muskler, gribefunktion',
     questionCount: 0,
     isAvailable: false,
     group: 'upper-extremity',
   },
   {
     id: 'myotomes-upper',
-    title: 'Myotomes & Dermatomes (Upper)',
-    description: 'C5–T1 myotomes, dermatomes, and reflexes',
+    title: 'Myotomer & dermatomer (overekstremitet)',
+    description: 'C5–T1 myotomer, dermatomer og reflekser',
     questionCount: 0,
     isAvailable: false,
     group: 'upper-extremity',
   },
 
-  // ─── Spine & Trunk ────────────────────────────────────────────────────────
+  // ─── Columna & truncus ────────────────────────────────────────────────────
   {
     id: 'cervical-spine',
-    title: 'Cervical Spine',
-    description: 'Vertebral anatomy, joints of Luschka, cervicogenic headache',
+    title: 'Cervikalcolumna',
+    description: 'Hvirvlelanatomi, Luschas led, cervikogens hovedpine',
     questionCount: 0,
     isAvailable: false,
     group: 'spine-trunk',
   },
   {
     id: 'thoracic-spine',
-    title: 'Thoracic Spine & Trunk',
-    description: 'Rib cage, facets, thoracic mobility in function',
+    title: 'Thorakalcolumna & truncus',
+    description: 'Ribbensskelet, facetled, thorakal mobilitet i funktion',
     questionCount: 0,
     isAvailable: false,
     group: 'spine-trunk',
   },
   {
     id: 'lumbar-spine',
-    title: 'Lumbar Spine & Pelvis',
-    description: 'Disc anatomy, sacroiliac joint, lumbar stability',
+    title: 'Lumbalcolumna & bækken',
+    description: 'Diskusanatomi, sacroiliakal led, lumbal stabilitet',
     questionCount: 0,
     isAvailable: false,
     group: 'spine-trunk',
   },
   {
     id: 'core-musculature',
-    title: 'Core Musculature in Function',
-    description: 'Local and global stabilisers, intra-abdominal pressure',
+    title: 'Kernemuskulatur i funktion',
+    description: 'Lokale og globale stabilisatorer, intraabdominalt tryk',
     questionCount: 0,
     isAvailable: false,
     group: 'spine-trunk',
   },
 
-  // ─── Neurofunctional Anatomy ──────────────────────────────────────────────
+  // ─── Neurofunktionel anatomi ──────────────────────────────────────────────
   {
     id: 'basal-ganglia-parkinson',
-    title: 'Basal Ganglia & Parkinson\'s',
-    description: 'Motor loop, dopamine pathways, clinical relevance',
+    title: 'Basalganglier & Parkinson',
+    description: 'Motorisk loop, dopaminbaner, klinisk relevans',
     questionCount: 0,
     isAvailable: false,
     group: 'neurofunctional',
   },
   {
     id: 'corticospinal-stroke',
-    title: 'Corticospinal Pathways & Stroke',
-    description: 'Motor control pathways, UMN signs, recovery',
+    title: 'Kortikospinale baner & apopleksi',
+    description: 'Motorkontrolbaner, UMN-tegn, restitution',
     questionCount: 0,
     isAvailable: false,
     group: 'neurofunctional',
   },
   {
     id: 'cerebellar-function',
-    title: 'Cerebellar Function & Ataxia',
-    description: 'Cerebellar anatomy, coordination, clinical signs',
+    title: 'Cerebellær funktion & ataksi',
+    description: 'Cerebellær anatomi, koordination, kliniske tegn',
     questionCount: 0,
     isAvailable: false,
     group: 'neurofunctional',
   },
   {
     id: 'central-peripheral',
-    title: 'Central vs Peripheral Neurology',
-    description: 'UMN vs LMN signs, key differentiators',
+    title: 'Centralt vs. perifert nervesystem',
+    description: 'UMN vs. LMN-tegn, centrale differentieringspunkter',
     questionCount: 0,
     isAvailable: false,
     group: 'neurofunctional',
@@ -163,8 +163,8 @@ export const ANATOMY_CATEGORIES: AnatomyCategory[] = [
 ];
 
 export const ANATOMY_GROUPS = [
-  { key: 'lower-extremity', label: 'Lower Extremity' },
-  { key: 'upper-extremity', label: 'Upper Extremity' },
-  { key: 'spine-trunk', label: 'Spine & Trunk' },
-  { key: 'neurofunctional', label: 'Neurofunctional Anatomy' },
+  { key: 'lower-extremity', label: 'Underekstremitet' },
+  { key: 'upper-extremity', label: 'Overekstremitet' },
+  { key: 'spine-trunk', label: 'Columna & truncus' },
+  { key: 'neurofunctional', label: 'Neurofunktionel anatomi' },
 ] as const;

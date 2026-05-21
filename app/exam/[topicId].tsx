@@ -7,6 +7,8 @@ import { CaseCard } from '@/components/exam/CaseCard';
 import { Colors } from '@/constants/Colors';
 import { Layout } from '@/constants/Layout';
 import { parkinsonExamCases } from '@/data/parkinson/examCases';
+import { msExamCases } from '@/data/ms/examCases';
+import { strokeExamCases } from '@/data/stroke/examCases';
 import { getTopicById } from '@/data/topics';
 import { useProgress } from '@/hooks/useProgress';
 import { useExamSession } from '@/context/ExamSessionContext';
@@ -14,6 +16,8 @@ import { ExamCase } from '@/types';
 
 const ALL_EXAM_CASES: Record<string, ExamCase[]> = {
   parkinson: parkinsonExamCases,
+  'multiple-sclerosis': msExamCases,
+  stroke: strokeExamCases,
 };
 
 export default function ExamCaseList() {

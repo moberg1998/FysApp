@@ -39,6 +39,17 @@ export default function QuizConfig() {
 
   if (!topic) return null;
 
+  if (questions.length === 0) {
+    return (
+      <View style={styles.screen}>
+        <ScreenHeader title={topic.title} onBack={() => router.back()} />
+        <View style={styles.center}>
+          <Text style={styles.emptyText}>Quiz-spørgsmål til dette emne er under udarbejdelse. Prøv de kliniske cases i mellemtiden.</Text>
+        </View>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.screen}>
       <ScreenHeader title={topic.title} subtitle="Konfigurer din session" />
@@ -149,5 +160,17 @@ const styles = StyleSheet.create({
     color: Colors.textMuted,
     textAlign: 'center',
     marginTop: Layout.spacing.sm,
+  },
+  center: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: Layout.spacing.lg,
+  },
+  emptyText: {
+    fontSize: 14,
+    color: Colors.textSecondary,
+    textAlign: 'center',
+    lineHeight: 21,
   },
 });

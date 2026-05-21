@@ -20,6 +20,7 @@ export default function ExamTopicSelect() {
         renderItem={({ item }) => (
           <TopicCard
             topic={item}
+            examMode
             onPress={() => router.push({ pathname: '/exam/[topicId]', params: { topicId: item.id } })}
           />
         )}

@@ -50,6 +50,14 @@ const MODES = [
     accentColor: Colors.modeFlashcard,
     route: '/flashcards' as const,
   },
+  {
+    id: 'guide',
+    title: 'Klinisk guide',
+    description: 'Anamnese · undersøgelse · klinisk ræsonnering · røde flag',
+    icon: 'book-outline' as const,
+    accentColor: '#58A6FF',
+    route: '/guide' as const,
+  },
 ];
 
 export default function HomeScreen() {
@@ -120,7 +128,7 @@ export default function HomeScreen() {
           <Ionicons name="library-outline" size={18} color={Colors.textMuted} />
           <View style={styles.topicBannerText}>
             <Text style={styles.topicBannerTitle}>10 kliniske emner</Text>
-            <Text style={styles.topicBannerSub}>Parkinson tilgængeligt · 9 emner kommer snart</Text>
+            <Text style={styles.topicBannerSub}>Parkinson · MS · Apopleksi tilgængeligt · 7 emner kommer snart</Text>
           </View>
         </View>
 
