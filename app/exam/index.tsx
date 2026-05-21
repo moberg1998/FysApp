@@ -5,9 +5,7 @@ import { ScreenHeader } from '@/components/ui/ScreenHeader';
 import { TopicCard } from '@/components/ui/TopicCard';
 import { Colors } from '@/constants/Colors';
 import { Layout } from '@/constants/Layout';
-import { TOPICS } from '@/data/topics';
-
-const EXAM_TOPICS = TOPICS.filter((t) => t.category === 'neuro' || t.examCaseCount > 0);
+import { EXAM_TOPICS } from '@/data/topics';
 
 export default function ExamTopicSelect() {
   const router = useRouter();

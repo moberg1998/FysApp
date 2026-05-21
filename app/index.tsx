@@ -119,8 +119,8 @@ export default function HomeScreen() {
         <View style={styles.topicBanner}>
           <Ionicons name="library-outline" size={18} color={Colors.textMuted} />
           <View style={styles.topicBannerText}>
-            <Text style={styles.topicBannerTitle}>20 kliniske emner</Text>
-            <Text style={styles.topicBannerSub}>Parkinson tilgængeligt · 19 emner kommer snart</Text>
+            <Text style={styles.topicBannerTitle}>10 kliniske emner</Text>
+            <Text style={styles.topicBannerSub}>Parkinson tilgængeligt · 9 emner kommer snart</Text>
           </View>
         </View>
 
