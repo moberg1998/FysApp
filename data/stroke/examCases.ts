@@ -558,7 +558,7 @@ export const strokeExamCases: ExamCase[] = [
           },
           {
             id: 'c',
-            text: 'Hvad har Klaus' aktivitetsniveau været de seneste 3 måneder — er han blevet mere stillesiddende?',
+            text: 'Hvad har Klaus\' aktivitetsniveau været de seneste 3 måneder — er han blevet mere stillesiddende?',
             isCorrect: true,
             explanation: 'Dekonditionering er den hyppigste årsag til funktionel tilbagegang ved kronisk apopleksi. Reduceret aktivitetsniveau — grundet arbejdspres, vinter, motivation — er en direkte årsag til øget spasticitet og gangforringelse.',
           },
@@ -570,13 +570,13 @@ export const strokeExamCases: ExamCase[] = [
           },
           {
             id: 'e',
-            text: 'Hvad er Klaus' yndlingsfarve?',
+            text: 'Hvad er Klaus\' yndlingsfarve?',
             isCorrect: false,
             explanation: 'Yndlingsfarve er ikke klinisk relevant information i apopleksi-anamnesen.',
           },
           {
             id: 'f',
-            text: 'Hvad er Klaus' specifikke funktionelle mål — hvad vil han opnå med fysioterapi?',
+            text: 'Hvad er Klaus\' specifikke funktionelle mål — hvad vil han opnå med fysioterapi?',
             isCorrect: true,
             explanation: 'Patientcentrerede mål er essentialet for interventionsdesign og motivation. Klaus arbejder hjemmefra og er faldet udenfor — hvad er hans prioriteter? Gang i nabolaget, fuld arbejdskapacitet, sportsaktivitet med familien?',
           },
@@ -667,7 +667,7 @@ export const strokeExamCases: ExamCase[] = [
             explanation: 'Depression er hyppig 12+ måneder post-apopleksi og er en stærk prediktor for funktionel tilbagegang og lav rehabiliteringsmotivation. PHQ-9 er et valideret, hurtigt screeningsredskab.',
           },
         ],
-        explanation: 'Kronisk apopleksi-vurdering: 10MWT og 6MWT (gangkapacitet), dual-task TUG (faldrisiko), Ashworth (spasticitet), ganganalyse (mekanisme) og depressionssscreening. Disse tegner et komplet billede af Klaus' tilbagegang.',
+        explanation: 'Kronisk apopleksi-vurdering: 10MWT og 6MWT (gangkapacitet), dual-task TUG (faldrisiko), Ashworth (spasticitet), ganganalyse (mekanisme) og depressionssscreening. Disse tegner et komplet billede af Klaus\' tilbagegang.',
         clinicalNote: 'Klaus er faldet én gang udenfor. Fald hos en kronisk apopleksi-patient er et wake-up call. Dual-task TUG og ganganalyse er ikke kun akademiske test — de er direkte prædiktorer for om næste fald sker.',
       },
       {
@@ -701,7 +701,7 @@ export const strokeExamCases: ExamCase[] = [
             explanation: 'TIA giver forbigående symptomer der remitterer fuldstændigt. Ganghastighedstabet er over 3 måneder — langt forud for TIA for 2 uger siden. Dekonditionering og spasticitet er de primære forklaringer.',
           },
         ],
-        explanation: 'Klaus' tilbagegang: dekonditionering (primær), øget spasticitet (sekundær) og dual-task-deficit (faldrisiko). Mild depression (PHQ-9 8) kan bidrage til inaktivitet og lavere træningsmotivation. Alle fire faktorer skal adresseres.',
+        explanation: 'Klaus\' tilbagegang: dekonditionering (primær), øget spasticitet (sekundær) og dual-task-deficit (faldrisiko). Mild depression (PHQ-9 8) kan bidrage til inaktivitet og lavere træningsmotivation. Alle fire faktorer skal adresseres.',
         clinicalNote: 'Vedligeholdende rehabilitering ved kronisk apopleksi er evidensbaseret men underprioriteret i det danske system. Klaus er et eksempel på, hvad der sker, når kronikere "frisættes" fra systemet: gradvis tilbagegang, der kan forebygges.',
       },
       {
@@ -772,13 +772,13 @@ export const strokeExamCases: ExamCase[] = [
             id: 'c',
             text: 'Sæt SMART-mål med Klaus: f.eks. "Gå 500 m i nabolaget uden snublen om 8 uger" og "10MWT > 0,9 m/s om 12 uger"',
             isCorrect: true,
-            explanation: 'Patientcentrerede SMART-mål øger motivation og giver konkrete succeskriterier. Klaus' fald udenfor og reducerede gangkapacitet oversættes til konkrete, målbare mål.',
+            explanation: 'Patientcentrerede SMART-mål øger motivation og giver konkrete succeskriterier. Klaus\' fald udenfor og reducerede gangkapacitet oversættes til konkrete, målbare mål.',
           },
           {
             id: 'd',
             text: 'Design et skriftligt, gradueret hjemmetræningsprogram som Klaus kan fortsætte efter forløbet',
             isCorrect: true,
-            explanation: 'Et skriftligt hjemmeprogram er investeringen i Klaus' langsigtede selvforvaltning. Det bør inkludere gangøvelser, strækøvelser og styrkeprogramm med klar progression.',
+            explanation: 'Et skriftligt hjemmeprogram er investeringen i Klaus\' langsigtede selvforvaltning. Det bør inkludere gangøvelser, strækøvelser og styrkeprogramm med klar progression.',
           },
           {
             id: 'e',
