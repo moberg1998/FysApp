@@ -39,7 +39,7 @@ export const TOPICS: Topic[] = [
   },
   {
     id: 'neuro-group-training',
-    title: 'Neurologiske hold, faldforebyggelse og balance',
+    title: 'Neuro hold & faldforebyggelse',
     subtitle: 'Neurologi',
     icon: 'people',
     color: '#A371F7',
@@ -75,7 +75,7 @@ export const TOPICS: Topic[] = [
   },
   {
     id: 'neck-pain',
-    title: 'Nakke, cervikal radikulopati og hovedpine',
+    title: 'Nakke & cervikal radikulopati',
     subtitle: 'Bevægeapparat',
     icon: 'fitness',
     color: '#2F81F7',
@@ -111,7 +111,7 @@ export const TOPICS: Topic[] = [
   },
   {
     id: 'red-flags',
-    title: 'Røde flag, differentialdiagnostik og klinisk ræsonnering',
+    title: 'Røde flag & differentialdiagnostik',
     subtitle: 'Tværgående',
     icon: 'warning',
     color: '#F85149',

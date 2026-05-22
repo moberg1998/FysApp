@@ -28,7 +28,7 @@ const MODES = [
   },
   {
     id: 'exam',
-    title: 'Klinisk case / eksamen',
+    title: 'Klinisk case',
     description: '6-trins patientcases med struktureret klinisk ræsonnering',
     icon: 'clipboard' as const,
     accentColor: Colors.modeExam,
@@ -83,7 +83,7 @@ export default function HomeScreen() {
             <Text style={styles.tagline}>Klinisk fysioterapiundervisning</Text>
           </View>
           <TouchableOpacity
-            onPress={() => router.push('/progress/index')}
+            onPress={() => router.push('/progress')}
             style={styles.progressButton}
             activeOpacity={0.75}
           >
@@ -94,7 +94,7 @@ export default function HomeScreen() {
         {/* Summary strip */}
         {(totalQuizzes > 0 || totalExams > 0) && (
           <TouchableOpacity
-            onPress={() => router.push('/progress/index')}
+            onPress={() => router.push('/progress')}
             activeOpacity={0.8}
             style={styles.summaryStrip}
           >
@@ -124,13 +124,18 @@ export default function HomeScreen() {
         </View>
 
         {/* Topic coverage */}
-        <View style={styles.topicBanner}>
+        <TouchableOpacity
+          onPress={() => router.push('/progress')}
+          activeOpacity={0.75}
+          style={styles.topicBanner}
+        >
           <Ionicons name="library-outline" size={18} color={Colors.textMuted} />
           <View style={styles.topicBannerText}>
             <Text style={styles.topicBannerTitle}>10 kliniske emner</Text>
-            <Text style={styles.topicBannerSub}>Parkinson · MS · Apopleksi tilgængeligt · 7 emner kommer snart</Text>
+            <Text style={styles.topicBannerSub}>Alle emner tilgængelige — tryk for at se din fremgang</Text>
           </View>
-        </View>
+          <Ionicons name="chevron-forward" size={14} color={Colors.textMuted} />
+        </TouchableOpacity>
 
         {/* Footer */}
         <Text style={styles.footer}>Offline · Intet login krævet · Alt indhold er inkluderet</Text>

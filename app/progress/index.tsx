@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { useRouter } from 'expo-router';
+import { useFocusEffect } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { ScreenHeader } from '@/components/ui/ScreenHeader';
 import { Card } from '@/components/ui/Card';
@@ -12,7 +13,13 @@ import { Topic } from '@/types';
 
 export default function ProgressScreen() {
   const router = useRouter();
-  const { progress, isLoading, getBestScore, getLatestScore, getFlashcardProgress } = useProgress();
+  const { progress, isLoading, refresh, getBestScore, getLatestScore, getFlashcardProgress } = useProgress();
+
+  useFocusEffect(
+    React.useCallback(() => {
+      refresh();
+    }, [refresh])
+  );
 
   const availableTopics = TOPICS.filter((t) => t.isAvailable);
 
@@ -75,7 +82,7 @@ export default function ProgressScreen() {
           <View style={styles.emptyBanner}>
             <Ionicons name="stats-chart" size={32} color={Colors.textMuted} />
             <Text style={styles.emptyTitle}>Ingen resultater endnu</Text>
-            <Text style={styles.emptyText}>Start en quiz for at se din fremgang.</Text>
+            <Text style={styles.emptyText}>Gennemfør en quiz eller flashkortsession for at se din fremgang her.</Text>
           </View>
         )}
 
