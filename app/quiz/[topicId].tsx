@@ -8,11 +8,15 @@ import { Colors } from '@/constants/Colors';
 import { Layout } from '@/constants/Layout';
 import { TOPICS } from '@/data/topics';
 import { parkinsonQuiz } from '@/data/parkinson/quiz';
+import { msQuiz } from '@/data/ms/quiz';
+import { strokeQuiz } from '@/data/stroke/quiz';
 import { useQuizSession } from '@/context/QuizSessionContext';
 import { QuizQuestion } from '@/types';
 
 const ALL_QUESTIONS: Record<string, QuizQuestion[]> = {
   parkinson: parkinsonQuiz,
+  'multiple-sclerosis': msQuiz,
+  stroke: strokeQuiz,
 };
 
 const LENGTHS = [5, 10, 20, 0] as const;

@@ -9,10 +9,14 @@ import { Colors } from '@/constants/Colors';
 import { Layout } from '@/constants/Layout';
 import { useFlashcardSession } from '@/context/FlashcardSessionContext';
 import { parkinsonFlashcards } from '@/data/parkinson/flashcards';
+import { msFlashcards } from '@/data/ms/flashcards';
+import { strokeFlashcards } from '@/data/stroke/flashcards';
 import { Flashcard, FlashcardStatus } from '@/types';
 
 const ALL_FLASHCARDS: Record<string, Flashcard[]> = {
   parkinson: parkinsonFlashcards,
+  'multiple-sclerosis': msFlashcards,
+  stroke: strokeFlashcards,
 };
 
 export default function FlashcardSession() {
