@@ -11,12 +11,26 @@ import { useFlashcardSession } from '@/context/FlashcardSessionContext';
 import { parkinsonFlashcards } from '@/data/parkinson/flashcards';
 import { msFlashcards } from '@/data/ms/flashcards';
 import { strokeFlashcards } from '@/data/stroke/flashcards';
+import { neuroGroupFlashcards } from '@/data/neuro-group/flashcards';
+import { homeTreatmentFlashcards } from '@/data/home-treatment/flashcards';
+import { lowBackFlashcards } from '@/data/low-back/flashcards';
+import { neckFlashcards } from '@/data/neck/flashcards';
+import { shoulderFlashcards } from '@/data/shoulder/flashcards';
+import { hipKneeFlashcards } from '@/data/hip-knee/flashcards';
+import { redFlagsFlashcards } from '@/data/red-flags/flashcards';
 import { Flashcard, FlashcardStatus } from '@/types';
 
 const ALL_FLASHCARDS: Record<string, Flashcard[]> = {
   parkinson: parkinsonFlashcards,
   'multiple-sclerosis': msFlashcards,
   stroke: strokeFlashcards,
+  'neuro-group-training': neuroGroupFlashcards,
+  'home-treatment': homeTreatmentFlashcards,
+  'low-back-pain': lowBackFlashcards,
+  'neck-pain': neckFlashcards,
+  shoulder: shoulderFlashcards,
+  'hip-knee-oa': hipKneeFlashcards,
+  'red-flags': redFlagsFlashcards,
 };
 
 export default function FlashcardSession() {

@@ -10,6 +10,13 @@ import { TOPICS } from '@/data/topics';
 import { parkinsonQuiz } from '@/data/parkinson/quiz';
 import { msQuiz } from '@/data/ms/quiz';
 import { strokeQuiz } from '@/data/stroke/quiz';
+import { neuroGroupQuiz } from '@/data/neuro-group/quiz';
+import { homeTreatmentQuiz } from '@/data/home-treatment/quiz';
+import { lowBackQuiz } from '@/data/low-back/quiz';
+import { neckQuiz } from '@/data/neck/quiz';
+import { shoulderQuiz } from '@/data/shoulder/quiz';
+import { hipKneeQuiz } from '@/data/hip-knee/quiz';
+import { redFlagsQuiz } from '@/data/red-flags/quiz';
 import { useQuizSession } from '@/context/QuizSessionContext';
 import { QuizQuestion } from '@/types';
 
@@ -17,6 +24,13 @@ const ALL_QUESTIONS: Record<string, QuizQuestion[]> = {
   parkinson: parkinsonQuiz,
   'multiple-sclerosis': msQuiz,
   stroke: strokeQuiz,
+  'neuro-group-training': neuroGroupQuiz,
+  'home-treatment': homeTreatmentQuiz,
+  'low-back-pain': lowBackQuiz,
+  'neck-pain': neckQuiz,
+  shoulder: shoulderQuiz,
+  'hip-knee-oa': hipKneeQuiz,
+  'red-flags': redFlagsQuiz,
 };
 
 const LENGTHS = [5, 10, 20, 0] as const;

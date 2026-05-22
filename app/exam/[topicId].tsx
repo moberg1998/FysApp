@@ -9,6 +9,13 @@ import { Layout } from '@/constants/Layout';
 import { parkinsonExamCases } from '@/data/parkinson/examCases';
 import { msExamCases } from '@/data/ms/examCases';
 import { strokeExamCases } from '@/data/stroke/examCases';
+import { neuroGroupExamCases } from '@/data/neuro-group/examCases';
+import { homeTreatmentExamCases } from '@/data/home-treatment/examCases';
+import { lowBackExamCases } from '@/data/low-back/examCases';
+import { neckExamCases } from '@/data/neck/examCases';
+import { shoulderExamCases } from '@/data/shoulder/examCases';
+import { hipKneeExamCases } from '@/data/hip-knee/examCases';
+import { redFlagsExamCases } from '@/data/red-flags/examCases';
 import { getTopicById } from '@/data/topics';
 import { useProgress } from '@/hooks/useProgress';
 import { useExamSession } from '@/context/ExamSessionContext';
@@ -18,6 +25,13 @@ const ALL_EXAM_CASES: Record<string, ExamCase[]> = {
   parkinson: parkinsonExamCases,
   'multiple-sclerosis': msExamCases,
   stroke: strokeExamCases,
+  'neuro-group-training': neuroGroupExamCases,
+  'home-treatment': homeTreatmentExamCases,
+  'low-back-pain': lowBackExamCases,
+  'neck-pain': neckExamCases,
+  shoulder: shoulderExamCases,
+  'hip-knee-oa': hipKneeExamCases,
+  'red-flags': redFlagsExamCases,
 };
 
 export default function ExamCaseList() {
