@@ -111,7 +111,7 @@ export const TOPICS: Topic[] = [
   },
   {
     id: 'red-flags',
-    title: 'Røde flag & differentialdiagnostik',
+    title: 'Røde flag & diff.diagnostik',
     subtitle: 'Tværgående',
     icon: 'warning',
     color: '#F85149',
