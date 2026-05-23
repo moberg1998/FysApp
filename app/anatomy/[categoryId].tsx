@@ -38,13 +38,16 @@ const ALL_QUESTIONS: Record<string, AnatomyQuestion[]> = {
 export default function AnatomySession() {
   const { categoryId } = useLocalSearchParams<{ categoryId: string }>();
   const router = useRouter();
-  const { session, startSession, selectOption, submitAnswer, nextQuestion } = useAnatomySession();
+  const { session, startSession, selectOption, submitAnswer, nextQuestion, resetSession } = useAnatomySession();
 
   const category = ANATOMY_CATEGORIES.find((c) => c.id === categoryId);
   const questions = ALL_QUESTIONS[categoryId ?? ''] ?? [];
 
+  // Always start a fresh shuffled session when entering a category screen.
+  // The guard (!session || ...) was removed because it prevented re-shuffling when
+  // navigating back to the same category without calling resetSession first.
   useEffect(() => {
-    if (questions.length > 0 && (!session || session.categoryId !== categoryId)) {
+    if (questions.length > 0) {
       const shuffled = shuffle(questions).map((q) => ({ ...q, options: shuffle(q.options) }));
       startSession(categoryId ?? '', shuffled);
     }
@@ -59,7 +62,7 @@ export default function AnatomySession() {
   const handleBack = () => {
     Alert.alert('Afslut session', 'Din fremgang slettes.', [
       { text: 'Annuller', style: 'cancel' },
-      { text: 'Afslut', style: 'destructive', onPress: () => router.replace('/anatomy') },
+      { text: 'Afslut', style: 'destructive', onPress: () => { resetSession(); router.replace('/anatomy'); } },
     ]);
   };
 
