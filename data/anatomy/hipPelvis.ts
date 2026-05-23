@@ -13,7 +13,7 @@ export const hipPelvisQuestions: AnatomyQuestion[] = [
     ],
     explanation: 'Acetabulum dannes ved fusion af ilium (superiort), ischium (postero-inferiort) og pubis (antero-inferiort). Fusionen er afsluttet i 14–16-årsalderen. Den Y-formede triradiate brusk er den vækstplade, der ses hos børn ved samlingspunktet for de tre knogler.',
     clinicalRelevance: 'Forståelse af acetabulums anatomi er relevant ved tolkning af hofte-røntgen, klassifikation af acetabularfrakturer og ved vurdering af hofteledsdysplasi.',
-    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/808_Hip_Bone.jpg/500px-808_Hip_Bone.jpg',
+    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Acetabulum_04_lateral_view_%28Right_hip_bone%29.png/500px-Acetabulum_04_lateral_view_%28Right_hip_bone%29.png',
   },
   {
     id: 'anat-hip-02',
@@ -41,7 +41,7 @@ export const hipPelvisQuestions: AnatomyQuestion[] = [
     ],
     explanation: 'Gluteus medius (innerveret af n. gluteus superior, L4–S1) forhindrer kontralateralt bækkenfald under etbens-støtte ved at abducere hoften. Svaghed → positivt Trendelenburg-tegn (bækkenet falder på modsatte side ved stående på det afficerede ben). Under gang kan patienten kompensere ved at tippe truncus mod den svage side (kompenseret Trendelenburg).',
     clinicalRelevance: 'Gluteus medius-svaghed er ekstremt hyppig ved hofte-OA, efter hoftealloplastik, ved IT-båndssyndrom og ved smerter i lænd, hofte og knæ. Det er et centralt styrkningsmål i mange rehabiliteringsprogrammer for underekstremiteterne.',
-    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Pelvis_diagram.png/500px-Pelvis_diagram.png',
+    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/5/5d/Gluteus_medius_muscle.PNG',
   },
   {
     id: 'anat-hip-04',

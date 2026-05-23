@@ -13,7 +13,7 @@ export const gaitCycleQuestions: AnatomyQuestion[] = [
     ],
     explanation: 'Gangcyklussen defineres som perioden fra initial kontakt (hælisæt hos normaltgående) med én fod til næste initial kontakt med samme fod. Ved normal gangfart udgør standfasen ca. 60% og svingfasen 40%. Der er to perioder med dobbelt understøttelse (begge fødder på underlaget) per cyklus, hver på ca. 10%.',
     clinicalRelevance: 'Asymmetri i stands- og svingtid er en central ganganalyseparameter. Reduceret standfase på én side tyder på smerte eller instabilitet. Ved Parkinsons sygdom forkortes begge faser og giver et shufflende, kortsteppet gangmønster.',
-    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Gait_Cycle.png',
+    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Walking_gait_cycle.png/500px-Walking_gait_cycle.png',
   },
   {
     id: 'anat-gait-02',
@@ -27,7 +27,7 @@ export const gaitCycleQuestions: AnatomyQuestion[] = [
     ],
     explanation: 'De fem standfase-underfaser (Perrys klassifikation): (1) Initial kontakt — hælisæt (hos normaltgående) eller fodkontakt. (2) Belastningsrespons — slutter når den modsatte fod forlader underlaget. (3) Midstance — slutter når hælen på referencebenets fod rejser sig. (4) Terminal stance — slutter når den modsatte fod laver kontakt. (5) Pre-swing — fra kontralateral fodkontakt til tåafsæt på referencebenet. Hver er defineret af en specifik kinematisk hændelse, ikke et tidsinterval.',
     clinicalRelevance: 'Forståelse af disse faser muliggør præcis identifikation af patologiske gangmønstre. F.eks.: svaghed af tibialis anterior forsinker hælrejsningen og påvirker belastningsresponset; svaghed af plantarflektorerne reducerer afsættet i terminal stance.',
-    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Stance_and_Swing_Phase.png/500px-Stance_and_Swing_Phase.png',
+    imageKey: undefined,
   },
   {
     id: 'anat-gait-03',

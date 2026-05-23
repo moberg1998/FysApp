@@ -13,7 +13,7 @@ export const ankleFootQuestions: AnatomyQuestion[] = [
     ],
     explanation: 'Ankelmortisen (art. talocruralis) dannes af tibias ledoverflade (plafond), malleolus medialis (tibia), malleolus lateralis (fibula) og taluskuppelen. Lateral stabilitet ydes af det laterale ligamentkompleks: ATFL (anterior talofibular ligament — hyppigst forstuvet), CFL (calcaneofibular ligament) og PTFL (posterior talofibular ligament). Deltoidligamentet yder medial stabilitet.',
     clinicalRelevance: 'Laterale ankelforstuvninger er blandt de hyppigste sportsskader. ATFL skades først ved inversionsforstuvninger, efterfulgt af CFL. Undersøgelse inkluderer anterior drawer-test (ATFL) og talar tilt-test (CFL).',
-    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ankle_en.svg/500px-Ankle_en.svg.png',
+    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Ankle.svg/500px-Ankle.svg.png',
   },
   {
     id: 'anat-ankle-02',

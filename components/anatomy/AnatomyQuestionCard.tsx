@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   container: { gap: Layout.spacing.md },
   image: {
     width: '100%',
-    height: 200,
+    height: 220,
     borderRadius: Layout.radius.md,
     backgroundColor: Colors.surface,
   },
