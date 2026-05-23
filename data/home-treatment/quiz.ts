@@ -50,7 +50,7 @@ export const homeTreatmentQuiz: QuizQuestion[] = [
     ],
     explanation: 'Visuel cueing med streger på gulvet (klæbestrimler placeret parallelt, ca. 50 cm brede) er en evidensbaseret strategi mod freezing-of-gait. De giver et perceptuelt "mål" for det næste skridt og reducerer freezing ved snævre overgange markant.',
     takeaway: 'Freezing ved døråbning → gulvstrimler som visuel cueing. Enkelt, billigt og effektivt.',
-    tags: ['parkinson', 'freezing', 'cueing', 'boligmodifikation'],
+    tags: ['parkinson', 'frysning', 'cueing-strategi', 'boligmodifikation'],
     subtopic: 'Hjælpemidler',
   },
   {
@@ -153,7 +153,7 @@ export const homeTreatmentQuiz: QuizQuestion[] = [
     ],
     explanation: 'Transfer betegner flytning fra én overflade/position til en anden. Transferteknik i rehabilitering dækker seng-til-stol, stol-til-toilet, bil-in/ud mv. Sikker og effektiv transfer er central for ADL og selvstændighed. Undervurderes ofte.',
     takeaway: 'Transfer = flytning fra overflade til overflade. Korrekt teknik reducerer faldrisiko og belastning.',
-    tags: ['transfer', 'adl', 'teknik'],
+    tags: ['forflytning', 'adl', 'teknik'],
     subtopic: 'ADL',
   },
   {
@@ -170,7 +170,7 @@ export const homeTreatmentQuiz: QuizQuestion[] = [
     ],
     explanation: 'En sammensatt intervention er mest effektiv: visuel cueing (gulvstrimler) adresserer det perceptuelle problem, auditiv cueing (metronom) fremmer rytmisk gang til toilettet, og tidsplanlægning (toiletbesøg i on-fasen) reducerer eksponering for risikosituationen. Bleer er en kapitulation, ikke en løsning.',
     takeaway: 'Freezing + blære: visuel + auditiv cueing + planlagt toilettid i on-fase. Bleer er ikke en løsning.',
-    tags: ['parkinson', 'freezing', 'cueing', 'blærefunktion', 'hjemmetræning'],
+    tags: ['parkinson', 'frysning', 'cueing-strategi', 'blærefunktion', 'hjemmetræning'],
     subtopic: 'Hjælpemidler',
   },
   {
@@ -204,7 +204,7 @@ export const homeTreatmentQuiz: QuizQuestion[] = [
     ],
     explanation: 'Adherence (efterlevelse) er den vigtigste prediktor for effekt af hjemmeprogrammer. En realistisk plan er én patienten faktisk vil udføre: max 3-5 øvelser, integreret i daglige rutiner (morgenkaffe, tv-reklamer), med meningsfulde mål og progressiv sværhedsgrad.',
     takeaway: 'En hjemmeplan er god, hvis den bliver udført. Max 3-5 øvelser, integreret i hverdagen.',
-    tags: ['hjemmetræning', 'adherence', 'motivation'],
+    tags: ['hjemmetræning', 'efterlevelse', 'motivation'],
     subtopic: 'Hjemmetræning',
   },
   {
@@ -290,7 +290,7 @@ export const homeTreatmentQuiz: QuizQuestion[] = [
     ],
     explanation: 'Kombination af auditiv cueing (metronom 110-120 BPM), timing af ture til medicins on-fase og brug af rollator med laser-linje (visuel cueing) er en evidensbaseret strategi mod udendørs freezing. Målet er at opretholde udendørs mobilitet, ikke undgå den.',
     takeaway: 'Udendørs freezing PD: auditiv cueing + on-fase timing + laser-rollator. Oprethold udendørs mobilitet.',
-    tags: ['parkinson', 'freezing', 'cueing', 'udendørs', 'gang'],
+    tags: ['parkinson', 'frysning', 'cueing-strategi', 'udendørs', 'gang'],
     subtopic: 'Hjælpemidler',
   },
   {
@@ -324,7 +324,7 @@ export const homeTreatmentQuiz: QuizQuestion[] = [
     ],
     explanation: 'Adherence-forskning viser: max 3-5 øvelser øger efterlevelse. Meningsfulde øvelser (relateret til patientens mål) og integration i eksisterende rutiner (tandpudsning, morgenmad) øger konsistens. Komplekse programmer med mange elementer udføres sjældent konsekvent.',
     takeaway: 'Adherence: 3-5 øvelser, meningsfulde for patienten, integreret i hverdagsrutine.',
-    tags: ['adherence', 'hjemmetræning', 'motivation'],
+    tags: ['efterlevelse', 'hjemmetræning', 'motivation'],
     subtopic: 'Hjemmetræning',
   },
   {

@@ -101,7 +101,7 @@ export const neuroGroupQuiz: QuizQuestion[] = [
     ],
     explanation: 'TUG > 12 sek ved ældre ≥65 år er den mest anvendte grænseværdi for øget faldrisiko. TUG > 20 sek indikerer behov for ganghjælpemiddel. TUG er et enkelt og reliabelt screeningsredskab til holdvurdering.',
     takeaway: 'TUG > 12 sek = øget faldrisiko hos ældre. Nul udstyr, hurtig og reliabel.',
-    tags: ['tug', 'faldrisiko', 'vurdering'],
+    tags: ['tug-test', 'faldrisiko', 'vurdering'],
     subtopic: 'Funktionelle tests',
   },
   {
@@ -119,7 +119,7 @@ export const neuroGroupQuiz: QuizQuestion[] = [
     ],
     explanation: 'Parkinson-specifikke sikkerhedsovervejelser på hold inkluderer freezing (særligt ved vendinger), on/off-fluktuationer, ortostatisk hypotension og kognitiv overbelastning ved dual-task. Spasticitet er ikke et primært PD-træk (UMN-syndrom).',
     takeaway: 'Planlæg PD-holdtræning med hensyn til freezing, on/off, ortostatisk hypotension og dual-task.',
-    tags: ['parkinson', 'holdtræning', 'sikkerhed', 'freezing'],
+    tags: ['parkinson', 'holdtræning', 'sikkerhed', 'frysning'],
     subtopic: 'Sikkerhed',
   },
   {
@@ -221,7 +221,7 @@ export const neuroGroupQuiz: QuizQuestion[] = [
     ],
     explanation: 'Niveauinddeling til hold bør baseres på objektive funktionstest (TUG, BBS, 6MWT) samt subjektiv vurdering inkl. faldhistorik, kognition, træthed og sociale faktorer. Diagnose alene er utilstrækkelig grundet stor individual variation.',
     takeaway: 'Indplacer på hold ud fra funktion, ikke diagnose. Brug TUG/BBS + anamnese.',
-    tags: ['niveauinddeling', 'vurdering', 'tug', 'berg-balance-scale'],
+    tags: ['niveauinddeling', 'vurdering', 'tug-test', 'berg-balance-scale'],
     subtopic: 'Holdorganisation',
   },
   {
@@ -256,7 +256,7 @@ export const neuroGroupQuiz: QuizQuestion[] = [
     ],
     explanation: 'Alle nævnte tests er klinisk validerede til neurologiske patienter. BBS og TUG er de mest udbredte i klinisk praksis. Mini-BESTest er mere sensitiv for milde balanceproblemer. DGI måler gangkvalitet under udfordring. Romberg tester sensorisk integration (vestibulær vs. proprioceptiv).',
     takeaway: 'BBS, TUG, Mini-BESTest og DGI er alle valide. Vælg ud fra formål og ressourcer.',
-    tags: ['berg-balance-scale', 'tug', 'mini-bestest', 'balance', 'vurdering'],
+    tags: ['berg-balance-scale', 'tug-test', 'mini-bestest', 'balance', 'vurdering'],
     subtopic: 'Funktionelle tests',
   },
   {

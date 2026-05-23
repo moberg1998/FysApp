@@ -29,7 +29,7 @@ export const strokeQuiz: QuizQuestion[] = [
       { id: 'a', text: 'Nedsatte reflekser, atrofi, fasciculationer', isCorrect: false },
       { id: 'b', text: 'Øgede reflekser, spasticitet, Babinski-tegn, klonus', isCorrect: true },
       { id: 'c', text: 'UMN og LMN kan ikke skelnes klinisk', isCorrect: false },
-      { id: 'd', text: 'UMN giver primært sensoriske deficits', isCorrect: false },
+      { id: 'd', text: 'UMN giver primært sensoriske funktionsnedsættelser', isCorrect: false },
     ],
     explanation: 'UMN-syndrom (kortikal/subkortikal/kapselær læsion) efter apopleksi: hyperrefleksi, spasticitet (hastighedsafhængig tonus), Babinski-tegn (dorsalfleksion af stortå ved plantar stimulation), klonus og initial flacciditet der efterfølges af tonus. Apopleksi er en UMN-læsion.',
     takeaway: 'Apopleksi = UMN-syndrom: spasticitet, hyperrefleksi, Babinski. Kliniske tegn guider vurdering og behandlingsvalg.',

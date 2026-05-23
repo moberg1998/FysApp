@@ -97,6 +97,7 @@ export default function AnatomySession() {
       >
         <AnatomyQuestionCard
           question={question.question}
+          imageKey={question.imageKey}
           options={question.options}
           selectedId={selectedId}
           isSubmitted={isSubmitted}

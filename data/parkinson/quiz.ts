@@ -33,7 +33,7 @@ export const parkinsonQuiz: QuizQuestion[] = [
       { id: 'c', text: 'Spasticitet i underekstremiteternes ekstensormuskler', isCorrect: false },
       { id: 'd', text: 'Perifer neuropati der påvirker proprioception', isCorrect: false },
     ],
-    explanation: 'Bradykinesi (langsomhed) og hypokinesi (reduceret amplitude) er de hyppigste funktionelle gangfund ved PD. De forklarer korte skridt, reduceret fodclearing, shuffling og reduceret armsving. Disse adskiller sig fra ataksi (uregelmæssig, bredbaseret gang) eller spasticitet (saksegang, stive ben).',
+    explanation: 'Bradykinesi (langsomhed) og hypokinesi (reduceret amplitude) er de hyppigste funktionelle gangfund ved PD. De forklarer korte skridt, reduceret fodfrigang, shuffling og reduceret armsving. Disse adskiller sig fra ataksi (uregelmæssig, bredbaseret gang) eller spasticitet (saksegang, stive ben).',
     takeaway: 'Reduceret skridtlængde og armsving = bradykinesi/hypokinesi. Behandlingen retter sig mod amplitude, ikke blot hastighed.',
     tags: ['klinisk-præsentation', 'gang', 'bradykinesi'],
     subtopic: 'Klinisk præsentation',
@@ -71,7 +71,7 @@ export const parkinsonQuiz: QuizQuestion[] = [
     ],
     explanation: 'Wearing-off refererer til tilbagevendet af PD-symptomer, inden næste medicindosis skal tages, efterhånden som levodopas effekt aftager. Dette er meget relevant for fysioterapi, da patienter kan have meget forskellig funktionsevne afhængigt af, hvor de er i medicincyklussen. Behandling bør ideelt planlægges til "on"-fasen, når det er muligt.',
     takeaway: 'Spørg altid, hvornår patienten sidst tog sin medicin. Planlæg træning til "on"-perioden for bedst mulig funktionsevne.',
-    tags: ['on-off', 'medicintiming', 'funktionel-variation'],
+    tags: ['on-off-variation', 'medicintiming', 'funktionel-variation'],
     subtopic: 'Klinisk præsentation',
   },
   {
@@ -144,7 +144,7 @@ export const parkinsonQuiz: QuizQuestion[] = [
     ],
     explanation: 'Visuelle gulvcues foran tærsklen (f.eks. tape) er meget effektive ved dørfrysning — patienten instrueres i at fokusere på at træde over linjen. Mekanismen er, at det visuelle stimulus aktiverer kortikale ressourcer og omgår basalgangliernes nedsatte timeringsoutput. Tape, laserstok eller virtuelle linjer er alle anvendelige former.',
     takeaway: 'Visuel gulvcue + "træd over"-instruktion = første valg ved dørfrysning. Tape foran tærsklen er en simpel, effektiv hjemmeløsning.',
-    tags: ['frysning', 'cueing', 'visuel-cue'],
+    tags: ['frysning', 'cueing-strategi', 'visuel-cue'],
     subtopic: 'Freezing og fald',
   },
   {
@@ -197,7 +197,7 @@ export const parkinsonQuiz: QuizQuestion[] = [
     ],
     explanation: 'Den evidensbaserede tilgang til en akut FOG-episode: (1) Stop — forsøg ikke at tvinge bevægelse. (2) Omdirigér opmærksomheden — vægtskiftet bagud eller til siden reducerer den posturale konflikt. (3) Brug en cue: tæl "1-2-3 skridt", march på stedet først, brug en laserlinje eller instruer et stort bevidst første skridt. At skubbe en patient bagfra under FOG er farligt og ineffektivt.',
     takeaway: 'Under FOG: Stop → Skift vægt → Cue. Skub aldrig bagfra. Øv strategien, så både patient og pårørende kender den.',
-    tags: ['frysning', 'cueing', 'håndtering', 'sikkerhed'],
+    tags: ['frysning', 'cueing-strategi', 'håndtering', 'sikkerhed'],
     subtopic: 'Freezing og fald',
   },
   {
@@ -253,7 +253,7 @@ export const parkinsonQuiz: QuizQuestion[] = [
     ],
     explanation: 'TUG måler funktionel mobilitet: rejsning fra stol, 3 meters gang, drejning og tilbagevenden til stolen. Den fanger ganginitiering, drejning og koordination i én test. Forlænget TUG-tid kan indikere nedsat funktionel mobilitet og mulig øget faldrisiko — cut-offs varierer efter population, alder, hjælpemidler og kontekst, og bør aldrig stå alene. Kombiner med kvalitativ observation af rejsning, gangstart, vending og nedsætning. Dual-task TUG (optælling) afslører kognitiv-motorisk interferens.',
     takeaway: 'TUG fanger de mest PD-relevante opgaver: rejsning, ganginitiering, drejning. Brug som udgangspunkt og gentest — kombiner altid med kvalitativ observation.',
-    tags: ['vurdering', 'tug', 'fald', 'funktionel-mobilitet'],
+    tags: ['vurdering', 'tug-test', 'fald', 'funktionel-mobilitet'],
     subtopic: 'Anamnese og undersøgelse',
   },
   {
@@ -341,7 +341,7 @@ export const parkinsonQuiz: QuizQuestion[] = [
     ],
     explanation: 'I distraherende omgivelser som et supermarked, hvor gulvmodifikationer ikke er mulige, er auditiv cueing (en metronom eller rytmisk musik med passende skridtkadence) den mest praktiske, bærbare cueing-strategi. Den aktiverer den auditorisk-motoriske koblingsvej og omgår basal gangliernes nedsatte timeringsmekanisme. Patienten kan bruge en telefonapp. Visuelle linjer er upraktiske på offentlige steder. Skridt-optælling kan virke, men kræver mere kognitiv indsats i distraherende omgivelser.',
     takeaway: 'Travle, offentlige omgivelser → auditiv cueing (metronom-app) er den mest praktiske bærbare strategi.',
-    tags: ['cueing', 'auditiv-cue', 'gang', 'behandling'],
+    tags: ['cueing-strategi', 'auditiv-cue', 'gang', 'behandling'],
     subtopic: 'Behandlingsprincipper',
   },
   {
@@ -375,7 +375,7 @@ export const parkinsonQuiz: QuizQuestion[] = [
     ],
     explanation: 'LSVT BIG er et intensivt fysioterapiprotokol baseret på princippet om, at personer med PD undervurderer, hvor små deres bevægelser er. Ved at træne maksimale amplitudebevægelser (tænk "overdrevent store") rekalibrerer programmet den interne amplitudeopfattelse og forbedrer den funktionelle bevægelsesstørrelse. Det retter sig specifikt mod bradykinesi og hypokinesi. Protokollen består af 16 sessioner over 4 uger (4 sessioner/uge) med daglig hjemmetræning.',
     takeaway: 'LSVT BIG = stor amplitudetræning til rekalibrering af bevægelses-opfattelsen. Retter sig specifikt mod bradykinesi/hypokinesi.',
-    tags: ['behandling', 'lsvt', 'amplitude', 'bradykinesi'],
+    tags: ['behandling', 'lsvt-big', 'amplitude', 'bradykinesi'],
     subtopic: 'Behandlingsprincipper',
   },
   {
@@ -424,7 +424,7 @@ export const parkinsonQuiz: QuizQuestion[] = [
     ],
     explanation: 'Rejsning fra stol ved PD er primært nedsat på grund af bradykinesi (reduceret bevægelseshastighed/-amplitude) og nedsat evne til at generere det fremadrettede truncus-momentum, der er nødvendigt for at flytte kropsvægt frem over fødderne. Den centrale fysioterapeutiske strategi er at træne patienten i at: (1) glide frem til stolkanten, (2) læne sig frem ("næse over tæer"), (3) bruge en verbal eller rytmisk cue til at initierer rejsningen ("1-2-3 op"). Dette erstatter den nedsatte automatiske bevægelsesintiering.',
     takeaway: 'Rejsning ved PD: fremadlæningsstrategi + cue. Øv "glid frem → næse over tæer → 1-2-3 op" som en indlært strategi.',
-    tags: ['forflytninger', 'rejsning', 'behandling', 'cueing'],
+    tags: ['forflytninger', 'rejsning', 'behandling', 'cueing-strategi'],
     subtopic: 'Behandlingsprincipper',
   },
 
@@ -462,7 +462,7 @@ export const parkinsonQuiz: QuizQuestion[] = [
     ],
     explanation: 'Når en patient er i "off"-perioden, er motorsymptomerne betydeligt forværret — at forsøge det samme program som i "on"-tilstanden er både ineffektivt og usikkert. Den rette reaktion er at tilpasse sessionen: reducer intensitet/kompleksitet, fokusér på siddende eller understøttede øvelser, og revurdér stående/gang-sikkerheden inden progression. Dette er en central klinisk kompetence i neurologisk holdtræning. At rådgive til ekstra medicin er uden for fysioterapeutens kompetenceområde.',
     takeaway: '"Off"-periode-patient i gruppen: tilpas, ekskludér ikke. Reducer kompleksitet og intensitet, prioritér sikkerhed. Dokumentér og overvej sessionstiming fremover.',
-    tags: ['on-off', 'holdtræning', 'klinisk-ræsonnering', 'tilpasning'],
+    tags: ['on-off-variation', 'holdtræning', 'klinisk-ræsonnering', 'tilpasning'],
     subtopic: 'Holdtræning',
   },
   {

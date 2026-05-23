@@ -306,7 +306,7 @@ export const lowBackQuiz: QuizQuestion[] = [
     ],
     explanation: 'Evidens for arbejde: tidlig tilbagevenden til modificeret arbejde (reduceret tempo, tilpassede opgaver) er associeret med kortere sygefravær, bedre recovery og lavere risiko for langvarigt forløb. Fuld sygmelding øger risikoen for kronificering. Arbejde er i sig selv terapeutisk.',
     takeaway: 'Tidlig tilbagevenden til modificeret arbejde > fuld sygmelding. Arbejde er terapeutisk.',
-    tags: ['arbejde', 'sygefravær', 'prognose', 'chronificering'],
+    tags: ['arbejde', 'sygefravær', 'prognose', 'kronificering'],
     subtopic: 'Arbejde',
   },
   {
@@ -340,7 +340,7 @@ export const lowBackQuiz: QuizQuestion[] = [
     ],
     explanation: 'MDP/tværfaglig smerterehabilitering er indiceret ved kompleks kronisk rygsmerter med: høj psykosocial belastning, langvarigt sygefravær, multipel behandlingsfejlslagning, eller komorbid angst/depression. Evidens viser overlegne resultater over enkeltfag-behandling ved disse patienter.',
     takeaway: 'MDP: indiceret ved kompleks kronisk smerte + psykosocial belastning + fejlslagne behandlinger.',
-    tags: ['mdb', 'multidisciplinær', 'kronisk-smerte', 'evidens'],
+    tags: ['mdp', 'multidisciplinær', 'kronisk-smerte', 'evidens'],
     subtopic: 'Kroniske smerter',
   },
 ];

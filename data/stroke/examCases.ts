@@ -128,7 +128,7 @@ export const strokeExamCases: ExamCase[] = [
           },
           {
             id: 'e',
-            text: 'Observation af gangmønster med rollator: skulder- og bækkenbevægelse, knæfleksion i svingfase, fodclearing',
+            text: 'Observation af gangmønster med rollator: skulder- og bækkenbevægelse, knæfleksion i svingfase, fodfrigang',
             isCorrect: true,
             explanation: 'Kvalitativ gangobservation supplement de kvantitative tests. Klassisk hemiplegisk gang: cirkumduktionstrategi (benrotation udad for clearance), reduceret knæfleksion i svingfase, spastisk ekstensorsynergi. Hvad ser du hos Erik?',
           },
@@ -652,7 +652,7 @@ export const strokeExamCases: ExamCase[] = [
             id: 'd',
             text: 'Ganganalyse med fokus på plantarfleksion og knæfleksion: cirkumduktionstrategi, fodslæb, hæl-isæt',
             isCorrect: true,
-            explanation: 'Kvalitativ ganganalyse kortlægger mekanismen bag hans snublen: reduceret fodclearing? Øget spastisk plantarfleksion? Reduceret knæfleksion? Identifikation af specifik mekanisme guider interventionen.',
+            explanation: 'Kvalitativ ganganalyse kortlægger mekanismen bag hans snublen: reduceret fodfrigang? Øget spastisk plantarfleksion? Reduceret knæfleksion? Identifikation af specifik mekanisme guider interventionen.',
           },
           {
             id: 'e',

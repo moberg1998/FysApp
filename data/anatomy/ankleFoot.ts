@@ -13,7 +13,7 @@ export const ankleFootQuestions: AnatomyQuestion[] = [
     ],
     explanation: 'Ankelmortisen (art. talocruralis) dannes af tibias ledoverflade (plafond), malleolus medialis (tibia), malleolus lateralis (fibula) og taluskuppelen. Lateral stabilitet ydes af det laterale ligamentkompleks: ATFL (anterior talofibular ligament — hyppigst forstuvet), CFL (calcaneofibular ligament) og PTFL (posterior talofibular ligament). Deltoidligamentet yder medial stabilitet.',
     clinicalRelevance: 'Laterale ankelforstuvninger er blandt de hyppigste sportsskader. ATFL skades først ved inversionsforstuvninger, efterfulgt af CFL. Undersøgelse inkluderer anterior drawer-test (ATFL) og talar tilt-test (CFL).',
-    imageKey: undefined,
+    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ankle_en.svg/500px-Ankle_en.svg.png',
   },
   {
     id: 'anat-ankle-02',
@@ -96,7 +96,7 @@ export const ankleFootQuestions: AnatomyQuestion[] = [
       { id: 'd', text: 'Dorsalfleksionsbegrænsning medfører kun øget Achillesbelastning', isCorrect: false },
     ],
     explanation: 'Normal gang kræver ca. 10° dorsalfleksion i sen standfase. Mere bevægeomfang er nødvendigt ved squat, trappegang og knæ-over-tå-bevægelser. Begrænsning medfører kompensationsstrategier: subtalar pronation, tidlig hælrejsning eller trunkustilt til modsatte side. Langsigtet kan disse kompensationer bidrage til PFPS, plantar fasciopati, IT-båndssyndrom og Achilles-patologi.',
-    clinicalRelevance: 'Vurdering af ankeldorsalfleksion er essentiel i løbe- og sportsfysioterapi, efter Achillessenerekonstruktion og hos Parkinson-patienter, hvor ankeldorsalfleksion under svingfasen påvirker fodclearing.',
+    clinicalRelevance: 'Vurdering af ankeldorsalfleksion er essentiel i løbe- og sportsfysioterapi, efter Achillessenerekonstruktion og hos Parkinson-patienter, hvor ankeldorsalfleksion under svingfasen påvirker fodfrigang.',
     imageKey: undefined,
   },
   {

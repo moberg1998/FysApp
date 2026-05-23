@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Image } from 'expo-image';
 import { Colors } from '@/constants/Colors';
 import { Layout } from '@/constants/Layout';
 import { AnatomyOption } from '@/types';
@@ -35,6 +36,7 @@ function AnatomyOptionButton({ option, state, onPress }: AnatomyOptionButtonProp
 
 interface AnatomyQuestionCardProps {
   question: string;
+  imageKey?: string;
   options: AnatomyOption[];
   selectedId: string | null;
   isSubmitted: boolean;
@@ -43,6 +45,7 @@ interface AnatomyQuestionCardProps {
 
 export function AnatomyQuestionCard({
   question,
+  imageKey,
   options,
   selectedId,
   isSubmitted,
@@ -58,6 +61,14 @@ export function AnatomyQuestionCard({
 
   return (
     <View style={styles.container}>
+      {imageKey && (
+        <Image
+          source={{ uri: imageKey }}
+          style={styles.image}
+          contentFit="contain"
+          transition={200}
+        />
+      )}
       <Text style={styles.question}>{question}</Text>
       <View style={styles.options}>
         {options.map((option) => (
@@ -75,6 +86,12 @@ export function AnatomyQuestionCard({
 
 const styles = StyleSheet.create({
   container: { gap: Layout.spacing.md },
+  image: {
+    width: '100%',
+    height: 200,
+    borderRadius: Layout.radius.md,
+    backgroundColor: Colors.surface,
+  },
   question: {
     fontSize: 17,
     fontWeight: '600',

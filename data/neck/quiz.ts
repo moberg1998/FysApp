@@ -152,7 +152,7 @@ export const neckQuiz: QuizQuestion[] = [
     ],
     explanation: 'De dybe nakkefleksorer (longus colli og capitis) er cervikalcolumnens stabilisatorer. DNF-svaghed er hyppigt ved kronisk nakkesmerter, WAD og cervikogen hovedpine. Klinisk test: craniocervical flexion test (CCFT/Jull-test). Træning af DNF viser reduceret nakkesmerter og -handicap.',
     takeaway: 'DNF-svaghed: associeret med kronisk nakkesmerter og WAD. Test: CCFT. Behandling: specifik DNF-styrketræning.',
-    tags: ['deep-neck-flexors', 'stabilitet', 'nakkesmerter'],
+    tags: ['dybe-nakkefleksorer', 'stabilitet', 'nakkesmerter'],
     subtopic: 'Behandling',
   },
   {
@@ -220,7 +220,7 @@ export const neckQuiz: QuizQuestion[] = [
     ],
     explanation: 'NDI: 10-items selvrapporteret spørgeskema, vurderer: smerteintensitet, personlig hygiejne, løftning, læsning, hovedpine, koncentration, arbejde, kørsel, søvn og rekreative aktiviteter. Score 0-50 (0-4 = ingen, 5-14 = mild, 15-24 = moderat, 25-34 = svær, >34 = komplet disability). MCID = 5/50 point.',
     takeaway: 'NDI: 10-items, 0-50. Måler nakkesmerters ADL-indvirkning. MCID = 5 point.',
-    tags: ['ndi', 'outcome-measure', 'vurdering'],
+    tags: ['ndi', 'udfalds-mål', 'vurdering'],
     subtopic: 'Vurdering',
   },
   {

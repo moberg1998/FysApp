@@ -13,7 +13,7 @@ export const gaitCycleQuestions: AnatomyQuestion[] = [
     ],
     explanation: 'Gangcyklussen defineres som perioden fra initial kontakt (hælisæt hos normaltgående) med én fod til næste initial kontakt med samme fod. Ved normal gangfart udgør standfasen ca. 60% og svingfasen 40%. Der er to perioder med dobbelt understøttelse (begge fødder på underlaget) per cyklus, hver på ca. 10%.',
     clinicalRelevance: 'Asymmetri i stands- og svingtid er en central ganganalyseparameter. Reduceret standfase på én side tyder på smerte eller instabilitet. Ved Parkinsons sygdom forkortes begge faser og giver et shufflende, kortsteppet gangmønster.',
-    imageKey: undefined,
+    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/Gait_Cycle.png',
   },
   {
     id: 'anat-gait-02',
@@ -27,7 +27,7 @@ export const gaitCycleQuestions: AnatomyQuestion[] = [
     ],
     explanation: 'De fem standfase-underfaser (Perrys klassifikation): (1) Initial kontakt — hælisæt (hos normaltgående) eller fodkontakt. (2) Belastningsrespons — slutter når den modsatte fod forlader underlaget. (3) Midstance — slutter når hælen på referencebenets fod rejser sig. (4) Terminal stance — slutter når den modsatte fod laver kontakt. (5) Pre-swing — fra kontralateral fodkontakt til tåafsæt på referencebenet. Hver er defineret af en specifik kinematisk hændelse, ikke et tidsinterval.',
     clinicalRelevance: 'Forståelse af disse faser muliggør præcis identifikation af patologiske gangmønstre. F.eks.: svaghed af tibialis anterior forsinker hælrejsningen og påvirker belastningsresponset; svaghed af plantarflektorerne reducerer afsættet i terminal stance.',
-    imageKey: undefined,
+    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Stance_and_Swing_Phase.png/500px-Stance_and_Swing_Phase.png',
   },
   {
     id: 'anat-gait-03',
@@ -74,7 +74,7 @@ export const gaitCycleQuestions: AnatomyQuestion[] = [
   {
     id: 'anat-gait-06',
     categoryId: 'gait-cycle',
-    question: 'Hvilken muskel er mest aktiv i tidlig svingfase for at hjælpe fodclearing, og hvad sker der ved svaghed?',
+    question: 'Hvilken muskel er mest aktiv i tidlig svingfase for at hjælpe fodfrigang, og hvad sker der ved svaghed?',
     options: [
       { id: 'a', text: 'Tibialis anterior — dorsalflekterer anklen under svingfasen; svaghed forårsager dropfod og clearingsvigt', isCorrect: true },
       { id: 'b', text: 'Rectus femoris — ekstenderer knæet under svingfasen; svaghed forårsager knæbøjning', isCorrect: false },
@@ -95,7 +95,7 @@ export const gaitCycleQuestions: AnatomyQuestion[] = [
       { id: 'c', text: 'Hypokinetisk shufflende gang med reduceret skridtlængde, reduceret armsving og festination — forårsaget af bradykinesi og nedsat automatisk gangudøvelse', isCorrect: true },
       { id: 'd', text: 'Antalgisk gang med forkortet standfase på én side — forårsaget af hofte- eller knæsmerter', isCorrect: false },
     ],
-    explanation: 'Parkinsons gang er karakteriseret ved hypokinesi (reduceret amplitude): korte skridt, shuffling, reduceret fodclearing, reduceret armsving, fremadrettet flekteret kropsholdning og festination. Dette afspejler nedsat automatik i gangudøvelse fra basal ganglie-dysfunktion — patienten skal bevidst kontrollere hvert skridt. Det manglende automatiske reciprokke armsving afspejler reduceret automatisk truncus-modrotation. Drejninger er særligt påvirket med mange små shufflende skridt i stedet for en jævn omdrejning.',
+    explanation: 'Parkinsons gang er karakteriseret ved hypokinesi (reduceret amplitude): korte skridt, shuffling, reduceret fodfrigang, reduceret armsving, fremadrettet flekteret kropsholdning og festination. Dette afspejler nedsat automatik i gangudøvelse fra basal ganglie-dysfunktion — patienten skal bevidst kontrollere hvert skridt. Det manglende automatiske reciprokke armsving afspejler reduceret automatisk truncus-modrotation. Drejninger er særligt påvirket med mange små shufflende skridt i stedet for en jævn omdrejning.',
     clinicalRelevance: 'Behandlingsmål inkluderer: amplitudetræning (større skridt), cueing (auditiv, visuel), drejetræning og aerob træning. Forståelse af den biomekaniske baggrund guider den fysioterapeutiske tilgang.',
     imageKey: undefined,
   },

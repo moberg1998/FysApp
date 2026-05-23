@@ -13,7 +13,7 @@ export const kneeQuestions: AnatomyQuestion[] = [
     ],
     explanation: 'Begge menisker fordeler belastning, absorberer stød, forbedrer ledkongruens og yder sekundær stabilitet. Den mediale menisk er C-formet og fast hæftet til den mediale ledkapsel og MCL, hvilket gør den mindre mobil. Den laterale menisk er mere O-formet og mobil. Derfor skades den mediale menisk hyppigere — den kan ikke undvige kompressive kræfter ligeså effektivt ved kombinerede valgus- og rotationsmekanismer.',
     clinicalRelevance: 'Mediale menisklæsioner er hyppige. McMurray-test og Thessaly-test kan støtte mistanken, men kan hverken bekræfte eller udelukke menisklæsion alene. Mekanisme, hævelse, klik/locking, ledlinjemøhed, alder og det samlede kliniske billede er afgørende for vurderingen. Rehabilitering efter menisksutur inkluderer beskyttelse mod aksial belastning i de tidlige faser.',
-    imageKey: undefined,
+    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Knee_diagram.svg/500px-Knee_diagram.svg.png',
   },
   {
     id: 'anat-knee-02',
@@ -27,7 +27,7 @@ export const kneeQuestions: AnatomyQuestion[] = [
     ],
     explanation: 'ACL løber fra den posteriore laterale femurkondyl til den anteriore intercondylare tibiaregion. Den begrænser primært anterior tibia-translation og modstår tibial indadrotation. Lachman-test (udført ved 20–30° fleksion) har den højeste sensitivitet (~85–95%) for ACL-rupturer. Anterior drawer-test (90° fleksion) er mindre sensitiv grundet hamstrings-spasme.',
     clinicalRelevance: 'ACL-skader er hyppige i sportsgrene med drejning og retningsskift. Forståelse af normal versus insufficiens af ACL guider returnering til sport og progressionen i rehabiliteringen. Quadriceps- og hamstrings-koaktivering er et centralt neuromuskulært mål efter ACL-rekonstruktion.',
-    imageKey: undefined,
+    imageKey: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Knee_diagram.svg/500px-Knee_diagram.svg.png',
   },
   {
     id: 'anat-knee-03',

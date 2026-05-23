@@ -134,9 +134,9 @@ export const msExamCases: ExamCase[] = [
           },
           {
             id: 'f',
-            text: 'Observation af gangmønster med særlig opmærksomhed på spastisk komponent, fodclearing og stamina',
+            text: 'Observation af gangmønster med særlig opmærksomhed på spastisk komponent, fodfrigang og stamina',
             isCorrect: true,
-            explanation: 'Kvalitativ gangobservation kompletmenterer de kvantitative tests. Specifikt: spastisk gangmønster (stif knæ i svingfase), fodclearing (svaghed i tibialis anterior), og om ganghastighed og -kvalitet falder over 6 min (træthedssignatur).',
+            explanation: 'Kvalitativ gangobservation kompletmenterer de kvantitative tests. Specifikt: spastisk gangmønster (stif knæ i svingfase), fodfrigang (svaghed i tibialis anterior), og om ganghastighed og -kvalitet falder over 6 min (træthedssignatur).',
           },
         ],
         explanation: 'MS-gangvurdering bør inkludere: FSS (træthed), 10MWT (hastighedsbaseline), 6MWT (gangkapacitet og træthedsinduceret forringelse), TUG (funktionel mobilitet) og kvalitativ gangobservation. Tilsammen giver de et fuldt billede af Sofies funktionelle status.',
@@ -208,7 +208,7 @@ export const msExamCases: ExamCase[] = [
           },
           {
             id: 'e',
-            text: 'Gangrehab med fokus på fodclearing og stamina: gangbånd, konditionstræning og eventuelt brug af stave til energioptimering',
+            text: 'Gangrehab med fokus på fodfrigang og stamina: gangbånd, konditionstræning og eventuelt brug af stave til energioptimering',
             isCorrect: true,
             explanation: 'Direkte gangtræning adresserer det specifikke funktionelle mål. Nordic walking-stave reducerer energiforbruget og kan forlænge gangdistancen, hvilket er relevant da hendes klage er nedsat gangdistance.',
           },

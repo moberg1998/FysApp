@@ -202,7 +202,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Mål: bradykinesi og hypokinesi. Kerneprincip: patienter med PD undervurderer, hvor små deres bevægelser er, på grund af unormal sensorisk skalering. LSVT BIG træner overdrevent store bevægelser i alle kontekster — stående, gang, rækken. "Tænk STORT, bevæg STORT." Rekalibringseffekten generaliserer til daglige bevægelser. Format: 16 sessioner over 4 uger (4x/uge, 1-times sessioner) + daglig hjemmetræning.',
     clinicalPoint: 'LSVT BIG kræver intensiv planlægning og høj patientmotivation. Det er evidensbaseret ved PD og tilbydes som certifikation for fysioterapeuter.',
     category: 'Behandlingsprincipper',
-    tags: ['behandling', 'lsvt', 'amplitude'],
+    tags: ['behandling', 'lsvt-big', 'amplitude'],
   },
   {
     id: 'pk-fc22',

@@ -272,7 +272,7 @@ export const redFlagsQuiz: QuizQuestion[] = [
     ],
     explanation: 'IASP-klassifikation: Nociceptiv = aktivering af nociceptorer ved vævsskade (artrose, fraktur). Neuropatisk = strukturel nervelæsion (radikulopati, polyneuropati) med sensorisk ændring i dermatomalt mønster. Nociplastisk = central sensibilisering uden klar væv/nerveskade (fibromyalgi, kronisk rygsmerter). Korrekt klassifikation guider behandlingsvalg.',
     takeaway: 'Nociceptiv: vævsskade. Neuropatisk: nerveskade + sensorisk deficit. Nociplastisk: central sensitisering.',
-    tags: ['smertemechanisme', 'neuropatisk', 'nociplastisk', 'klassifikation'],
+    tags: ['smertemekanisme', 'neuropatisk', 'nociplastisk', 'klassifikation'],
     subtopic: 'Differentialdiagnose',
   },
   {
@@ -306,7 +306,7 @@ export const redFlagsQuiz: QuizQuestion[] = [
     ],
     explanation: 'Multiple røde flag: alder > 50, > 5 kg vægttab, natsveden, hvileresistente rygsmerter, ryger. Klinisk billede er stærkt suspekt for malign sygdom (lungecancer med spinal metastase). Fysioterapeuten har pligt til at identificere disse røde flag og sikre øjeblikkelig lægekonsultation. Påbegyndelse af fysioterapi er uansvarligt.',
     takeaway: 'Flertydige røde flag (vægttab + natsvede + hvileresistent + alder + rygning) = stop og refer til læge.',
-    tags: ['røde-flag', 'malignitet', 'klinisk-ræsonnering', 'refer'],
+    tags: ['røde-flag', 'malignitet', 'klinisk-ræsonnering', 'henvisning'],
     subtopic: 'Røde flag',
   },
   {
