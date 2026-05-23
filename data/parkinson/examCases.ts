@@ -78,19 +78,19 @@ export const parkinsonExamCases: ExamCase[] = [
             id: 'c',
             text: 'Henvis straks til neurologi inden fysioterapi påbegyndes',
             isCorrect: false,
-            explanation: 'Fysioterapi kan og bør begyndes hurtigt. Kognitive ændringer er hyppige ved PD og kræver ikke neurologisk gennemgang inden fysioterapi. Henvis, hvis du identificerer en uforklaret akut ændring, men ikke for forventede PD-relaterede ændringer.',
+            explanation: 'Kognitive ændringer er hyppige ved PD og kræver ikke neurologisk gennemgang inden fysioterapi — start straks. Henvis ved pludselig ny neurologisk forværring, akut konfusion eller ny kraftnedsættelse, men ikke for forventede PD-ændringer.',
           },
           {
             id: 'd',
             text: 'Spørg om Ingrid har et ganghjælpemiddel, om hun bruger det konsekvent, og om det hjælper ved freezing eller svimmelhed',
             isCorrect: true,
-            explanation: 'Brug af ganghjælpemiddel er direkte relevant for sikkerhedsplanlægning. Visse hjælpemidler (f.eks. firehjulede rollatorer med sæde) kan hjælpe ved OH (sæt dig, hvis svimmel), men hjælper muligvis ikke ved FOG. Nordic poles eller laserstokke kan være mere hensigtsmæssige for denne patient.',
+            explanation: 'Ganghjælpemidler er direkte relevante for sikkerhedsplanlægning — visse typer hjælper ved OH (sæt-sig ved svimmelhed), mens andre (laserstok) er bedre ved FOG. Vurder hvilken type der matcher Ingrids primære risiko.',
           },
           {
             id: 'e',
             text: 'Aflyse sessionen og omlægge til en dag, hvor hun ikke er svimmel',
             isCorrect: false,
-            explanation: 'Svimmelhed ved opstigning er en behandlelig tilstand. At aflyse sessionen er ikke hensigtsmæssigt. Vurder, tilpas og håndtér i stedet — svimmelhedshåndtering er en del af det fysioterapeutiske arbejde.',
+            explanation: 'OH er behandlelig — aflys ikke sessionen. Vurder, tilpas og håndtér svimmelhedsrisikoen som en del af fysioterapien.',
           },
         ],
         explanation: 'Ortostatisk hypotension og kognitive ændringer er to store kliniske hensyn i denne case. Begge kræver praktisk tilpasning, ikke henvisning eller aflysning.',
@@ -118,7 +118,7 @@ export const parkinsonExamCases: ExamCase[] = [
             id: 'c',
             text: 'FOG-Q udfyldt med Ingrid',
             isCorrect: true,
-            explanation: 'FOG-Q kvantificerer freezing-sværhedsgraden og hjælper med at identificere specifikke kontekster. Baseline-scoring er essentiel for monitorering af fremgang.',
+            explanation: 'FOG-Q kvantificerer freezing-sværhedsgraden og hjælper med at identificere specifikke kontekster. Udgangspunktsmålingen er essentiel for monitorering af fremgang.',
           },
           {
             id: 'd',
@@ -184,7 +184,7 @@ export const parkinsonExamCases: ExamCase[] = [
         options: [
           {
             id: 'a',
-            text: 'Cueing-strategitræning til dør- og drejefrysning — visuelle gulvcues, auditiv cueing, vægtskinestrategi',
+            text: 'Cueing-strategitræning til dør- og drejefrysning — visuelle gulvcues, auditiv cueing, vægtskiftestrategi',
             isCorrect: true,
             explanation: 'Cueing er den primære intervention for FOG. Start med at identificere, hvilken strategi der virker bedst for Ingrid via in-session afprøvning, og øv derefter og generaliser til hjemmemiljøet.',
           },
@@ -230,9 +230,9 @@ export const parkinsonExamCases: ExamCase[] = [
         options: [
           {
             id: 'a',
-            text: 'Dokumentér baseline-scores: TUG (19 s), FOG-Q (18/24), Mini-BESTest (16/28), posturalt BT-fald (24 mmHg)',
+            text: 'Dokumentér udgangspunktsmålinger: TUG (19 s), FOG-Q (18/24), Mini-BESTest (16/28), posturalt BT-fald (24 mmHg)',
             isCorrect: true,
-            explanation: 'Baseline-scores danner grundlaget for at måle fremgang og kommunikere med andre sundhedsprofessionelle. Dokumentér altid standardiserede testscores med enheder og dato.',
+            explanation: 'Udgangspunktsmålingerne danner grundlaget for at måle fremgang og kommunikere med andre sundhedsprofessionelle. Dokumentér altid standardiserede testscores med enheder og dato.',
           },
           {
             id: 'b',
@@ -336,13 +336,13 @@ export const parkinsonExamCases: ExamCase[] = [
             id: 'c',
             text: 'Start ikke fysioterapi, før alle symptomer er medicinsk stabiliserede',
             isCorrect: false,
-            explanation: 'On/off-fluktuationer er et kronisk træk ved PD-farmakoterapi og elimineres sjældent fuldstændigt. At vente på fuld stabilisering svarer til at vente på ubestemt tid. Fysioterapi bør fortsætte med passende tilpasning.',
+            explanation: 'On/off-fluktuationer er et kronisk PD-træk og elimineres sjældent fuldstændigt — at vente på stabilisering er ikke realistisk. Fortsæt fysioterapi med passende tilpasning.',
           },
           {
             id: 'd',
             text: 'Sørg for at fysioterapisessioner altid planlægges i Henriks "on"-periode, og dokumentér, hvordan "on" og "off" ser ud, for at informere teamet',
             isCorrect: true,
-            explanation: 'Planlægning af fysioterapi i "on"-fasen maksimerer træniningskvalitet og -sikkerhed. Dokumentation af den funktionelle forskel mellem tilstandene hjælper det bredere plejeteam med kommunikation.',
+            explanation: 'Planlægning af fysioterapi i "on"-fasen maksimerer træningskvalitet og -sikkerhed. Dokumentation af den funktionelle forskel mellem tilstandene hjælper det bredere plejeteam med kommunikation.',
           },
         ],
         explanation: 'Ikke-motoriske off-symptomer (angst, brystsymptomer) kræver medicinsk kommunikation. Fysioterapi bør tidsindstilles til "on"-fasen og fortsættes med bevidsthed om variabiliteten.',
@@ -470,7 +470,7 @@ export const parkinsonExamCases: ExamCase[] = [
         options: [
           {
             id: 'a',
-            text: 'Dokumentér baseline-funktion i "on"-fasen med standardiserede tests (TUG, 10MWT) — notér præcist tidspunkt for seneste medicindosis',
+            text: 'Dokumentér funktionsniveau i "on"-fasen med standardiserede tests (TUG, 10MWT) — notér tidspunkt for seneste medicindosis',
             isCorrect: true,
             explanation: 'Notér altid tidspunktet for seneste medicindosis, når PD-vurderinger dokumenteres. Et resultat uden denne kontekst er svært at fortolke.',
           },
@@ -564,7 +564,7 @@ export const parkinsonExamCases: ExamCase[] = [
             id: 'a',
             text: 'Sæt Bjørn tæt på dig og modificer hans program til siddende eller understøttede øvelser, til han tager sin næste dosis og bliver "on"',
             isCorrect: true,
-            explanation: 'Tilpasset program i "off"-tilstand er den korrekte tilgang. Siddende og understøttede øvelser er sikrere og stadig gavnlige. At placere Bjørn tæt på dig forbedrer supervision.',
+            explanation: 'Tilpasset program i "off"-tilstand er korrekt — siddende og understøttede øvelser er sikrere og stadig gavnlige. Placer Bjørn tæt på dig for bedre supervision.',
           },
           {
             id: 'b',

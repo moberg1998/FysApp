@@ -10,7 +10,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Bradykinesi = langsomhed af bevægelse kombineret med progressiv reduktion i hastighed og amplitude ved gentagelse (trætning). Funktionelle konsekvenser: reduceret skridtlængde, shufflende gang, reduceret armsving, lille håndskrift (micrographia), ansigtsmasking og besvær med finmotoriske opgaver.',
     clinicalPoint: 'Bradykinesi er det mest invaliderende motoriske træk ved Parkinsons sygdom. LSVT BIG og amplitudetræning retter sig specifikt mod hypokinesi-komponenten.',
     category: 'Motorsymptomer og funktion',
-    tags: ['bradykinesia', 'motor-symptoms', 'gait'],
+    tags: ['bradykinesi', 'motorsymptomer', 'gang'],
   },
   {
     id: 'pk-fc02',
@@ -19,16 +19,16 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Rigiditet = øget modstand mod passiv bevægelse i hele bevægeomfanget, i både fleksion og ekstension. To typer: cogwheel-rigiditet (rykvis, superponeret på tremor) og bly-rørs-rigiditet (jævn, konstant). Spasticitet = hastighedsafhængig modstand (forværres ved hurtigere bevægelse) og er et øvre motorneurontegn ved apopleksi/sclerose.',
     clinicalPoint: 'Rigiditet reducerer truncusrotation, begrænser armsving og bidrager til foroverbøjet kropsholdning. Stræk- og rotationsøvelser adresserer dette direkte.',
     category: 'Motorsymptomer og funktion',
-    tags: ['rigidity', 'motor-symptoms'],
+    tags: ['rigiditet', 'motorsymptomer'],
   },
   {
     id: 'pk-fc03',
     topicId: 'parkinson',
     front: 'Hvad forårsager den shufflende, kortsteppede gang ved Parkinsons sygdom, og hvad er behandlingsprincippet?',
-    back: 'Korte skridt og shuffling skyldes hypokinesi (reduceret amplitude), der påvirker skridtlængden, kombineret med reduceret fodclearing og manglende hæl-til-tå-mønster. Patienten tager mange små skridt i stedet for normale skridt. Behandlingsprincip: amplitudetræning — specifik øvelse i at tage større, overdrevne skridt med cueing.',
+    back: 'Korte skridt og shuffling skyldes hypokinesi (reduceret amplitude), der påvirker skridtlængden, kombineret med reduceret fodfrigang og manglende hæl-til-tå-mønster. Patienten tager mange små skridt i stedet for normale skridt. Behandlingsprincip: amplitudetræning — specifik øvelse i at tage større, overdrevne skridt med cueing.',
     clinicalPoint: 'Træning for større skridt, ikke hurtigere skridt. Brug visuelle mål (markører på gulvet) eller "tag store skridt"-cueing. LSVT BIG-principperne gælder direkte.',
     category: 'Motorsymptomer og funktion',
-    tags: ['gait', 'hypokinesia', 'treatment'],
+    tags: ['gang', 'hypokinesi', 'behandling'],
   },
   {
     id: 'pk-fc04',
@@ -37,7 +37,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Reduceret truncusrotation: begrænser drejeevnen, øger FOG-risiko ved drejninger, bidrager til foroverbøjet kropsholdning. Reduceret armsving: ofte det første observerbare gangtegn, normalt asymmetrisk (værst på den mest afficerede side). Begge skyldes rigiditet og bradykinesi. Reduceret modrotation mellem truncus og bækken reducerer også gangeffektiviteten.',
     clinicalPoint: 'Truncusrotationsøvelser (siddende, stående, under gang) er en central komponent i PD-fysioterapi og adresserer direkte både kropsholdning og gangkvalitet.',
     category: 'Motorsymptomer og funktion',
-    tags: ['trunk-rotation', 'arm-swing', 'gait', 'posture'],
+    tags: ['truncusrotation', 'armsving', 'gang', 'kropsholdning'],
   },
   {
     id: 'pk-fc05',
@@ -46,7 +46,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Festination = ufrivillig acceleration af gang med progressivt kortere og hurtigere skridt. Patienten ser ud til at "jage sit tyngdepunkt" fremad. Det afspejler et forsøg på at forhindre fremadrettet fald ved en flekteret kropsholdning. Det forudsætter ofte et fald. Fysioterapeutisk tilgang: sæt farten ned med bevidst stop, brug auditiv cueing til at nulstille skridtrytmen, øv bevidste store skridt.',
     clinicalPoint: 'Ser du en patient festinere, bed dem stoppe, rette sig op og genstarte med en cue. Øv "stop → nulstil → skridt" som en strategi, de kan bruge selvstændigt.',
     category: 'Motorsymptomer og funktion',
-    tags: ['festination', 'gait', 'falls'],
+    tags: ['festination', 'gang', 'fald'],
   },
 
   // ─── Kategori 2: Freezing og cueing ───────────────────────────────────────
@@ -58,7 +58,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'FOG = korte, pludselige episoder, hvor fødderne ser ud til at være "limet til gulvet", og patienten ikke kan tage et skridt frem trods intentionen om at gå. Hyppigste udløsere: ganginitiering (starttøven), drejning (særligt 180°), døråbninger og smalle passager, dual-task (tale/bæring af genstande), stress og tidspres.',
     clinicalPoint: 'FOG er et af de mest invaliderende og faldfremkaldende symptomer ved PD. Spørg specifikt til alle udløsere i anamnesen.',
     category: 'Freezing og cueing',
-    tags: ['freezing', 'fog-triggers'],
+    tags: ['frysning', 'fog-udløsere'],
   },
   {
     id: 'pk-fc07',
@@ -67,7 +67,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Auditiv cueing tilvejebringer et eksternt rytmisk stimulus (metronom, musik), der omgår basalgangliernes nedsatte interne timeringsmekanisme. Den auditorisk-motoriske koblingsvej aktiverer kortikale ressourcer til at opretholde skridtrytmen. Bedst egnet til: gangopretholdelse i distraherende omgivelser (supermarked, menneskemængder), reduktion af festination, opretholdelse af skridtkadence under længere gangture.',
     clinicalPoint: 'Indstil metronomen 10–15% over patientens komfortable kadence for at forbedre skridtlængde og hastighed. Telefonapps (MetroTimer m.fl.) gør dette bærbart.',
     category: 'Freezing og cueing',
-    tags: ['cueing', 'auditory-cue'],
+    tags: ['cueing-strategi', 'auditiv-cue'],
   },
   {
     id: 'pk-fc08',
@@ -76,7 +76,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Visuelle gulvcues (tapelinjer, laserlinjer, parallelle linjer på gulv) giver et tværgående visuelt mål, som patienten fokuserer på at træde over. Dette aktiverer det visuelle system og kortikal kontrol til at kompensere for det nedsatte automatiske basalganglie-motorprogram. Kliniske anvendelser: dørfrysning (tape foran tærskel), ganginitiering, skridtlængetræning, drejning.',
     clinicalPoint: 'Enkel gulvtape hjemme foran hyppige frysningssteder (badeværelsesdøren, køkkendøren) er højeffektiv og koster ingenting. Laserstok giver bærbare visuelle cues til udendørs brug.',
     category: 'Freezing og cueing',
-    tags: ['cueing', 'visual-cue', 'freezing'],
+    tags: ['cueing-strategi', 'visuel-cue', 'frysning'],
   },
   {
     id: 'pk-fc09',
@@ -85,16 +85,16 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Attentionel (kognitiv) cueing = bevidst opmærksomhed rettes mod selve bevægelsen for at tilsidesætte det nedsatte automatiske motorprogram. Eksempler: "Tænk på at tage et stort skridt," "Fokus på at løfte foden højt," "Træd over en imaginær linje." Bruges når eksterne cues (auditiv/visuel) er utilgængelige, eller patienten har lært at internalisere en bevægelsesstrategi.',
     clinicalPoint: 'Attentionelle strategier kræver kognitive ressourcer og er mere mentalt krævende — de kan trætte patienter med kognitiv PD. Kombiner med pauser efter behov.',
     category: 'Freezing og cueing',
-    tags: ['cueing', 'attentional-cue', 'cognitive'],
+    tags: ['cueing-strategi', 'attentionel-cue', 'kognition'],
   },
   {
     id: 'pk-fc10',
     topicId: 'parkinson',
-    front: 'Beskriv "det store første skridt" og vægtskiningstrategi til ganginitiering efter freezing.',
-    back: 'Ved freezing: (1) Stop forsøget på at træde frem. (2) Skift vægt til én side (eller lidt bagud) for at frigøre den forreste fod. (3) Instruer: "Tag ét stort bevidst skridt — hæl ned først." Vægtskiningen ændrer det posturale sæt og reducerer konflikten i basalgangliernes output. "Store"-instruktionen bruger amplitudecueing til at tilsidesætte hypokinesi.',
+    front: 'Beskriv "det store første skridt" og vægtskiftestrategi til ganginitiering efter freezing.',
+    back: 'Ved freezing: (1) Stop forsøget på at træde frem. (2) Skift vægt til én side (eller lidt bagud) for at frigøre den forreste fod. (3) Instruer: "Tag ét stort bevidst skridt — hæl ned først." Vægtskiftet ændrer det posturale sæt og reducerer konflikten i basalgangliernes output. "Store"-instruktionen bruger amplitudecueing til at tilsidesætte hypokinesi.',
     clinicalPoint: 'Øv denne strategi bevidst i sessioner, til den er indlært som en respons patienten kan bruge selvstændigt. Pårørendeuddannelse i denne strategi er lige så vigtig.',
     category: 'Freezing og cueing',
-    tags: ['freezing', 'cueing', 'gait-initiation'],
+    tags: ['frysning', 'cueing-strategi', 'ganginitiering'],
   },
 
   // ─── Kategori 3: Centrale anamnesespørgsmål ───────────────────────────────
@@ -106,7 +106,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Spørg: (1) Antal fald de seneste 3–12 måneder. (2) Omstændigheder — hvor, hvilken aktivitet, tidspunkt. (3) Var der kvæstelser? (4) Faldangst (rate 0–10). (5) Involverede faldet freezing, svimmelhed eller tab af balance? (6) Er der et ganghjælpemiddel — bruger patienten det konsekvent? Dokumenter fald med standardiseret tilgang.',
     clinicalPoint: 'To eller flere fald på 12 måneder = høj faldrisiko. Dette bør straks udløse en grundig balancevurdering og et faldforebyggelsesprogram.',
     category: 'Centrale anamnesespørgsmål',
-    tags: ['anamnesis', 'falls'],
+    tags: ['anamnese', 'fald'],
   },
   {
     id: 'pk-fc12',
@@ -115,7 +115,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Spørg: (1) Oplever du nogensinde at sidde fast under gang — fødderne "limet til gulvet"? (2) Hvornår sker det: gangstart, drejning, døråbninger, trængslen, stress? (3) Hvor ofte og i hvor lang tid? (4) Hvad hjælper dig, når du fryser? (5) Er du faldet på grund af freezing? Brug FOG-Q til kvantificering.',
     clinicalPoint: 'Mange patienter rapporterer ikke spontant FOG — de beskriver det som "mine fødder vil ikke følge med" eller "jeg sidder fast." Spørg direkte og brug specifikke eksempler.',
     category: 'Centrale anamnesespørgsmål',
-    tags: ['anamnesis', 'freezing', 'fog'],
+    tags: ['anamnese', 'frysning', 'fog'],
   },
   {
     id: 'pk-fc13',
@@ -124,7 +124,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Spørg: (1) Hvilken PD-medicin tager du og hvornår? (2) Er der tidspunkter af dagen, hvor du bevæger dig væsentlig bedre eller dårligere? (3) Hvor lang tid efter indtagelse mærker du at medicinen begynder at virke? (4) Hvor lang tid inden næste dosis oplever du forværring? (5) Har du ufrivillige bevægelser (dyskinesi) på noget tidspunkt?',
     clinicalPoint: 'At time din vurdering og træning i patientens "on"-fase giver det mest pålidelige udgangspunkt. Vurderer du i "off"-fasen, kan du overvurdere sværhedsgraden af funktionsnedsættelsen.',
     category: 'Centrale anamnesespørgsmål',
-    tags: ['anamnesis', 'on-off', 'medication-timing'],
+    tags: ['anamnese', 'on-off-variation', 'medicintiming'],
   },
   {
     id: 'pk-fc14',
@@ -133,7 +133,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Spørg: (1) Føler du dig svimmel eller ør, når du rejser dig op? (2) Sker det fra liggende, siddende eller begge dele? (3) Føler du dig ved at besvime eller må holde fast i noget? (4) Er du nogensinde faldet eller tæt på at falde på grund af svimmelhed ved opstigning? (5) Hvornår på dagen er det værst?',
     clinicalPoint: 'Ved positiv svar: mål blodtryk liggende og stående inden stående øvelser. Et fald ≥20 mmHg systolisk eller ≥10 mmHg diastolisk bekræfter ortostatisk hypotension.',
     category: 'Centrale anamnesespørgsmål',
-    tags: ['anamnesis', 'orthostatic-hypotension', 'falls'],
+    tags: ['anamnese', 'ortostatisk-hypotension', 'fald'],
   },
 
   // ─── Kategori 4: Undersøgelse og tests ────────────────────────────────────
@@ -142,19 +142,19 @@ export const parkinsonFlashcards: Flashcard[] = [
     id: 'pk-fc15',
     topicId: 'parkinson',
     front: 'Beskriv TUG-testen: procedure, hvad den måler og klinisk tolkning.',
-    back: 'Procedure: patienten sidder i en standard stol, rejser sig på kommando, går 3 m, drejer rundt, går tilbage og sætter sig. Tid fra kommando til siddende. Hvad den måler: funktionel mobilitet — integrerer rejsning, gangintiering, gang, drejning og tilbagevenden til stolen. Klinisk tolkning: <12 s = god mobilitet; >12–13 s = øget faldrisiko hos ældre/PD. En dual-task TUG (baglæns optælling) afslører yderligere kognitiv-motorisk interferens.',
+    back: 'Procedure: patienten sidder i en standardstol, rejser sig på kommando, går 3 m, drejer rundt, går tilbage og sætter sig. Hvad den måler: funktionel mobilitet — integrerer rejsning, ganginitiering, gang, drejning og tilbagevenden til stolen. Tolkning: forlænget TUG-tid kan indikere nedsat funktionel mobilitet — brug cut-offs vejledende, da de varierer med alder, hjælpemidler og kontekst. Dual-task TUG (baglæns optælling) afslører kognitiv-motorisk interferens.',
     clinicalPoint: 'TUG er din mest alsidige enkelttest ved PD — den fanger initiering, drejning og de mest faldudsatte bevægelser i én test.',
     category: 'Undersøgelse og tests',
-    tags: ['assessment', 'tug'],
+    tags: ['vurdering', 'tug'],
   },
   {
     id: 'pk-fc16',
     topicId: 'parkinson',
     front: 'Beskriv 5xSTS-testen: procedure og klinisk brug ved PD.',
-    back: 'Procedure: patienten sidder i en standard stol (ingen armbrug), rejser sig fuldt op og sætter sig ned 5 gange så hurtigt som muligt. Tid fra start til sidst siddende. Klinisk brug: måler underekstremitetsstyrke og transferevne. Normer varierer; >12–15 sekunder er klinisk meningsfuldt hos ældre. Brug til vurdering af transfersikkerhed, styrkedeficit og fremgang med træning.',
+    back: 'Procedure: patienten sidder i en standardstol (ingen armbrug), rejser sig fuldt op og sætter sig ned 5 gange så hurtigt som muligt. Klinisk brug: måler underekstremitetsstyrke og transferevne. Forlænget tid kan tyde på nedsat transferkapacitet — referenceværdier varierer med alder og population. Brug til vurdering af transfersikkerhed og fremgang med træning.',
     clinicalPoint: 'Observér ikke kun tid men også kvalitet: armbrug, fremadlænet strategi, tab af balance, tøven ved initiering.',
     category: 'Undersøgelse og tests',
-    tags: ['assessment', '5sts', 'transfers'],
+    tags: ['vurdering', '5sts', 'forflytninger'],
   },
   {
     id: 'pk-fc17',
@@ -163,16 +163,16 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'FOG-Q er et 6-spørgsmåls patientrapporteret spørgeskema, der vurderer hyppighed og sværhedsgrad af freezing of gait. Samlet score 0–24 (højere = dårligere). Spørgsmålene omhandler: ganghastighedsændringer under FOG, fornemmelse af at sidde fast, frysning ved drejning, frysning ved gangstart og varighed af FOG-episoder. Brug ved baseline og genundersøgelse til at følge forandringen.',
     clinicalPoint: 'Brug altid FOG-Q sammen med direkte klinisk observation — patienter underrapporterer ofte sværhedsgraden eller genkender ikke alle deres FOG-kontekster.',
     category: 'Undersøgelse og tests',
-    tags: ['assessment', 'fog-q', 'freezing'],
+    tags: ['vurdering', 'fog-q', 'frysning'],
   },
   {
     id: 'pk-fc18',
     topicId: 'parkinson',
     front: 'Hvad vurderer Mini-BESTest, og hvorfor er den at foretrække frem for Berg Balance Scale ved PD?',
     back: 'Mini-BESTest (14 items, max 28 point) vurderer 4 balancesystemer: anticipatoriske posturale justeringer, reaktive posturale responser (perturbation), sensorisk orientering (skum/lukkede øjne) og dynamisk gang. Ved PD: Berg Balance Scale har et lofteffekt ved moderat PD — patienter kan score godt på statiske opgaver men stadig falde. Mini-BESTest fanger de anticipatoriske og reaktive balancekomponenter, der er mest nedsat ved PD.',
-    clinicalPoint: 'En Mini-BESTest-score <20 er associeret med høj faldrisiko ved PD. Brug den til at identificere, hvilke balancesystemer der behøver behandling.',
+    clinicalPoint: 'Lavere Mini-BESTest-score er associeret med øget faldrisiko, men resultatet skal tolkes i sammenhæng med faldhistorik, freezing, medicinstatus og klinisk observation — ikke som en isoleret grænseværdi.',
     category: 'Undersøgelse og tests',
-    tags: ['assessment', 'balance', 'mini-bestest'],
+    tags: ['vurdering', 'balance', 'mini-bestest'],
   },
   {
     id: 'pk-fc19',
@@ -181,7 +181,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Pull-test: stå bag patienten, advar dem om at du vil trække dem bagud, giv derefter et brat bagudrettet træk i skuldrene. Observér responset. Normalt: 1–2 korrektive skridt. Positivt (abnormt): ≥3 skridt, ingen korrektive skridt eller skal gribes. Hvad den afslører: posturalt retterefleks — den automatiske evne til at genvinde balance med reaktivt skridttagning. Positivt = nedsat postural instabilitet.',
     clinicalPoint: 'En positiv pull-test (H&Y 3-kriterium) indikerer markant øget faldrisiko. Disse patienter behøver intensiv balancetræning med reaktive komponenter.',
     category: 'Undersøgelse og tests',
-    tags: ['assessment', 'pull-test', 'postural-instability'],
+    tags: ['vurdering', 'pull-test', 'postural-instabilitet'],
   },
 
   // ─── Kategori 5: Behandlingsprincipper ───────────────────────────────────
@@ -193,7 +193,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Anbefalet: moderat til høj intensitet aerob træning, 60–80% HRmax eller Borg RPE 13–15/20. Hyppighed: ≥3 sessioner per uge. Varighed: 30–45 minutter per session. Bedste former: cykling (særligt kondicykel), løbebåndsgång, nordic walking, svømning. Evidens fra SPARX og andre forsøg viser motoriske, neuroplasticitets- og livskvalitetsgevinster. Højere intensitet giver større motoriske effekter.',
     clinicalPoint: 'Intensitet er vigtig ved PD. Let gang er ikke tilstrækkelig til neuroplasticitetseffekter. Brug HRmax-monitorering eller oplevet anstrengelse.',
     category: 'Behandlingsprincipper',
-    tags: ['treatment', 'aerobic', 'exercise'],
+    tags: ['behandling', 'aerob', 'træning'],
   },
   {
     id: 'pk-fc21',
@@ -202,16 +202,16 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Mål: bradykinesi og hypokinesi. Kerneprincip: patienter med PD undervurderer, hvor små deres bevægelser er, på grund af unormal sensorisk skalering. LSVT BIG træner overdrevent store bevægelser i alle kontekster — stående, gang, rækken. "Tænk STORT, bevæg STORT." Rekalibringseffekten generaliserer til daglige bevægelser. Format: 16 sessioner over 4 uger (4x/uge, 1-times sessioner) + daglig hjemmetræning.',
     clinicalPoint: 'LSVT BIG kræver intensiv planlægning og høj patientmotivation. Det er evidensbaseret ved PD og tilbydes som certifikation for fysioterapeuter.',
     category: 'Behandlingsprincipper',
-    tags: ['treatment', 'lsvt', 'amplitude'],
+    tags: ['behandling', 'lsvt', 'amplitude'],
   },
   {
     id: 'pk-fc22',
     topicId: 'parkinson',
     front: 'Hvad er de centrale elementer i balance- og gangtræning ved Parkinsons sygdom?',
-    back: 'Centrale elementer: (1) Amplitudetræning — større skridt, bedre fodclearing. (2) Skridtlængde og hæl-isæt-øvelse. (3) Drejetræning — sikre drejestrategier (små skridt, pivotdrejning). (4) Reaktiv balancetræning — perturbationsøvelser. (5) Dual-task-træning — introduceres progressivt når gangen er stabil. (6) Cueing-strategier — auditiv, visuel, attentionel. (7) Eksternt fokus — trinningsmål, linjer på gulv.',
+    back: 'Centrale elementer: (1) Amplitudetræning — større skridt, bedre fodfrigang. (2) Skridtlængde og hæl-isæt-øvelse. (3) Drejetræning — sikre drejestrategier (små skridt, pivotdrejning). (4) Reaktiv balancetræning — perturbationsøvelser. (5) Dual-task-træning — introduceres progressivt når gangen er stabil. (6) Cueing-strategier — auditiv, visuel, attentionel. (7) Eksternt fokus — trinningsmål, linjer på gulv.',
     clinicalPoint: 'Drejning er den højeste-risiko gangtask ved PD og den mest underudnyttede i træning. Inkludér altid specifik drejeøvelse.',
     category: 'Behandlingsprincipper',
-    tags: ['treatment', 'balance', 'gait-training'],
+    tags: ['behandling', 'balance', 'gangtræning'],
   },
 
   // ─── Kategori 6: Holdtræning og beslutninger ──────────────────────────────
@@ -223,7 +223,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: '(1) Kend hver patients individuelle faldrisiko inden sessionen. (2) Ryddeligt, uforhindret rum — særligt i drejeområder. (3) Planlæg sessioner, når patienterne er i deres "on"-fase, hvis muligt. (4) Hold gruppestørrelsen håndterbar — overvej en medleder for grupper >6. (5) Hav siddende alternativer klar til alle stående øvelser. (6) Placer højrisikopatienter tættest på fysioterapeuten.',
     clinicalPoint: 'Holdtræning er sikker og gavnlig ved PD, men kræver forberedelse. Miljøopstilling og individuel risikovurdering finder sted, inden den første patient ankommer.',
     category: 'Holdtræning og beslutninger',
-    tags: ['group-training', 'safety'],
+    tags: ['holdtræning', 'sikkerhed'],
   },
   {
     id: 'pk-fc24',
@@ -232,7 +232,7 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: 'Patienter i "off"-periode: mærkbart stivere, langsommere, mere bradykinetiske, højere FOG- og faldrisiko. Holdledelse: (1) Vurder visuelt hver patients aktuelle tilstand, når de ankommer. (2) Er en patient uventet i "off", modificer deres program — siddende eller understøttede øvelser, lavere intensitet. (3) Undgå komplekse balance-/gangopgaver for "off"-patienter. (4) Dokumentér og overvej justeringer af sessionstidspunkt fremover.',
     clinicalPoint: 'Indbyg en vane med kortvarigt funktionsvurdering af hver holdedeltager, når de ankommer — inden sessionen starter.',
     category: 'Holdtræning og beslutninger',
-    tags: ['on-off', 'group-training', 'clinical-reasoning'],
+    tags: ['on-off-variation', 'holdtræning', 'klinisk-ræsonnering'],
   },
   {
     id: 'pk-fc25',
@@ -241,6 +241,6 @@ export const parkinsonFlashcards: Flashcard[] = [
     back: '(1) Screen: spørg alle patienter om svimmelhed ved opstigning ved den initiale undersøgelse. (2) Forebyggelse: undgå hurtige stillingsændringer, sørg for tilstrækkelig hydrering, lad patienten sidde på stolkanten inden rejsning, brug langsomme overgangs fra siddende til stående. (3) Rapporterer en patient svimmelhed under sessionen: sæt dem straks ned, mål BP hvis muligt, vent til de er stabile inden fortsættelse. (4) Dokumentér og overvej tilpasning af programmet.',
     clinicalPoint: 'I en gruppe opdager du muligvis ikke en patients svimmelhed, medmindre du specifikt spørger ved starten af hver session. Gør det til en rutinemæssig check-in.',
     category: 'Holdtræning og beslutninger',
-    tags: ['orthostatic-hypotension', 'group-training', 'safety'],
+    tags: ['ortostatisk-hypotension', 'holdtræning', 'sikkerhed'],
   },
 ];

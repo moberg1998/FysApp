@@ -63,12 +63,12 @@ export const hipPelvisQuestions: AnatomyQuestion[] = [
     question: 'Hvilken nerve forlader foramen ischiadicum majus nedenfor m. piriformis, og hvilke symptomer opstår ved kompression fra piriformis?',
     options: [
       { id: 'a', text: 'N. femoralis — forårsager anterior lårsmerte og quadriceps-svaghed', isCorrect: false },
-      { id: 'b', text: 'N. ischiadicus — forårsager gluteal smerte med udstråling ned ad det posteriore ben (piriformis-syndrom)', isCorrect: true },
+      { id: 'b', text: 'N. ischiadicus — forårsager gluteal smerte med udstråling ned ad det posteriore ben (piriformis-syndrom / deep gluteal syndrome)', isCorrect: true },
       { id: 'c', text: 'N. obturatorius — forårsager medial lårsmerte og adduktorsvaghed', isCorrect: false },
       { id: 'd', text: 'N. gluteus superior — forårsager hofteabduktorsvaghed', isCorrect: false },
     ],
     explanation: 'N. ischiadicus forlader bækkenet gennem foramen ischiadicum majus, normalt under piriformis. Ved piriformis-syndrom komprimerer spasme eller hypertrofi af piriformis n. ischiadicus og giver dyb gluteal smerte, ømhed over piriformis og udstrålende smerte ned i det posteriore ben. Differentieres fra diskusrelateret iskias ved hjælp af provokationstests for piriformis.',
-    clinicalRelevance: 'Piriformis-syndrom er en differentialdiagnose til iskias. Det kan fremkaldes af langvarig siddestilling, løb og cykling. Piriformis-stræk, neuralmobilisering og korrektion af bevægelsesmønstre er centrale fysioterapeutiske interventioner.',
+    clinicalRelevance: 'Piriformis-syndrom / deep gluteal syndrome er en differentialdiagnose til iskias — men differentier altid fra lumbal radikulopati, hofteledsproblemer og proksimal hamstringstendopati. Tilstanden er klinisk omdiskuteret; undgå at stille diagnosen med sikkerhed uden udelukkelse af andre årsager. Piriformis-stræk, neuralmobilisering og bevægelseskorrektion er centrale interventioner.',
     imageKey: undefined,
   },
   {
@@ -109,8 +109,8 @@ export const hipPelvisQuestions: AnatomyQuestion[] = [
       { id: 'c', text: 'Q-vinklen måler patellas vinkel i femursporet og er udelukkende en knæmåling', isCorrect: false },
       { id: 'd', text: 'Q-vinklen måler vinklen af collum femoris og har ingen praktisk klinisk anvendelse', isCorrect: false },
     ],
-    explanation: 'Q-vinklen måles fra ASIS gennem patellas midte og fra tuberositas tibiae gennem patellas midte. Normalt: <18° hos kvinder, <15° hos mænd. Et bredere bækken (hyppigt hos kvinder) og øget femoral anteversion øger Q-vinklen. Øget Q-vinkel øger det laterale træk på patella og bidrager til patellofemorale smerter og lateral patellar fejlsporing.',
-    clinicalRelevance: 'Q-vinkelfortolkning er relevant ved PFPS, patellasenetendopati og ACL-skadeforebyggelse. Styrketræning af hoften (særligt gluteus medius og gluteus maximus) kan reducere dynamisk valgus og lateral patellabelastning.',
+    explanation: 'Q-vinklen måles fra ASIS gennem patellas midte og fra tuberositas tibiae gennem patellas midte. Normalt: <18° hos kvinder, <15° hos mænd. Et bredere bækken og øget femoral anteversion øger Q-vinklen. Q-vinklen er en statisk, todimensionel måling og afspejler ikke nødvendigvis dynamisk valgus eller patellofemoral belastning under funktion.',
+    clinicalRelevance: 'Q-vinklen er måleusikker og bør ikke stå alene i vurdering af patellofemorale smerter. Dynamisk kontrol, styrke, belastning og symptomrespons er klinisk mere relevante. Hoftestyrketræning (gluteus medius og maximus) kan reducere dynamisk valgus og patellabelastning.',
     imageKey: undefined,
   },
 ];

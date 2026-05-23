@@ -118,6 +118,12 @@ const GUIDE_SECTIONS: GuideSection[] = [
     intro: 'Hypotesedrevet undersøgelse — prioritér tests baseret på anamnesefundene. Dokumentér fund objektivt med enheder og sideangivelse.',
     groups: [
       {
+        items: [
+          { label: 'Sikkerhed før test', detail: 'Start ikke med provokerende tests, hvis anamnesen peger på alvorlig patologi, høj irritabilitet eller akut neurologisk/vaskulær problemstilling.' },
+          { label: 'Vælg én udgangspunktsfunktion', detail: 'Vælg én funktion der kan re-testes samme dag: squat, cervikal rotation, TUG, rejse-sætte-sig, trappe eller skulder-elevation. Bruges til at demonstrere forandring for patienten.' },
+        ],
+      },
+      {
         heading: 'Generel observation',
         items: [
           { label: 'Holdning og symmetri', detail: 'Skulderstand, bækkentilt, valgus/varus, hoved fremad?' },
@@ -162,14 +168,14 @@ const GUIDE_SECTIONS: GuideSection[] = [
         items: [
           { label: '10 Meter Walk Test (10MWT)', detail: 'Ganghastighed. Normal voksne: 1,2–1,4 m/s. < 0,8 m/s = begrænset udendørsmobilitet.' },
           { label: '6 Minutters Gangtest (6MWT)', detail: 'Gangkapacitet og kardiorespiratorisk kondition. Fald i hastighed undervejs = træthedssignatur.' },
-          { label: 'Timed Up and Go (TUG)', detail: 'Funktionel mobilitet inkl. rejsning, gang og drejning. > 12 sek = øget faldrisiko.' },
-          { label: 'Gangobservation', detail: 'Hæl-isæt, fodclearing, knæfleksion svingfase, armsving, drejeteknik.' },
+          { label: 'Timed Up and Go (TUG)', detail: 'Funktionel mobilitet inkl. rejsning, gang og drejning. Forlænget tid kan indikere øget faldrisiko — cut-off varierer med population, alder og hjælpemidler.' },
+          { label: 'Gangobservation', detail: 'Hæl-isæt, fodfrigang, knæfleksion svingfase, armsving, drejeteknik.' },
         ],
       },
       {
         heading: 'Balance',
         items: [
-          { label: 'Berg Balance Scale', detail: '14 opgaver. Score < 45/56 = forhøjet faldrisiko.' },
+          { label: 'Berg Balance Scale', detail: '14 opgaver, max 56 point. Lavere score er associeret med øget faldrisiko — tolkes i klinisk kontekst.' },
           { label: 'Mini-BESTest', detail: 'Anticipatorisk, reaktiv, sensorisk og dynamisk balance. 28 point.' },
           { label: 'Romberg', detail: 'Stående balance med åbne/lukkede øjne. Positiv ved lukkede øjne = sensorisk ataksi.' },
           { label: 'Énbens-standfase', detail: 'Normal > 10 sek. Reduceret = øget faldrisiko og gluteus medius-svaghed.' },
@@ -277,13 +283,55 @@ const GUIDE_SECTIONS: GuideSection[] = [
     ],
   },
 
-  // ─── 7. Røde flag ─────────────────────────────────────────────────────────
+  // ─── 7. Spørgsmål ved uklare patienter ───────────────────────────────────
+  {
+    id: 'uklare-patienter',
+    title: 'Spørgsmål ved uklare patienter',
+    icon: 'help-circle-outline',
+    color: Colors.primary,
+    intro: 'Når anamnesen er uklar eller patienten er svær at afkode — stil disse fem spørgsmål.',
+    groups: [
+      {
+        items: [
+          { label: 'Hvad er dit største problem?', detail: '"Hvad er dit største problem lige nu?"' },
+          { label: 'Hvad ville gøre størst forskel?', detail: '"Hvad ville gøre størst forskel i din hverdag?"' },
+          { label: 'Hvad er du bekymret for?', detail: '"Hvad er du mest bekymret for?"' },
+          { label: 'Hvad har du allerede prøvet?', detail: '"Hvad har du allerede prøvet?"' },
+          { label: 'Hvad håber du jeg kan hjælpe med?', detail: '"Hvad håber du, jeg kan hjælpe dig med?"' },
+        ],
+      },
+    ],
+  },
+
+  // ─── 8. Grønne flag ───────────────────────────────────────────────────────
+  {
+    id: 'grønne-flag',
+    title: 'Grønne flag',
+    icon: 'checkmark-circle-outline',
+    color: '#3FB950',
+    intro: 'Prognostisk gunstige faktorer. Jo flere grønne flag, jo bedre prognose for bedring og aktiv deltagelse.',
+    groups: [
+      {
+        items: [
+          { label: 'Tryghed ved bevægelse', detail: 'Patienten bevæger sig uden overdreven frygt eller beskyttelse.' },
+          { label: 'God søvn og restitution', detail: 'Søvn er en stærk prediktor for smertebedring og rehabiliteringsudbytte.' },
+          { label: 'Høj self-efficacy', detail: 'Patienten tror på, at de kan komme sig — og at de selv kan bidrage til bedringen.' },
+          { label: 'Aktiv coping', detail: 'Patienten bruger aktive strategier (bevægelse, distraktionsteknikker) frem for passiv undgåelse.' },
+          { label: 'Klar behandlingsforventning', detail: 'Realistiske og aftalte forventninger til forløb, mål og indsats.' },
+          { label: 'God social støtte', detail: 'Familie, venner eller netværk understøtter bedringen.' },
+          { label: 'Symptomer i bedring', detail: 'Symptomerne er stabile eller bedres — selv langsomt.' },
+        ],
+      },
+    ],
+  },
+
+  // ─── 9. Røde flag ─────────────────────────────────────────────────────────
   {
     id: 'roede-flag',
     title: 'Røde flag',
     icon: 'warning-outline',
     color: Colors.incorrect,
-    intro: 'Symptomer der kan indikere alvorlig patologi. Screén systematisk og henvis til medicinsk vurdering, hvis et eller flere er til stede. Tidlig identifikation kan være afgørende.',
+    intro: 'Røde flag kan indikere alvorlig patologi. Nogle kræver akut handling samme dag, andre hurtig lægelig vurdering eller konference. Vurder mønster, sværhedsgrad og udvikling — ikke kun ét enkelt symptom isoleret.',
     groups: [
       {
         heading: 'Malignitet',
@@ -327,8 +375,7 @@ const GUIDE_SECTIONS: GuideSection[] = [
         items: [
           { label: 'Uforklaret feber', detail: 'Særligt i kombination med lokal smerte og forhøjede inflammationsmarkører' },
           { label: 'Immunsupprimeret patient', detail: 'Kortikosteroider, biologisk behandling, HIV — lav tærskel for udredning' },
-          { label: 'Barn der halter', detail: 'Ny halter + unilateral hofteømhed → Mb. Perthes, epifyseolysis' },
-          { label: 'Frakturmistanke', detail: 'Direkte traume + lokal ømhed + smerter ved aksial belastning' },
+          { label: 'Frakturmistanke', detail: 'Svært traume + lokal ømhed + smerte ved aksial belastning' },
         ],
       },
     ],
@@ -345,9 +392,9 @@ const GUIDE_SECTIONS: GuideSection[] = [
       {
         heading: 'Artrose',
         items: [
-          { label: 'Om brusk', detail: '"Brusk kan ikke reparere sig selv, men det er ikke hele historien. Ledet kan styrkes, smerter kan reduceres markant — med bevægelse."' },
+          { label: 'Om brusk', detail: '"Brusk ændrer sig langsomt, men smerte og funktion kan ofte forbedres markant. Derfor arbejder vi med muskler, bevægelse, belastning og tryghed."' },
           { label: 'Om smerte og aktivitet', detail: '"Smerter ved bevægelse er ikke et tegn på skade. Det er et overfølsomt alarmsystem, der kan dæmpes med regelmæssig træning."' },
-          { label: 'Om prognose', detail: '"Mange med samme røntgenbillede som dig har ingen smerter. Det er ikke billedet, der bestemmer din smerte — det er dit nervesystem og dine muskler."' },
+          { label: 'Om prognose', detail: '"Billeder kan vise forandringer, men de forklarer ikke altid, hvor ondt man har. Smerte påvirkes også af muskler, belastning, søvn, stress, bekymring og nervesystemets følsomhed."' },
         ],
       },
       {
@@ -369,14 +416,14 @@ const GUIDE_SECTIONS: GuideSection[] = [
         heading: 'Neurologi',
         items: [
           { label: 'Om neuroplasticitet', detail: '"Hjernen og nervesystemet er plastiske — de kan genoplære bevægelser. Det kræver gentagelse og tålmodighed, men det sker."' },
-          { label: 'Om træthed (MS/Parkinson)', detail: '"Den træthed du mærker er neurologisk — det er ikke dovenskab. Men paradoksalt nok er regelmæssig træning det, der reducerer den mest."' },
+          { label: 'Om træthed (MS/Parkinson)', detail: '"Træthed ved neurologisk sygdom er ikke dovenskab. For mange kan tilpasset, regelmæssig træning og energiforvaltning hjælpe, men doseringen skal passe til dagsformen."' },
         ],
       },
       {
         heading: 'Hjemmebehandling',
         items: [
           { label: 'Om hjemmetræningens rolle', detail: '"Det, du gør hjemme de øvrige 23 timer, er vigtigere end det, vi gør her i en time. Konsistens slår intensitet."' },
-          { label: 'Om compliance', detail: '"Du behøver ikke gøre det perfekt — du skal bare gøre det. 10 minutter 5 dage er bedre end 50 minutter én dag."' },
+          { label: 'Om efterlevelse', detail: '"Du behøver ikke gøre det perfekt — du skal bare gøre det. 10 minutter 5 dage er bedre end 50 minutter én dag."' },
         ],
       },
     ],
@@ -459,7 +506,7 @@ const GUIDE_SECTIONS: GuideSection[] = [
         items: [
           { label: 'Nøgletests', detail: 'TUG · FOG-Q · Mini-BESTest · 10MWT · postural BT (OH-screening)' },
           { label: 'Kernepunkter', detail: 'Amplitude > hastighed. Cueing (auditiv, visuel). Drejetræning. Reaktiv balance. Medicintiming.' },
-          { label: 'Rødt flag', detail: 'Pludselig motorisk forværring eller ny kognitiv ændring → kontakt neurolog.' },
+          { label: 'Rødt flag', detail: 'Pludselig ny motorisk forværring, akut konfusion, ny kraftnedsættelse, tale- eller synsproblemer → akut lægelig vurdering. Gradvis kognitiv ændring ved kendt PD → drøft med neurolog, men ikke nødvendigvis akut.' },
         ],
       },
       {

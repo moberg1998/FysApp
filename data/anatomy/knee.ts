@@ -12,7 +12,7 @@ export const kneeQuestions: AnatomyQuestion[] = [
       { id: 'd', text: 'Den styrer knærotation; den er mere modtagelig fordi den er større', isCorrect: false },
     ],
     explanation: 'Begge menisker fordeler belastning, absorberer stød, forbedrer ledkongruens og yder sekundær stabilitet. Den mediale menisk er C-formet og fast hæftet til den mediale ledkapsel og MCL, hvilket gør den mindre mobil. Den laterale menisk er mere O-formet og mobil. Derfor skades den mediale menisk hyppigere — den kan ikke undvige kompressive kræfter ligeså effektivt ved kombinerede valgus- og rotationsmekanismer.',
-    clinicalRelevance: 'Mediale menisklæsioner er blandt de hyppigste knæskader. De præsenterer med ledlinjemøhed, positiv McMurray-test og positiv Thessaly-test. Rehabilitering efter menisksutur indebærer beskyttelse af aksial belastning i de tidlige faser.',
+    clinicalRelevance: 'Mediale menisklæsioner er hyppige. McMurray-test og Thessaly-test kan støtte mistanken, men kan hverken bekræfte eller udelukke menisklæsion alene. Mekanisme, hævelse, klik/locking, ledlinjemøhed, alder og det samlede kliniske billede er afgørende for vurderingen. Rehabilitering efter menisksutur inkluderer beskyttelse mod aksial belastning i de tidlige faser.',
     imageKey: undefined,
   },
   {
@@ -96,7 +96,7 @@ export const kneeQuestions: AnatomyQuestion[] = [
       { id: 'd', text: 'Vastus intermedius — er den primære patellastabilisator', isCorrect: false },
     ],
     explanation: 'VMO yder en medial kraft på patella, der modvirker det laterale træk fra quadricepssene-vinklen (Q-vinklen) og vastus lateralis. Svaghed eller forsinket aktivering af VMO er associeret med lateral fejlsporing af patella og patellofemorale smerter. VMO er aktiv under hele knæekstensionen, men specielt de sidste 10–15° af ekstension.',
-    clinicalRelevance: 'VMO-styrketræning (terminal knæekstension, quadriceps-sæt, step-down) er en hjørnesten i PFPS-rehabilitering. Evidensen tyder dog på, at generel quadricepstræning med fokus på teknik kan være mere effektiv end isoleret VMO-træning.',
+    clinicalRelevance: 'Tidligere fokuserede man meget på isoleret VMO-aktivering som kernen i PFPS-behandling. I dag prioriteres samlet quadricepsstyrke, hoftekontrol, belastningsstyring og funktionel bevægelseskvalitet frem for isoleret VMO-øvelse — men terminal knæekstension og quadriceps-sæt er fortsat relevante.',
     imageKey: undefined,
   },
   {
