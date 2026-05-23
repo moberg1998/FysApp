@@ -132,7 +132,7 @@ export default function HomeScreen() {
           <Ionicons name="library-outline" size={18} color={Colors.textMuted} />
           <View style={styles.topicBannerText}>
             <Text style={styles.topicBannerTitle}>10 kliniske emner</Text>
-            <Text style={styles.topicBannerSub}>Alle emner tilgængelige — tryk for at se din fremgang</Text>
+            <Text style={styles.topicBannerSub}>Parkinson, MS, Apopleksi tilgængeligt · 7 emner med indhold</Text>
           </View>
           <Ionicons name="chevron-forward" size={14} color={Colors.textMuted} />
         </TouchableOpacity>

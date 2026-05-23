@@ -16,7 +16,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Uhthoffs fænomen er forbigående forværring af MS-symptomer ved stigning i kropstemperatur — f.eks. ved varmt vejr, varmt bad, feber eller intensiv fysisk aktivitet. Det skyldes, at demyeliniserede aksoner er særligt følsomme over for temperaturstigning. Det er ikke en egentlig exacerbation og aftager, når temperaturen normaliseres.',
     takeaway: 'Uhthoffs fænomen = midlertidig symptomforværring ved temperaturstigning. Ikke en exacerbation. Håndteres med kølestrategier.',
-    tags: ['uhthoffs', 'heat-intolerance', 'symptoms'],
+    tags: ['uhthoffs-fænomen', 'varmeintolerans', 'symptomer'],
     subtopic: 'Varmeintolerans',
   },
 
@@ -35,7 +35,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'FSS er et 9-punkts spørgeskema, der vurderer sværhedsgraden af træthed generelt. MFIS er et 21-punkts spørgeskema, der skelner mellem trætthedens indvirkning på fysisk, kognitivt og psykosocialt niveau — og giver et mere nuanceret klinisk billede.',
     takeaway: 'FSS = trætthedens sværhedsgrad. MFIS = trætthedens indvirkning fordelt på fysisk/kognitiv/psykosocial funktion.',
-    tags: ['fatigue', 'fss', 'mfis', 'assessment'],
+    tags: ['træthed', 'fss', 'mfis', 'vurdering'],
     subtopic: 'Træthed',
   },
   {
@@ -50,7 +50,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Aerob træning reducerer MS-relateret træthed — dette er et af de mest kontraintuitive fund i MS-fysioterapi. Mekanismerne inkluderer bedret kardiorespiratorisk effektivitet, neuroplasticitetseffekter og reduceret inflammationsniveau. Træthed kræver omhyggelig dosering men er ikke en kontraindikation.',
     takeaway: 'Aerob træning REDUCERER MS-træthed — ikke en kontraindikation. Dosering og energipacing er nøglen.',
-    tags: ['fatigue', 'exercise', 'aerobic', 'treatment'],
+    tags: ['træthed', 'træning', 'aerob', 'behandling'],
     subtopic: 'Træthed',
   },
   {
@@ -67,7 +67,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: '"Boom-and-bust" er et mønster, hvor patienten overanstrenger sig på gode dage og er sengsliggende bagefter. Den evidensbaserede tilgang er energipacing: fordele aktivitet jævnt, respektere energigrænser og planlægge hvile INDEN træthed slår til.',
     takeaway: 'Boom-and-bust er problemet, energipacing er løsningen. Planlagt hvile inden grænsen nås er bedre end reaktiv hvile.',
-    tags: ['fatigue', 'energy-pacing', 'self-management'],
+    tags: ['træthed', 'energistyring', 'selvhåndtering'],
     subtopic: 'Træthed',
   },
 
@@ -86,7 +86,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Spasticitet er et øvre motorneurontegn defineret ved hastighedsafhængig øgning af muskeltonus — modstanden øges jo hurtigere passiv bevægelse udføres. Ses ved MS, apopleksi og rygmarvslæsioner. Rigiditet ved PD er konstant og skyldes basalgangliernes dysfunction.',
     takeaway: 'Spasticitet = hastighedsafhængig UMN-tonus (MS, apopleksi). Rigiditet = konstant tonus i hele ROM (Parkinson).',
-    tags: ['spasticity', 'tone', 'assessment'],
+    tags: ['spasticitet', 'muskeltonus', 'vurdering'],
     subtopic: 'Spasticitet',
   },
   {
@@ -105,7 +105,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Spasticitet forværres af stimuli der øger afferent input: UVI (hyppigst), trykskader, forstoppelse, blæreoverbelastning, Uhthoffs fænomen og stress. Identifikation af disse triggere er første skridt ved pludselig forværring. Moderat aerob træning forværrer ikke spasticiteten.',
     takeaway: 'Pludselig spasticitetsstigning → søg triggere: UVI, trykskade, forstoppelse, blæreoverbelastning. Behandlelige årsager.',
-    tags: ['spasticity', 'triggers', 'management'],
+    tags: ['spasticitet', 'udløsere', 'håndtering'],
     subtopic: 'Spasticitet',
   },
 
@@ -125,7 +125,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'MS påvirker balance via fire systemer: proprioceptiv sensorisk ataksi (posterior columna), visuel dysfunction (opticus neuritis), vestibulær påvirkning (hjernestamme) og cerebellar ataksi. Multisystem-involvering er typisk for MS. Høreproblemer er sjældne.',
     takeaway: 'MS-balance: 4 systemer påvirket — proprioception, syn, vestibulær, cerebellum. Behandl alle relevante komponenter.',
-    tags: ['balance', 'sensory', 'ataxia', 'assessment'],
+    tags: ['balance', 'sensorisk', 'ataksi', 'vurdering'],
     subtopic: 'Balance',
   },
   {
@@ -142,7 +142,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Romberg-testen er positiv, når svajning eller fald tiltar ved lukkede øjne. Det indikerer sensorisk ataksi: patienten kompenserer for proprioceptionssvigt med visuelt input. Hyppig ved MS pga. posterior columna-læsioner. Rehabilitering skal adressere sensory reweighting.',
     takeaway: 'Positiv Romberg = sensorisk ataksi. Patienten baserer sig på syn for balance. Træn balance med reduceret visuelt input.',
-    tags: ['romberg', 'balance', 'proprioception', 'sensory'],
+    tags: ['romberg', 'balance', 'proprioception', 'sensorisk'],
     subtopic: 'Balance',
   },
 
@@ -161,7 +161,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Gangtræthed ved MS skyldes den kombinerede energiomkostning af ineffektiv nervesignalering, spasticitet og nedsat koordination. Resultatet er begrænset gangdistance med faldende kvalitet. 6MWT fanger dette mønster bedre end 10MWT.',
     takeaway: 'MS gangtræthed = nedsat gangtolerance pga. ineffektiv neuromotorisk kontrol. 6MWT er mere relevant end 10MWT.',
-    tags: ['gait', 'fatigue', 'walking-endurance', 'assessment'],
+    tags: ['gang', 'træthed', 'gangkapacitet', 'vurdering'],
     subtopic: 'Gang',
   },
   {
@@ -178,7 +178,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: '10MWT måler gangfart over en kort distance. 6MWT måler gangtolerance og træthed over 6 minutter — det fanger gangtræthed som er karakteristisk for MS. Mange MS-patienter har acceptabel 10MWT-fart men begrænset 6MWT-distance. Brug begge for et komplet gangbillede.',
     takeaway: '10MWT = kortdistance-fart. 6MWT = gangudholdenhed/træthed. MS: god kortfart, men begrænset udholdenhed.',
-    tags: ['gait', 'assessment', '6mwt', '10mwt'],
+    tags: ['gang', 'vurdering', '6mwt', '10mwt'],
     subtopic: 'Gang',
   },
 
@@ -197,7 +197,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Lhermitte-tegnet er en elektrisk fornemmelse ned langs rygsøjlen ved cervikal fleksion — skyldes demyelinisering i posterior cervikale rygmarv. I fysioterapi: nakkefleksionsøvelser og visse strækøvelser kan udløse tegnet. Modificér øvelser der kræver cervikal fleksion under aktiv exacerbation.',
     takeaway: 'Lhermitte-tegn = elektrisk fornemmelse ved nakkefleksion. Rød flag for aktiv cervikal MS-læsion — undgå nakkefleksion under exacerbation.',
-    tags: ['lhermitte', 'red-flags', 'cervical', 'safety'],
+    tags: ['lhermitte', 'røde-flag', 'cervikal', 'sikkerhed'],
     subtopic: 'Røde flag',
   },
   {
@@ -214,7 +214,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Nye neurologiske symptomer (pludselig synstab — optisk neuritis, ny kraftnedsættelse) over 2 dage indikerer mulig aktiv exacerbation. Aktive exacerbationer kan kræve kortikosteroidbehandling. Stop rehabilitering og henvis til neurolog.',
     takeaway: 'Nye neurologiske symptomer over dage = mulig exacerbation. Sæt behandling på pause. Kontakt neurolog.',
-    tags: ['red-flags', 'exacerbation', 'safety', 'referral'],
+    tags: ['røde-flag', 'eksacerbation', 'sikkerhed', 'henvisning'],
     subtopic: 'Røde flag',
   },
 
@@ -233,7 +233,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Overaktiv blære med urgency er hyppigst ved MS. Det skyldes UMN-læsionernes reduktion af central blærehæmning. Klinisk relevant: patienter kan begrænse gangdistance og undgå træning af frygt for inkontinens. Spørg til blæresymptomer i anamnesen — det påvirker træningsplanlægning.',
     takeaway: 'Urgency-inkontinens er hyppig ved MS og påvirker træningsdeltagelse. Spørg til blæresymptomer i anamnesen.',
-    tags: ['bladder', 'urgency', 'quality-of-life', 'anamnesis'],
+    tags: ['blærefunktion', 'urgency', 'livskvalitet', 'anamnese'],
     subtopic: 'Blæredysfunktion',
   },
 
@@ -252,7 +252,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Nedsat informationsbehandlingshastighed er oftest ramt tidligt ved MS. Konsekvenser for fysioterapi: patienten har brug for langsommere instruktioner, kortere sætninger, skriftlig instruktion og reduceret dual-task-belastning.',
     takeaway: 'MS-kognition: informationsbehandlingshastighed ramt oftest. Giv langsomme, klare instrukser. Skriftlig støtte hjælper.',
-    tags: ['cognition', 'information-processing', 'communication', 'treatment'],
+    tags: ['kognition', 'informationsbehandling', 'kommunikation', 'behandling'],
     subtopic: 'Kognition',
   },
 
@@ -271,7 +271,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'EDSS 5.0: gangbesvær begrænser fuld daglig aktivitet; kan gå ca. 200 meter uden støtte. EDSS 6.0: kræver ensidigt ganghjælpemiddel (stok/krykke) til 100 meter. EDSS 7.0: kørestol nødvendig. Funktionel test (10MWT, TUG, 6MWT) er mere klinisk meningsfuld end EDSS alene.',
     takeaway: 'EDSS 5 = gang 200 m, begrænset. EDSS 6 = ensidig støtte, 100 m. EDSS 7 = kørestol. Brug EDSS som kontekst, ikke eneste mål.',
-    tags: ['edss', 'disease-course', 'walking', 'assessment'],
+    tags: ['edss', 'sygdomsforløb', 'gang', 'vurdering'],
     subtopic: 'EDSS',
   },
   {
@@ -288,7 +288,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'RRMS er den hyppigste form (~85% ved diagnose). Adskilte attakker med akut neurologisk forværring efterfulgt af delvis/fuldstændig remission. Imellem attakker er sygdomsaktiviteten lav. Fysioterapi tilpasses: konservativt under attakker, progressivt i remission.',
     takeaway: 'RRMS = attakker med remission (85% ved diagnose). Træning tilpasses fase.',
-    tags: ['disease-course', 'rrms', 'relapse'],
+    tags: ['sygdomsforløb', 'rrms', 'relaps'],
     subtopic: 'Sygdomsforløb',
   },
   {
@@ -305,7 +305,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Under aktiv exacerbation: konservativ håndtering (hvile, undgå Uhthoff-eksponering). Intensiv rehabilitering genoptages, når stabil — typisk 4–12 uger efter. Fuld remission kræves ikke: mange er klar med resterende symptomer. Tidlig rehabilitering i remission forbedrer funktionsudfald.',
     takeaway: 'Intensiv rehab: afvent stabil fase (4–12 uger efter exacerbation). Under exacerbation: vedligeholdende, konservativ aktivitet.',
-    tags: ['exacerbation', 'relapse', 'treatment', 'timing'],
+    tags: ['eksacerbation', 'relaps', 'behandling', 'timing'],
     subtopic: 'Sygdomsforløb',
   },
 
@@ -325,7 +325,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Aerob træning ved MS kræver: timing til energitoppen, kølestrategier, gradvis progression og intensitetsmonitorering (Borg RPE 11–14/20 ved moderat, HRmax 60–75%). At stoppe al træning ved træthed er ikke hensigtsmæssigt — normal træningstræthed er en stopindikator, sygdomstræthed kræver tilpasning.',
     takeaway: 'MS-aerob træning: timing, køling, gradvis progression, intensitetsmonitorering. Normal træningstræthed ≠ stopindikator.',
-    tags: ['exercise', 'aerobic', 'fatigue', 'treatment', 'cooling'],
+    tags: ['træning', 'aerob', 'træthed', 'behandling', 'afkøling'],
     subtopic: 'Behandlingsprincipper',
   },
   {
@@ -342,7 +342,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'Post-exertional fatigue (træthed dagen efter) er karakteristisk for MS og indikerer, at aktiviteten overskred energikapaciteten. Ikke en exacerbation. Reducer til et level der ikke giver next-day fatigue og byg gradvist op.',
     takeaway: 'Next-day fatigue = energigrænse overskredet. Reducer aktiviteten og byg langsomt op. Ikke en exacerbation.',
-    tags: ['fatigue', 'post-exertional', 'energy-pacing', 'treatment'],
+    tags: ['træthed', 'post-anstrengelse', 'energistyring', 'behandling'],
     subtopic: 'Behandlingsprincipper',
   },
   {
@@ -359,7 +359,7 @@ export const msQuiz: QuizQuestion[] = [
     ],
     explanation: 'MS påvirker multiple balancesystemer. Berg/Mini-BESTest fanger statisk og dynamisk balance. Dual-task TUG er særligt relevant fordi MS reducerer kognitiv processering — det er en daglig udfordring at kombinere gang med kognition.',
     takeaway: 'MS-balance: brug kombinerede tests. Berg/Mini-BESTest for balance-systemer, dual-task TUG for kognitiv-motorisk interferens.',
-    tags: ['balance', 'assessment', 'berg', 'mini-bestest', 'dual-task'],
+    tags: ['balance', 'vurdering', 'berg', 'mini-bestest', 'dual-task'],
     subtopic: 'Vurderingsredskaber',
   },
 ];

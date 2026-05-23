@@ -14,9 +14,9 @@ export const strokeQuiz: QuizQuestion[] = [
       { id: 'c', text: 'Shuffling gang fra basalganglier-affektion', isCorrect: false },
       { id: 'd', text: 'Trendelenburg-gang fra hofteabduktorsvaghed', isCorrect: false },
     ],
-    explanation: 'Hemiparetisk gang kendes ved cirkumduktion: patienten roterer og løfter hoften på den paretiske side i svingfasen pga. spasticitet i plantar-fleksorerne, nedsat knæfleksion og foddropstendens. Det er den klassiske kompensationsstrategi for manglende fodclearing.',
+    explanation: 'Hemiparetisk gang kendes ved cirkumduktion: patienten roterer og løfter hoften på den paretiske side i svingfasen pga. spasticitet i plantar-fleksorerne, nedsat knæfleksion og foddropstendens. Det er den klassiske kompensationsstrategi for manglende fodfrigang.',
     takeaway: 'Hemiparetisk gang = cirkumduktion, hævet hofte, foddrop. Identificér den specifikke afvigelse for at målrette interventionen.',
-    tags: ['hemiparesis', 'gait', 'spasticity', 'circumduction'],
+    tags: ['hemiparese', 'gang', 'spasticitet', 'cirkumduktion'],
     subtopic: 'Hemiparese og gang',
   },
   {
@@ -33,7 +33,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'UMN-syndrom (kortikal/subkortikal/kapselær læsion) efter apopleksi: hyperrefleksi, spasticitet (hastighedsafhængig tonus), Babinski-tegn (dorsalfleksion af stortå ved plantar stimulation), klonus og initial flacciditet der efterfølges af tonus. Apopleksi er en UMN-læsion.',
     takeaway: 'Apopleksi = UMN-syndrom: spasticitet, hyperrefleksi, Babinski. Kliniske tegn guider vurdering og behandlingsvalg.',
-    tags: ['umn', 'spasticity', 'clinical-signs', 'assessment'],
+    tags: ['umn', 'spasticitet', 'kliniske-tegn', 'vurdering'],
     subtopic: 'Kliniske tegn',
   },
 
@@ -52,7 +52,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'MAS: 0 = normal tonus, 1 = let øgning (catch og release), 1+ = let øgning i < halvdelen af ROM, 2 = markant tonus i størstedelen af ROM men passiv bevægelse mulig, 3 = kraftig tonus — passiv bevægelse vanskelig, 4 = rigid. Brug MAS konsekvent for at følge forandringer.',
     takeaway: 'MAS score 2 = markant tonus i det meste af ROM, passiv bevægelse mulig. Brug MAS konsekvent som forløbsmål.',
-    tags: ['spasticity', 'modified-ashworth', 'assessment', 'tone'],
+    tags: ['spasticitet', 'modified-ashworth', 'vurdering', 'muskeltonus'],
     subtopic: 'Spasticitet',
   },
   {
@@ -70,7 +70,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Spasticitet er dynamisk og påvirkes af afferente stimuli: smerter, UVI, forstoppelse, dårlig positionering, angst og blæreoverbelastning øger spasticitetsgraden. Identificering af triggere bør komme før farmakologisk behandling. Aktiv kontrolleret øvelse forværrer ikke spasticitet.',
     takeaway: 'Forværret spasticitet → søg trigger: smerte, UVI, forstoppelse, dårlig stilling. Behandl årsagen før farmakologi.',
-    tags: ['spasticity', 'triggers', 'management'],
+    tags: ['spasticitet', 'udløsere', 'håndtering'],
     subtopic: 'Spasticitet',
   },
 
@@ -89,7 +89,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Akut post-stroke: flaccid lammelse (diaschisis). Over dage-uger: spasticitet udvikler sig som UMN-frisætning. Typisk distribution: OE i fleksionsmønster (skulderadduktion, albuefleksion, håndledsfleksion) og UE i ekstensionsmønster (knæekstension, plantarfleksion). Mønsteret guider stræk, ortoser og aktivitetsvalg.',
     takeaway: 'Post-stroke tonus: flaccid → gradvis spasticitet. OE: fleksion. UE: ekstension. Mønsteret guider behandling.',
-    tags: ['tone', 'spasticity', 'flaccidity', 'post-stroke'],
+    tags: ['muskeltonus', 'spasticitet', 'flacciditet', 'post-apopleksi'],
     subtopic: 'Tonus',
   },
 
@@ -108,7 +108,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Neglect er et attentionel syndrom efter typisk højresidig hjernebeskadigelse, hvor patienten undlader at reagere på den kontralaterale side — selv om de sensoriske veje er intakte. Adskiller sig fra hemianopsi: patienten med neglect ignorerer information selv om synet er bevaret. Neglect er en negativ prognostisk faktor.',
     takeaway: 'Neglect ≠ synstab. Neglect = attentionel svigt mod kontralateral side. Højre hemisfærelæsion → venstre neglect (hyppigst).',
-    tags: ['neglect', 'attention', 'hemispatial', 'assessment'],
+    tags: ['neglect', 'opmærksomhed', 'hemispatial', 'vurdering'],
     subtopic: 'Neglect',
   },
   {
@@ -126,7 +126,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Neglect-rehabilitation: placér stimuli til neglect-siden, scanning-træning, verbale cues og beskyttelse af neglected ekstremitet (risiko for trykskader). At arbejde kun fra den uberørte side understøtter neglect-adfærden.',
     takeaway: 'Neglect: stimulér fra neglect-siden, scan-træning, cues, beskyt neglected arm. Arbejd IKKE kun fra den uberørte side.',
-    tags: ['neglect', 'treatment', 'scanning', 'safety'],
+    tags: ['neglect', 'behandling', 'scanning', 'sikkerhed'],
     subtopic: 'Neglect',
   },
 
@@ -145,7 +145,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Pusher-syndrom: patienten oplever sig selv som oprejst, selv om de hælder kraftigt mod den paretiske side, og modsætter sig korrektionsforsøg. Skyldes forstyrret subjektiv vertikaopfattelse. Ses typisk efter posterolateral thalamisk læsion. Rehabilitering: visuel feedback via spejl og lodrette referencelinjer — ikke taktil assistance (patienten modstår den).',
     takeaway: 'Pusher-syndrom = fejlagtig subjektiv vertikal. Visuel feedback (spejl, lodrette linjer) — ikke taktil assistance.',
-    tags: ['pusher-syndrome', 'balance', 'postural-control', 'treatment'],
+    tags: ['pusher-syndrom', 'balance', 'postural-kontrol', 'behandling'],
     subtopic: 'Balance',
   },
   {
@@ -162,7 +162,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Berg Balance Scale (0–56 point): < 45 indikerer øget faldrisiko ved stroke-rehabilitering. Score 0–20 = høj faldrisiko. Score 21–40 = moderate balanceproblemer. Score 41–56 = lavere faldrisiko. BBS har lofteffekt — patienter med score > 50 kan stadig have signifikante problemer ved dynamisk aktivitet.',
     takeaway: 'Berg Balance Scale: < 45 = øget faldrisiko ved apopleksi. Lofteffekt ved score > 50.',
-    tags: ['berg-balance', 'falls', 'assessment', 'balance'],
+    tags: ['berg-balance', 'fald', 'vurdering', 'balance'],
     subtopic: 'Balance',
   },
 
@@ -181,7 +181,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'CRPS type I efter apopleksi: brændende smerter, allodyni, autonome forstyrrelser (ødem, farveforandringer). Behandling: blid, smertefri bevægeøvelse, TENS, spejlterapi, positionering. UNDGÅ aggressiv passiv stræk og smerteprægede procedurer, som kan forværre tilstanden.',
     takeaway: 'Skuldersmerte + ødem + allodyni post-stroke = CRPS. Undgå aggressive stræk. Blid, smertefri bevægeøvelse.',
-    tags: ['crps', 'shoulder', 'pain', 'management'],
+    tags: ['crps', 'skulder', 'smerte', 'håndtering'],
     subtopic: 'Skulder og CRPS',
   },
   {
@@ -199,7 +199,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Forebyggelse af subluksation: understøt armen under forflytning, arm trough i kørestol, positionér fremadrettet og understøttet, uddann alt personale. Armslynger er kontroversielle og bruges kun selektivt og kortvarigt.',
     takeaway: 'Skulder-subluksation: understøt altid, arm trough, positionering, personaleuddannelse. Armslynge kun selektivt.',
-    tags: ['shoulder', 'subluxation', 'positioning', 'management'],
+    tags: ['skulder', 'subluksation', 'positionering', 'håndtering'],
     subtopic: 'Skulder og positionering',
   },
 
@@ -218,7 +218,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Task-specific training er et kernepricip med stærk evidens: øvelse af selve opgaven (gang, greb, rejsning) fremmer neuroplasticitet via activity-dependent plasticity. Grundprincipper: intensitet (mange gentagelser), opgave-specifitet og progressiv udfordring. Neuroplasticitet ses fortsat i kronisk fase.',
     takeaway: 'Task-specific træning = øv den faktiske opgave med høj gentagelse. Neuroplasticitet drives af aktivitetsspecifik øvelse.',
-    tags: ['task-specific', 'neuroplasticity', 'treatment', 'evidence'],
+    tags: ['opgavespecifik', 'neuroplasticitet', 'behandling', 'evidens'],
     subtopic: 'Funktionel træning',
   },
   {
@@ -235,7 +235,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'CIMT (Constraint-Induced Movement Therapy) har stærk evidens for forbedring af OE-funktion ved mindst lidt bevaret motorisk funktion (frivillig hånd- eller fingerekstension). Princippet: immobiliser den ikke-paretiske arm og intensiv brug af den paretiske via use-dependent plasticity.',
     takeaway: 'CIMT = tvungen brug af paretisk arm, intensiv gentagelse. Stærkeste evidens for OE-funktion ved bevaret minimal motorisk funktion.',
-    tags: ['cimt', 'upper-extremity', 'neuroplasticity', 'treatment'],
+    tags: ['cimt', 'overekstremitet', 'neuroplasticitet', 'behandling'],
     subtopic: 'Øvre ekstremitet',
   },
 
@@ -254,7 +254,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Subakut flaccid fase: placér stol på stærkere side og led primært derfra. Understøt den paretiske arm under hele forflytningen. Instruér patienten i aktiv deltagelse. Undgå fuldstændig assisteret lift hvis muligt.',
     takeaway: 'Subakut transfer: stol på stærkere side, understøt paretisk arm, aktiv deltagelse. Aldrig fuldstændig passiv lift hvis undgåeligt.',
-    tags: ['transfers', 'positioning', 'acute-phase', 'management'],
+    tags: ['forflytninger', 'positionering', 'akutfase', 'håndtering'],
     subtopic: 'Transfers',
   },
 
@@ -274,7 +274,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Ekspressiv afasi: nedsat taleproduktion, men forståelse typisk bedre bevaret. Strategier: korte sætninger, demonstration, tid til svar, alternativ kommunikation og samarbejde med logoped. At tale hurtigt og komplekst frustrer og giver ikke sprogstimulation.',
     takeaway: 'Afasi: korte sætninger, demonstration, tid til svar, alternativ kommunikation. Koordinér med logoped.',
-    tags: ['aphasia', 'communication', 'stroke', 'treatment'],
+    tags: ['afasi', 'kommunikation', 'apopleksi', 'behandling'],
     subtopic: 'Afasi og kommunikation',
   },
 
@@ -293,7 +293,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Fugl-Meyer Assessment vurderer motorisk genopretning via synergistiske bevægelsesmønstre og isoleret bevægelseskontrol. Scoret 0–66 (OE) og 0–34 (UE). Mest relevant i subakut/kronisk fase til at dokumentere motorisk genopretning og respons på rehabilitering.',
     takeaway: 'Fugl-Meyer = motorisk genopretning post-stroke (synergier → isoleret kontrol). Subakut/kronisk fase.',
-    tags: ['fugl-meyer', 'assessment', 'motor-recovery', 'stroke'],
+    tags: ['fugl-meyer', 'vurdering', 'motorisk-restitution', 'apopleksi'],
     subtopic: 'Vurderingsredskaber',
   },
   {
@@ -310,7 +310,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: '10MWT måler gangfart (m/s) over 10 meter. Kliniske referencer: < 0,4 m/s = svært ganghandicap, 0,4–0,8 m/s = begrænset funktion, > 0,8 m/s = near-normal. MDC ca. 0,16 m/s. Høj responsivitet til træning.',
     takeaway: '10MWT: < 0,4 = svært handicap, 0,4–0,8 = begrænset, > 0,8 = near-normal. MDC ca. 0,16 m/s.',
-    tags: ['10mwt', 'gait', 'assessment', 'walking-speed'],
+    tags: ['10mwt', 'gang', 'vurdering', 'gangfart'],
     subtopic: 'Gang og vurderingsredskaber',
   },
 
@@ -329,7 +329,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Neuroplasticitet er størst i de første uger til måneder (kritisk vindue). Tidlig, intensiv og opgavespecifik rehabilitering giver de bedste langsigtede resultater. Evidens støtter tidlig mobilisering (24–48 timer ved stabil patient). Neuroplasticitet ophører ikke i kronisk fase — effekt ses fortsat.',
     takeaway: 'Tidlig rehab (1. uger/måneder) har størst effekt. Intensiv og opgavespecifik er nøglen. Effekt ses fortsat i kronisk fase.',
-    tags: ['timing', 'neuroplasticity', 'early-rehabilitation', 'evidence'],
+    tags: ['timing', 'neuroplasticitet', 'tidlig-rehabilitering', 'evidens'],
     subtopic: 'Timing og intensitet',
   },
 
@@ -348,7 +348,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'FAST: F = Ansigtsasymmetri, A = Armsvaghed, S = Talebesvær, T = Ring 112. Relevant for fysioterapeuter: kroniske apopleksi-patienter har øget TIA/re-stroke-risiko. Nye FAST-symptomer under behandling = stop behandling og ring 112.',
     takeaway: 'FAST = Face/Arm/Speech/Time. Nye FAST-symptomer under behandling = stop + ring 112.',
-    tags: ['fast', 'tia', 'red-flags', 'safety', 'emergency'],
+    tags: ['fast', 'tia', 'røde-flag', 'sikkerhed', 'akut'],
     subtopic: 'Røde flag',
   },
 
@@ -368,7 +368,7 @@ export const strokeQuiz: QuizQuestion[] = [
     ],
     explanation: 'Kronisk fase-rehabilitering er fortsat effektiv. Evidens støtter: intensiv opgavespecifik gangtræning, løbebånd med/uden body weight support, aerob træning og adressering af komponent-problemer. At begrænse til kompensation alene i kronisk fase er understøttet af neuroplasticitetsforskning.',
     takeaway: 'Kronisk fase gang: intensiv opgave-specifik øvelse virker stadig. Løbebånd og aerob træning har evidens.',
-    tags: ['gait-training', 'chronic-phase', 'neuroplasticity', 'treadmill', 'treatment'],
+    tags: ['gangtræning', 'kronisk-fase', 'neuroplasticitet', 'løbebånd', 'behandling'],
     subtopic: 'Gang-rehabilitering',
   },
 ];

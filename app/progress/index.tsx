@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, Alert, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useFocusEffect } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
@@ -8,6 +8,7 @@ import { Card } from '@/components/ui/Card';
 import { Colors } from '@/constants/Colors';
 import { Layout } from '@/constants/Layout';
 import { useProgress } from '@/hooks/useProgress';
+import { clearProgress } from '@/store/progressStore';
 import { TOPICS } from '@/data/topics';
 import { Topic } from '@/types';
 
@@ -22,6 +23,21 @@ export default function ProgressScreen() {
   );
 
   const availableTopics = TOPICS.filter((t) => t.isAvailable);
+
+  const handleReset = () => {
+    Alert.alert(
+      'Nulstil al fremgang',
+      'Er du sikker? Dette sletter alle quiz-resultater, flashkort-fremgang og case-historik.',
+      [
+        { text: 'Annuller', style: 'cancel' },
+        {
+          text: 'Nulstil',
+          style: 'destructive',
+          onPress: async () => { await clearProgress(); await refresh(); },
+        },
+      ]
+    );
+  };
 
   const quizStats = React.useMemo(() => {
     if (!progress) return null;
@@ -172,6 +188,10 @@ export default function ProgressScreen() {
             examCount={progress?.examResults.filter((r) => r.topicId === topic.id).length ?? 0}
           />
         ))}
+
+        <TouchableOpacity style={styles.resetButton} onPress={handleReset} activeOpacity={0.75}>
+          <Text style={styles.resetButtonText}>Nulstil al fremgang</Text>
+        </TouchableOpacity>
 
       </ScrollView>
     </View>
@@ -415,4 +435,19 @@ const styles = StyleSheet.create({
   fcMiniSegment: { height: 4 },
 
   examCount: { fontSize: 13, fontWeight: '600', color: Colors.modeExam },
+
+  resetButton: {
+    marginTop: Layout.spacing.md,
+    paddingVertical: Layout.spacing.md,
+    borderRadius: Layout.radius.md,
+    borderWidth: 1,
+    borderColor: Colors.incorrect + '50',
+    backgroundColor: Colors.incorrectSubtle,
+    alignItems: 'center',
+  },
+  resetButtonText: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: Colors.incorrect,
+  },
 });
