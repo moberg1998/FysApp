@@ -11,6 +11,7 @@ import {
   updateFlashcardProgress,
   appendExamResult,
   getBestQuizScore,
+  getBestQuizScoreInfo,
   getLatestQuizScore,
   getFlashcardStats,
 } from '@/store/progressStore';
@@ -23,6 +24,7 @@ interface UseProgressReturn {
   updateFlashcards: (fp: FlashcardProgress) => Promise<void>;
   addExamResult: (result: ExamResult) => Promise<void>;
   getBestScore: (topicId: string) => number | null;
+  getBestScoreInfo: (topicId: string) => { score: number; questionCount: number } | null;
   getLatestScore: (topicId: string) => number | null;
   getFlashcardProgress: (topicId: string) => { knew: number; unsure: number; repeat: number } | null;
 }
@@ -65,6 +67,11 @@ export function useProgress(): UseProgressReturn {
     return getBestQuizScore(progress.quizResults, topicId);
   }, [progress]);
 
+  const getBestScoreInfo = useCallback((topicId: string) => {
+    if (!progress) return null;
+    return getBestQuizScoreInfo(progress.quizResults, topicId);
+  }, [progress]);
+
   const getLatestScore = useCallback((topicId: string) => {
     if (!progress) return null;
     return getLatestQuizScore(progress.quizResults, topicId);
@@ -83,6 +90,7 @@ export function useProgress(): UseProgressReturn {
     updateFlashcards,
     addExamResult,
     getBestScore,
+    getBestScoreInfo,
     getLatestScore,
     getFlashcardProgress,
   };

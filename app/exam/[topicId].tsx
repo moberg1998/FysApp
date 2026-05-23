@@ -20,6 +20,7 @@ import { getTopicById } from '@/data/topics';
 import { useProgress } from '@/hooks/useProgress';
 import { useExamSession } from '@/context/ExamSessionContext';
 import { ExamCase } from '@/types';
+import { shuffle } from '@/utils/shuffle';
 
 const ALL_EXAM_CASES: Record<string, ExamCase[]> = {
   parkinson: parkinsonExamCases,
@@ -46,7 +47,11 @@ export default function ExamCaseList() {
   const cases = ALL_EXAM_CASES[topicId] ?? [];
 
   const handleSelectCase = (examCase: ExamCase) => {
-    startSession(topicId ?? '', examCase);
+    const shuffledCase: ExamCase = {
+      ...examCase,
+      steps: examCase.steps.map((step) => ({ ...step, options: shuffle(step.options) })) as ExamCase['steps'],
+    };
+    startSession(topicId ?? '', shuffledCase);
     router.push('/exam/session');
   };
 

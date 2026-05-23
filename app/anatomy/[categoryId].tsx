@@ -15,13 +15,24 @@ import { hipPelvisQuestions } from '@/data/anatomy/hipPelvis';
 import { kneeQuestions } from '@/data/anatomy/knee';
 import { ankleFootQuestions } from '@/data/anatomy/ankleFoot';
 import { gaitCycleQuestions } from '@/data/anatomy/gaitCycle';
+import { balancePosturalQuestions } from '@/data/anatomy/balancePostural';
+import { basalGangliaParkinsonQuestions } from '@/data/anatomy/basalGangliaParkinson';
+import { corticospinalStrokeQuestions } from '@/data/anatomy/corticospinalStroke';
+import { lumbarSpineQuestions } from '@/data/anatomy/lumbarSpine';
+import { cervicalSpineQuestions } from '@/data/anatomy/cervicalSpine';
 import { AnatomyQuestion } from '@/types';
+import { shuffle } from '@/utils/shuffle';
 
 const ALL_QUESTIONS: Record<string, AnatomyQuestion[]> = {
   'hip-pelvis': hipPelvisQuestions,
   'knee': kneeQuestions,
   'ankle-foot': ankleFootQuestions,
   'gait-cycle': gaitCycleQuestions,
+  'balance-postural': balancePosturalQuestions,
+  'basal-ganglia-parkinson': basalGangliaParkinsonQuestions,
+  'corticospinal-stroke': corticospinalStrokeQuestions,
+  'lumbar-spine': lumbarSpineQuestions,
+  'cervical-spine': cervicalSpineQuestions,
 };
 
 export default function AnatomySession() {
@@ -34,7 +45,8 @@ export default function AnatomySession() {
 
   useEffect(() => {
     if (questions.length > 0 && (!session || session.categoryId !== categoryId)) {
-      startSession(categoryId ?? '', questions);
+      const shuffled = shuffle(questions).map((q) => ({ ...q, options: shuffle(q.options) }));
+      startSession(categoryId ?? '', shuffled);
     }
   }, [categoryId]);
 

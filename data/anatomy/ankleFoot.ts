@@ -113,4 +113,32 @@ export const ankleFootQuestions: AnatomyQuestion[] = [
     clinicalRelevance: 'Træning af fodens intrinsiske muskler (håndklædeøvelse med tæer, tåspredning, "short foot"-øvelse) er en central komponent i rehabilitering af plantar fasciopati, hallux valgus og løbeskader.',
     imageKey: undefined,
   },
+  {
+    id: 'anat-ankle-09',
+    categoryId: 'ankle-foot',
+    question: 'Hvad er Achillessenetendinopati, hvad er de to kliniske undertyper, og hvad er den foretrukne behandlingstilgang?',
+    options: [
+      { id: 'a', text: 'Achillessenetendinopati er en akut ruptur; kun én type; behandles kirurgisk', isCorrect: false },
+      { id: 'b', text: 'En overbelastningspatologi i Achillessenen; midportion-type (2–6 cm proksimalt for hæftestedet) og insertionstype (ved hæftestedet); progressiv senebelastning er hjørnestenen i behandlingen', isCorrect: true },
+      { id: 'c', text: 'En betændelsestilstand i seneskeden; kun lateral lokalisation; behandles med RICE og kortikosteroider', isCorrect: false },
+      { id: 'd', text: 'En degenerativ forandring kun ved diabetes; ingen subtyper; fysioterapi er ikke evidensbaseret', isCorrect: false },
+    ],
+    explanation: 'Achillessenetendinopati opstår ved ubalance mellem belastning og kapacitet. Midportion-tendinopati (hyppigst, 2–6 cm fra calcaneus) skyldes kompressive og tensile kræfter. Insertionstendinopati (ved calcaneus) påvirkes stærkt af kompression og er sværere at behandle; dorsalfleksionsstræk og excentrisk hælsænkning kan forværre den. Royal London Hospital Test (palpationssmerte forsvinder ved ankelplantarfleksion = sene vs. peritenon). Alfredson excentrisk protokol (3×15 rep, 2 gange daglig i 12 uger) er veletableret for midportion-type.',
+    clinicalRelevance: 'Klinisk differentier midportion fra insertion — behandlingsprotokollerne adskiller sig. For insertionstendinopati er isometrisk og isotonisk belastning (uden fuld hælsænkning under plantarniveau) foretrukket over excentrisk hælsænkning. Undgå kompressionspositioner (dyb squat, langstrakt siddende). Belastning er behandlingen — ikke hvile alene.',
+    imageKey: undefined,
+  },
+  {
+    id: 'anat-ankle-10',
+    categoryId: 'ankle-foot',
+    question: 'Hvad er kronisk lateral ankelinstabilitet (CLAI), og hvad er de to typer instabilitet der skelnes imellem?',
+    options: [
+      { id: 'a', text: 'CLAI er gentagne akutte forstuvninger; kun mekanisk instabilitet kendes; behandles altid kirurgisk', isCorrect: false },
+      { id: 'b', text: 'CLAI er vedvarende symptomer efter ankelforstuvning; mekanisk instabilitet (strukturel laksitet) og funktionel instabilitet (proprioceptionsvigt og neuromuskulær svaghed) skelnes; funktionel komponenten dominerer hos mange', isCorrect: true },
+      { id: 'c', text: 'CLAI er en ligamentruptur ved akut forstuvning; behandles kun med ortoser og immobilisering', isCorrect: false },
+      { id: 'd', text: 'CLAI opstår udelukkende ved plantarfleksion; kun peronéerne er involverede; ingen neuromuskulær komponent', isCorrect: false },
+    ],
+    explanation: 'Efter lateral ankelforstuvning oplever 20–40% kroniske symptomer (CLAI). Mekanisk instabilitet: laksitet i ATFL/CFL, positiv anterior drawer og talar tilt test. Funktionel instabilitet: nedsat proprioception, forsinket neuromuskulær reaktion (særlig peroneus brevis), reduceret postural kontrol — selvom ligamenterne er strukturelt intakte. Proprioception fra mekanoreceptorer i ligamentet beskadiges ved forstuvning, og dette bidrag er afgørende for ankelstabilitet.',
+    clinicalRelevance: 'Rehabilitering fokuserer på begge komponenter: styrke (peroneus brevis og longus, dorsifleksorer), proprioception/balance (single-leg balance, ustabilt underlag), funktionel neuromuskulær træning og evt. taping/ortose. Kirurgi (lateral ligamentrekonstruktion) reserveres til strukturel laksitet ved svigt af konservativ behandling. Opfølgning af funktionel komponent er afgørende for recidivforebyggelse.',
+    imageKey: undefined,
+  },
 ];

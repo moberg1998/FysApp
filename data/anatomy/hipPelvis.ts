@@ -113,4 +113,32 @@ export const hipPelvisQuestions: AnatomyQuestion[] = [
     clinicalRelevance: 'Q-vinklen er måleusikker og bør ikke stå alene i vurdering af patellofemorale smerter. Dynamisk kontrol, styrke, belastning og symptomrespons er klinisk mere relevante. Hoftestyrketræning (gluteus medius og maximus) kan reducere dynamisk valgus og patellabelastning.',
     imageKey: undefined,
   },
+  {
+    id: 'anat-hip-09',
+    categoryId: 'hip-pelvis',
+    question: 'Hvad er femoroacetabulært impingement (FAI), hvad er de to morfologiske typer, og hvad er den typiske kliniske præsentation?',
+    options: [
+      { id: 'a', text: 'FAI er en hofteartrose; kun én type (global); smerte ved hvile og nat', isCorrect: false },
+      { id: 'b', text: 'FAI er en mekanisk konflikt mellem caput/collum femoris og acetabulumranden; cam-type (ekstra knogle på caput/collum), pincer-type (dybere/overdækket acetabulum) eller kombineret; smerte ved fleksion og indadrotation, lyskesmerte', isCorrect: true },
+      { id: 'c', text: 'FAI er en bursitis; ingen morfologiske typer; lateral hoftesmerte ved gang', isCorrect: false },
+      { id: 'd', text: 'FAI er en labral ruptur; forårsaget af traume; bageste hoftesmerte ved ekstension', isCorrect: false },
+    ],
+    explanation: 'FAI opstår, når der er unormal kontakt mellem proksimale femur og acetabulum ved bevægelse. Cam-type: en knogleprotuberans på anterolateral caput-collum-overgang der "skærer" ind i acetabulumkanten ved fleksion/indadrotation — hyppigst hos unge mænd. Pincer-type: overdreven acetabulær dækning (coxa profunda eller retroversion) der komprimerer labrum — hyppigere hos kvinder. Kombineret type er hyppigst. Labrumskade og chondral patologi opstår sekundært. Typisk lyskesmerte ved siddende stilling, foroverbøjning, in-car-tegn.',
+    clinicalRelevance: 'FAI er en hyppig årsag til lyskesmerte hos unge og middelaldrende aktive patienter. Klinisk test: FADIR (fleksion, adduktion, indadrotation) er sensitiv men uspecifik. Modsat FABER tester posterolaterale strukturer. Fysioterapeutisk behandling adresserer bevægelsesmønster, gluteusstyrke og belastningsstyring. Kirurgisk korrektionsvurdering ved manglende effekt.',
+    imageKey: undefined,
+  },
+  {
+    id: 'anat-hip-10',
+    categoryId: 'hip-pelvis',
+    question: 'Hvad forstås ved trochanter major-smertesyndrom (GTPS), og hvilken struktur er hyppigst afficeret?',
+    options: [
+      { id: 'a', text: 'En bursitis i bursa trochanterica; gluteus maximus-senen er hyppigst afficeret', isCorrect: false },
+      { id: 'b', text: 'Et paraplybegreb for lateral hoftesmerte; gluteus medius- og/eller minimus-tendopati (evt. med bursitis) er hyppigste årsag', isCorrect: true },
+      { id: 'c', text: 'En hofteledsinfektion; iliopsoas-senen afficeres primært; behandles udelukkende kirurgisk', isCorrect: false },
+      { id: 'd', text: 'IT-båndssyndrom med bursabetændelse; tensor fascia latae er primær årsag; hyppig hos løbere', isCorrect: false },
+    ],
+    explanation: 'GTPS er et paraplybegreb for smerter over trochanter major. Nyere forskning viser, at gluteus medius- og minimus-tendopati (insertionstendinopati) er langt hyppigere end isoleret bursitis. Bursaen er sekundært irriteret ved tendopati. Risikofaktorer: kvinder > mænd, overvægt, lænderygsmerter, benforskelskel. Smerten forværres ved liggende på siden, krydsning af ben, langstående og trappegang.',
+    clinicalRelevance: 'Diagnosen stilles klinisk ved lateral hoftesmerte, ømhed over trochanter major og positive provokationstests (single-leg stance test, FABER). Kompressionspositioner forværrer smerter. Behandling: isometrisk og progressiv belastning af gluteus medius, undgåelse af kompressionspositioner (krydsen af ben, ligge på siden), gang/løbeanalyse og evt. korrekte ortopædiske hjælpemidler.',
+    imageKey: undefined,
+  },
 ];

@@ -118,6 +118,17 @@ export function getBestQuizScore(results: UserQuizResult[], topicId: string): nu
   return Math.max(...relevant.map((r) => r.score));
 }
 
+export function getBestQuizScoreInfo(
+  results: UserQuizResult[],
+  topicId: string,
+): { score: number; questionCount: number } | null {
+  const relevant = results.filter((r) => r.topicId === topicId);
+  const totalAnswered = relevant.reduce((sum, r) => sum + r.totalQuestions, 0);
+  if (relevant.length === 0 || totalAnswered < 10) return null;
+  const best = relevant.reduce((b, r) => (r.score > b.score ? r : b), relevant[0]);
+  return { score: best.score, questionCount: best.totalQuestions };
+}
+
 export function getLatestQuizScore(results: UserQuizResult[], topicId: string): number | null {
   const relevant = results
     .filter((r) => r.topicId === topicId)

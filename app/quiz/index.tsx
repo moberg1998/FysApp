@@ -10,7 +10,7 @@ import { useProgress } from '@/hooks/useProgress';
 
 export default function QuizTopicSelect() {
   const router = useRouter();
-  const { getBestScore } = useProgress();
+  const { getBestScoreInfo } = useProgress();
 
   return (
     <View style={styles.screen}>
@@ -22,7 +22,7 @@ export default function QuizTopicSelect() {
         renderItem={({ item }) => (
           <TopicCard
             topic={item}
-            bestScore={getBestScore(item.id)}
+            bestScore={getBestScoreInfo(item.id)}
             onPress={() => router.push({ pathname: '/quiz/[topicId]', params: { topicId: item.id } })}
           />
         )}

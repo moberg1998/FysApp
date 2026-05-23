@@ -19,6 +19,7 @@ import { hipKneeQuiz } from '@/data/hip-knee/quiz';
 import { redFlagsQuiz } from '@/data/red-flags/quiz';
 import { useQuizSession } from '@/context/QuizSessionContext';
 import { QuizQuestion } from '@/types';
+import { shuffle } from '@/utils/shuffle';
 
 const ALL_QUESTIONS: Record<string, QuizQuestion[]> = {
   parkinson: parkinsonQuiz,
@@ -46,12 +47,12 @@ export default function QuizConfig() {
   const questions = ALL_QUESTIONS[topicId ?? ''] ?? [];
 
   const handleStart = () => {
-    let selected = questions;
-    if (selectedLength > 0 && selectedLength < questions.length) {
-      const shuffled = [...questions].sort(() => Math.random() - 0.5);
-      selected = shuffled.slice(0, selectedLength);
-    }
-    startSession(topicId ?? '', selected);
+    const shuffledQuestions = shuffle(questions);
+    const selected = selectedLength > 0 && selectedLength < shuffledQuestions.length
+      ? shuffledQuestions.slice(0, selectedLength)
+      : shuffledQuestions;
+    const withShuffledOptions = selected.map((q) => ({ ...q, options: shuffle(q.options) }));
+    startSession(topicId ?? '', withShuffledOptions);
     router.push('/quiz/session');
   };
 

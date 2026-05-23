@@ -113,4 +113,32 @@ export const kneeQuestions: AnatomyQuestion[] = [
     clinicalRelevance: 'Pes anserine-bursitis er en hyppig differentialdiagnose til medial knæsmerte hos ældre voksne. Fysioterapi inkluderer aktivitetsmodifikation, is og behandling af muskulære ubalancer (stramme hofteadduktorer/hamstrings). Vægtstyring er også relevant.',
     imageKey: undefined,
   },
+  {
+    id: 'anat-knee-09',
+    categoryId: 'knee',
+    question: 'Hvad er patellofemoralsmerte-syndrom (PFPS), og hvilke biomekaniske faktorer bidrager til øget patellofemoral ledtryk?',
+    options: [
+      { id: 'a', text: 'PFPS er en strukturel skade på patella; kun mangelfuld VMO-styrke er årsag; behandles kun kirurgisk', isCorrect: false },
+      { id: 'b', text: 'PFPS er anterior knæsmerte fra øget patellofemoral ledbelastning; bidragende faktorer inkluderer svag hofteabduktion/udadrotation, øget kneeling-angle, stram lateral retinaculum og høj belastning', isCorrect: true },
+      { id: 'c', text: 'PFPS er forårsaget udelukkende af kondromalaci; kun kvinder er ramt; ingen biomekaniske bidragsydere', isCorrect: false },
+      { id: 'd', text: 'PFPS opstår kun hos atleter; forårsaget af meniskskade; diagnosticeres ved McMurray-test', isCorrect: false },
+    ],
+    explanation: 'PFPS er defineret ved anterior knæsmerte foran, bag eller om patella uden anden strukturel skade. Patellofemoral ledtryk øges ved: (1) høj kvardriceps-vektor (Q-vinkel), (2) svage hofte-abduktorer/udadrotatorer der medfører dynamisk knævalgus og lateral patellastress, (3) stram lateralt retinaculum/IT-bånd, (4) reduceret ankeldorsalfleksion, (5) høj ekstern belastning (volumen, intensitet). Symptomer: trappegangen, siddende stilling i lang tid, squat, løb.',
+    clinicalRelevance: 'PFPS er hyppigst hos unge kvinder og løbere. Behandling prioriterer hofte-abduktor/udadrotator-styrketræning, belastningsstyring, ganganalyse og evt. taping. Isoleret VMO-øvelse er ikke tilstrækkelig. God prognose ved multimodal rehabilitering, men recidivrisiko ved genoptaget belastning uden tilstrækkelig styrke.',
+    imageKey: undefined,
+  },
+  {
+    id: 'anat-knee-10',
+    categoryId: 'knee',
+    question: 'Hvad er iliotibial band (IT-bånd) syndrom, og hvad er den aktuelt foretrukne biomekaniske forklaring?',
+    options: [
+      { id: 'a', text: 'IT-båndet slides af mod den laterale femorale epikondyl ved hver bøjning; forårsaget af overudstrækning af IT-båndet', isCorrect: false },
+      { id: 'b', text: 'Impingement-/kompressionszone-model: IT-båndet komprimerer det højt innerverede fedtvæv under det mod den laterale epikondyl ved ~30° fleksion, ikke friktion fra udstrækning', isCorrect: true },
+      { id: 'c', text: 'IT-båndet rupturerer som ACL ved valgusbelastning; forårsaget af kontaktskade', isCorrect: false },
+      { id: 'd', text: 'IT-båndet forstyrrer knæets screw-home-mekanisme ved terminal ekstension; kun hyppig hos ældre', isCorrect: false },
+    ],
+    explanation: 'IT-båndet (tractus iliotibialis) er en kondensation af fascia lata der løber fra tuber iliacum (og muskelfibre fra TFL og gluteus maximus) til Gerdy\'s tubercle på tibia. Klassisk friktionsmodel er nu erstattet af kompressionsmodellen: ved ~30° fleksion (det kritiske vinkelinterval ved løb) komprimerer IT-båndet det subchondrale fedtlegeme lateralt, som er tæt innerveret og vaskulær. Risikofaktorer: øget ukentlig løbedistance, bakkekørsel, svag hofteabduktion.',
+    clinicalRelevance: 'IT-båndssyndrom er den hyppigste overbelastningsskade hos løbere (lateral knæsmerte). Nobel\'s kompressionstest (presker laterale epikondyl ved 30° fleksion) er provokativ. Behandling: belastningsstyring, hofteabduktortræning, løbeteknik, evt. taping. Stræk af IT-båndet isoleret er ineffektivt da IT-båndet ikke er elastisk.',
+    imageKey: undefined,
+  },
 ];

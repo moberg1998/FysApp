@@ -8,7 +8,7 @@ import { Topic } from '@/types';
 
 interface TopicCardProps {
   topic: Topic;
-  bestScore?: number | null;
+  bestScore?: { score: number; questionCount: number } | null;
   onPress: () => void;
   examMode?: boolean;
 }
@@ -51,8 +51,10 @@ export function TopicCard({ topic, bestScore, onPress, examMode }: TopicCardProp
                   )}
                 </>
               )}
-              {bestScore !== null && bestScore !== undefined && (
-                <Text style={[styles.statText, styles.score]}>Bedste: {bestScore}%</Text>
+              {bestScore != null && (
+                <Text style={[styles.statText, styles.score]}>
+                  Bedste: {bestScore.score}% ({bestScore.questionCount} sp.)
+                </Text>
               )}
             </View>
           )}

@@ -113,4 +113,32 @@ export const gaitCycleQuestions: AnatomyQuestion[] = [
     clinicalRelevance: 'Ved Parkinsons sygdom er perioden med dobbelt understøttelse ofte forlænget, da patienterne sænker farten og anlægger en bredere, mere forsigtig gang. Gangtræning med tidsbestemte gangopgaver kan bidrage til at normalisere forholdet i dobbelt understøttelse.',
     imageKey: undefined,
   },
+  {
+    id: 'anat-gait-09',
+    categoryId: 'gait-cycle',
+    question: 'Hvad er energieffektivitetsprincippet i normal gang, og hvad sker med energiforbruget ved patologisk gang?',
+    options: [
+      { id: 'a', text: 'Normal gang kræver konstant muskelaktivitet i alle faser; patologisk gang er altid mere effektiv da det er kompenseret', isCorrect: false },
+      { id: 'b', text: 'Normal gang minimerer energiforbrug via dobbeltvippel-mekanisme med vekslen mellem potentiel og kinetisk energi; patologisk gang (antalgisk, spastisk, neurologisk) øger energiforbruget markant', isCorrect: true },
+      { id: 'c', text: 'Energiforbruget er identisk uanset gangmønster; kun gangfart bestemmer energiforbrug', isCorrect: false },
+      { id: 'd', text: 'Normal gang forbruger mest energi i svingfasen; patologisk gang reducerer svingfaseudgifterne', isCorrect: false },
+    ],
+    explanation: 'Normal gang er energiøkonomisk via dobbeltvippemodellen: i midstance stiger kroppens tyngdepunkt (potentiel energi), som ved terminal stance konverteres til kinetisk energi. Muskelaktivitet er intermitterende — ikke kontinuerlig — og afsættet fra gastrosoleus er det primære energigenereringspunkt. Patologisk gang øger VO₂-forbruget: hemiparetisk gang ~50% øget, amputationsgange 20–60% afhængigt af niveau, gang med krykker 30–50%. Reduceret gangfart øger relativ energiomkostning per meter.',
+    clinicalRelevance: 'Energieffektivitetsmåling (f.eks. Physiological Cost Index = puls ved gang / puls i hvile) er relevant ved neurologisk rehabilitering og protesegang. For Parkinson-patienter er reduceret afsættet og shuffling-gang energikrævende og træthedsskabende. Forbedret gangeffektivitet er et klinisk relevant outcome.',
+    imageKey: undefined,
+  },
+  {
+    id: 'anat-gait-10',
+    categoryId: 'gait-cycle',
+    question: 'Hvilke kinematiske krav stilles til hoften under normal trappegang sammenlignet med plan gang, og hvad er de kliniske implikationer?',
+    options: [
+      { id: 'a', text: 'Trappegang kræver mindre hoftefleksion end plan gang; ingen forskel i muskelaktivitet', isCorrect: false },
+      { id: 'b', text: 'Trappegang kræver ~60–70° hoftefleksion (vs. ~30° ved plan gang), større knæfleksion og øget quadriceps-belastning; relevant ved postoperativ hoftealloplastik og Parkinson', isCorrect: true },
+      { id: 'c', text: 'Trappegang kræver identisk bevægeomfang som plan gang; kun hastighed er forskellig', isCorrect: false },
+      { id: 'd', text: 'Trappegang er primært drevet af hofteekstensorerne; quadriceps er ikke involveret', isCorrect: false },
+    ],
+    explanation: 'Trappegang (opgang) kræver ~60–70° hoftefleksion, ~90–100° knæfleksion og øget ankeldorsalfleksion sammenlignet med plan gang (~30°, ~60°, ~10°). Quadriceps udfører excentrisk arbejde (bremsning af knæfleksion) ved nedgang og koncentrisk arbejde (knæekstension) ved opgang. Gluteus maximus og medius yder hofteekstension og stabilisering. Ledkræfterne på hofte og knæ er markant højere end ved plan gang.',
+    clinicalRelevance: 'Trappegangstesten bruges klinisk som funktionel test ved hofte/knæ-patologi. Efter hoftealloplastik med posteriore forholdsregler begrænses hoftefleksion (< 90°) og adduktion — trappegang kræver instruktion. Parkinson-patienter har ofte særlige vanskeligheder med trappegangen pga. frysning ved trin-for-trin eller hypokinetisk mønster. Step-over-step-trappegang er et rehabiliteringsmål.',
+    imageKey: undefined,
+  },
 ];
